@@ -1,7 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="" />
+    <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_refactoringminer_RefactoringMiner_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_refactoringminer_RefactoringMiner_1_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/_config.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/_includes/nav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/_includes/toc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-apache/src/main/java/com/intuit/karate/http/apache/ApacheHttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-apache/src/main/java/com/intuit/karate/http/apache/ApacheHttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-apache/src/main/java/com/intuit/karate/http/apache/ApacheHttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-apache/src/main/java/com/intuit/karate/http/apache/ApacheHttpUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-apache/src/main/java/com/intuit/karate/http/apache/LenientCookieSpec.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-apache/src/main/java/com/intuit/karate/http/apache/LenientCookieSpec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/antlr4/com/intuit/karate/core/KarateLexer.g4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/antlr4/com/intuit/karate/core/KarateParser.g4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Actions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Http.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/IdeUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Json.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/KarateOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/PerfContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Resource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Results.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/RunnerOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/StepActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Action.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Background.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Embed.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Engine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ExampleTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ExecutionContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ExecutionHook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Feature.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/FeatureBackend.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/FeatureContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/FeatureExecutionUnit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/FeatureParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/FeatureResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/FeatureSection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/MatchStep.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/MatchType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/MethodMatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/MethodPattern.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ParserErrorListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/PerfEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Scenario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ScenarioContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ScenarioExecutionUnit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ScenarioInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ScenarioOutline.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ScenarioResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/ScriptBridge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Step.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/StepResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Tag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/core/Tags.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/cucumber/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/cucumber/CucumberRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/DevToolsDriver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/DevToolsMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/Driver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/DriverOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/WaitState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/WebDriver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/chrome/Chrome.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/chrome/ChromeWebDriver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/edge/EdgeDevToolsDriver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/edge/MicrosoftWebDriver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/firefox/GeckoWebDriver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/safari/SafariWebDriver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/driver/windows/WinAppDriver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/postman/PostmanItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/postman/PostmanRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/postman/PostmanUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/postman/RequestBuilder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/selenium/SideConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/selenium/SideProject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/selenium/TestBase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/selenium/TestCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/selenium/TestCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/formats/selenium/TestSuite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/netty/FeatureServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/netty/FeatureServerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/netty/FeatureServerInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/netty/NettyUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/netty/WebSocketClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/netty/WebSocketClientHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/netty/WebSocketClientInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/netty/WebSocketListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/shell/CommandThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/shell/FileLogAppender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/shell/StopListenerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/shell/Stoppable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/ui/ConsolePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/ui/FeatureOutlineCell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/com/intuit/karate/ui/FeatureOutlinePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/cucumber/api/CucumberOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/cucumber/api/DataTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/cucumber/api/cli/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/java/cucumber/api/java/en/When.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/resources/karate-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-core/src/main/resources/karate-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/resources/report-template-js.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/main/resources/timeline-template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/FileUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/FileUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/IdeUtilsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/JsonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/JsonUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/JsonUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/MatchStepTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/RunnerOptionsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/RunnerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/called-arg-loop.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/called-arg-null.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/called-arg-single.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/caller-arg.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/AllKarateFeaturesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/EngineTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/FeatureBackendTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/FeatureEditTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/FeatureParserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/FeatureResultTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/FeatureReuseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/MandatoryTagHook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/ScenarioHookTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/TagsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/aborted.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/called-shared.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/called-shared2.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/called.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/called_2.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/caller-shared.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/caller.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/caller_2.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/empty.feature.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/failed.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/feature-header-only.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/outline.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/scenario.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/server.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/table.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-def-docstring.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-edge-cases.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-empty-background.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-empty-first-line1.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-empty-first-line2.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-empty-first-line3.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-error.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-hide.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-hook-multiexample.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-hook-notags.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-ignore-feature.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-ignore-scenario.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-outline-dynamic.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-outline-name.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-set-table.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-simple-background.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-simple.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-table-pipe.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/core/test-tags-multiline.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/formats/postman/ConvertUtilsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/formats/postman/RequestBuilderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/formats/postman/postman-echo-single.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/formats/postman/postman-echo-single.postman_collection" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/formats/postman/postman-multiple-items-and-sub-items.postman_collection" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/formats/selenium/SideConverterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/formats/selenium/side-converter-test.side" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/http/HttpRequestBuilderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/multi-scenario-fail.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/multi-scenario.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/netty/WebSocketClientRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/no-scenario-name.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/shell/CommandTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/ui/AppSessionRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/com/intuit/karate/ui/threadtest.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/karate-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-core/src/test/java/karate-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-core/src/test/resources/karate-test.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/main/java/com/intuit/karate/demo/config/WebSocketConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/WebSocketController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/main/java/com/intuit/karate/demo/controller/WebSocketHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/main/java/com/intuit/karate/demo/domain/Binary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/DemoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/DemoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/binary/BinaryRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/binary/binary.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/callfeature/CallFeatureUiRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/callnested/CallNestedRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/callnested/call-nested.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/callnested/called1.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/callnested/called2.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/callnested/called3.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/cats/KittensRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/cats/KittensRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/dogs/DogsRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/dogs/DogsRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/embed/EmbedRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/embed/embed-pdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/embed/embed.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/encoding/encoding.feature" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/encoding/encoding.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/form/FormRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/form/form.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/headers/HeadersUuidRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/headers/headers-alt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/headers/headers-form-get.feature" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/headers/headers-form-get.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/headers/headers-uuid.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/java/JavaApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/java/JavaApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/jwt/JwtRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/jwt/jwt.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/loopcall/LoopCallRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/loopcall/LoopCallRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/loopcall/loop.js" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/loopcall/loop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/oauth/Oauth1Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/oauth/Oauth2Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/oauth/Signer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/oauth/oauth1.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/outline/DynamicCsvRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/outline/DynamicRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/outline/DynamicUiRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/outline/ExamplesRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/outline/ExamplesUiRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/outline/dynamic-csv.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/outline/dynamic.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/outline/kittens.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/polling/polling.feature" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/polling/polling.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/tags/TagsSmokeRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/tags/TagsSmokeRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/websocket/EchoRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/websocket/WebSocketClientRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/websocket/WebSocketRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/websocket/echo.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/demo/websocket/websocket.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/MockRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/Test01ParallelRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/Test01Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/Test01UiRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/Test02Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/Test03Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/_mock.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/karate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/page-01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/page-02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/page-03.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/test-01.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/test-02-called.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/test-02.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/core/test-03.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/demo/Demo01JavaRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/demo/Demo01Runner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/demo/Demo01UiRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/demo/demo-01.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/screenshot/ChromeFullPageRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/screenshot/ChromePdfRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/windows/CalcRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/windows/CalcUiRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/driver/windows/calc.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/karate-config-contract.js" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/karate-config-contract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/contract/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/contract/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/contract/ConsumerUsingProxyRewriteSslTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/contract/ConsumerUsingProxyRewriteSslTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/contract/PaymentServiceContractSslTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/contract/PaymentServiceContractSslTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/contract/increment.js" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/contract/increment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/web/CatsMockRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/web/CatsMockStarter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/web/CatsTestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-demo/src/test/java/mock/web/start-mock.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-gatling/src/test/resources/karate-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-gatling/src/test/scala/mock/CatsSimulation.scala" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-gatling/src/test/scala/mock/CatsSimulation.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-gatling/src/test/scala/mock/MockUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-gatling/src/test/scala/mock/MockUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-gatling/src/test/scala/mock/cats-delete-one.feature" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-gatling/src/test/scala/mock/cats-delete-one.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-gatling/src/test/scala/mock/custom-rpc.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-jersey/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-jersey/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-jersey/src/main/java/com/intuit/karate/http/jersey/JerseyHttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-jersey/src/main/java/com/intuit/karate/http/jersey/JerseyHttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/main/java/com/intuit/karate/junit4/FeatureInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/BytesRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/CallTagRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/ChineseRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/ConfigReuseRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/FailHookRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/LowerCaseRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/OutlineDynamicRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/OutlineRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/PrintRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/PrintRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/ReadFromRelativePathRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/ReadFromRelativePathRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/TagsRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/TagsRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/UiRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/XmlAndXpathRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/XmlAndXpathRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/bytes.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/call-tag.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/called-tag.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/cats.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/common.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/config-reuse.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/fail-hook-log.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/fail-hook.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/fail.feature" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/fail.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/karate-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/lower-case.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/outline-dynamic.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/outline.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/中文测试-called.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/demos/中文测试.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/files/JarLoadingTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/files/WorkingDirRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/files/called2.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/files/called3.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/files/relative/CallerRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/files/relative/called1.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/files/relative/caller.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/http/DummyHttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/http/DummyHttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/http/DummyHttpClientRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/http/DummyHttpClientRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/http/JavaHttpTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/http/server.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/options/FirstRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/options/OptionsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/options/ParallelWarnTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/options/SecondRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/options/first.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/options/outline-only.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/options/second.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/selenium/SampleRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/com/intuit/karate/junit4/selenium/sample.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/common.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit4/src/test/java/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit5/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit5/src/main/java/com/intuit/karate/junit5/Karate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit5/src/test/java/karate-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit5/src/test/java/karate/SampleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit5/src/test/java/karate/sample.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-junit5/src/test/java/karate/tags.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/karate-config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/BinaryRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/CookiesRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/DownloadRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/HelloWorldRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/NoHeadersRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/cookies.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/download.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/no-headers.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/mock/test.pdf.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/netty/MainWinTestRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/os-project-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/os-project-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extractmethod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/extractmethod.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RefactorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RefactorInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ClassVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ClassVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodMiner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MethodVIsitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MethodVIsitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RefactorInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RefactorInfo.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +372,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="150">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CohesionValuesBeforeAndAfter.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="36" selection-end-line="903" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CohesionValuesAfter.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="97" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CohesionValuesBefore.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="69" selection-start-column="69" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -27,8 +408,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="32" selection-end-column="19" />
+            <state relative-caret-position="540">
+              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -36,7 +417,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ClassInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="30">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
@@ -45,31 +426,69 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-133">
-              <caret line="82" column="81" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="81" />
+            <state relative-caret-position="38">
+              <caret line="239" column="37" lean-forward="true" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10114#10115#0" expanded="true" />
+                <element signature="e#10178#10179#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MetricsAfterExtract.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21645">
+              <caret line="1443" column="91" selection-start-line="1443" selection-start-column="91" selection-end-line="1443" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../Clases U/Seminario/XmlReader/MetricsBeforeExtract.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/RefactorInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="420">
+              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+              <folding>
+                <element signature="e#1040#1041#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Lcom</find>
+      <find>lcom</find>
+      <find>LCOM</find>
+      <find>LCOM*</find>
+      <find>entro</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/emp/PagerBottomTabStrip" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" />
+        <option value="$PROJECT_DIR$/pruebas.xml" />
+        <option value="$PROJECT_DIR$/../../../Clases U/Seminario/XmlReader/MetricsBeforeExtract.txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/MetricsAfterExtract.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/RefactorInfo.java" />
+        <option value="$PROJECT_DIR$/CohesionValuesBeforeAndAfter.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" />
       </list>
     </option>
   </component>
@@ -83,23 +502,22 @@
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="extractmethod" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="extractmethod" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-          <item name="org.refactoringminer:RefactoringMiner:1.0" type="c0821a7e:MavenProjectsStructure$DependencyNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="y" value="3" />
-    <option name="width" value="1931" />
-    <option name="height" value="1044" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="67" />
+    <option name="y" value="23" />
+    <option name="width" value="1550" />
+    <option name="height" value="954" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -107,6 +525,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -136,18 +556,23 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.39195403" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -190,25 +615,29 @@
       <workItem from="1572982678363" duration="5188000" />
       <workItem from="1573183349610" duration="3865000" />
       <workItem from="1573955131352" duration="264000" />
+      <workItem from="1573956824890" duration="2676000" />
+      <workItem from="1573963867242" duration="36463000" />
+      <workItem from="1574268611461" duration="6421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21872000" />
+    <option name="totallyTimeSpent" value="67432000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="23" width="1550" height="954" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.183687" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3062645" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39907193" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -217,52 +646,102 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32830626" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.09808102" />
+      <window_info anchor="right" id="Maven" order="5" visible="true" weight="0.198939" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/pruebas.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="32" selection-end-column="19" />
+        <state relative-caret-position="1305">
+          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CohesionValues.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ClassInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="30">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MetricsAfterExtract.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21645">
+          <caret line="1443" column="91" selection-start-line="1443" selection-start-column="91" selection-end-line="1443" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Clases U/Seminario/XmlReader/MetricsBeforeExtract.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RefactorInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="420">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+          <folding>
+            <element signature="e#1040#1041#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CohesionValuesBeforeAndAfter.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="36" selection-end-line="903" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="150">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CohesionValuesBefore.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="69" selection-start-column="69" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CohesionValuesAfter.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="97" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="97" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="82" column="81" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="81" />
+        <state relative-caret-position="38">
+          <caret line="239" column="37" lean-forward="true" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10114#10115#0" expanded="true" />
+            <element signature="e#10178#10179#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -275,7 +754,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.39195403" />
               </list>
             </option>
           </splitter-proportions>
@@ -283,10 +762,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.39195403" />
               </list>
             </option>
           </splitter-proportions>
@@ -294,10 +774,11 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: org.refactoringminer:RefactoringMiner:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.39195403" />
               </list>
             </option>
           </splitter-proportions>
@@ -321,7 +802,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.39195403" />
               </list>
             </option>
           </splitter-proportions>
@@ -329,11 +810,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0</last-edited>
+          <last-edited>Maven: org.refactoringminer:RefactoringMiner:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.39195403" />
               </list>
             </option>
           </splitter-proportions>

@@ -13,12 +13,15 @@ import java.util.Set;
 
 public class ExtractMethodMiner {
     public static void main(String[] args) throws Exception {
-        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("E:\\\\projects-urls.txt");
-       System.out.println(extractMethodProcessor.repos);
+        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("/Users/Abel/Documents/projects-urls.txt");
+       //System.out.println(extractMethodProcessor.repos);
        for (String repo:extractMethodProcessor.repos ) {
-            extractMethodProcessor.abcd(repo);
+            extractMethodProcessor.analizeProjects(repo);
 
-        }
+       }
+
+       //extractMethodProcessor.analizeProjects(extractMethodProcessor.repos.get(2));
+     //extractMethodProcessor.executeJasome("/Users/Abel/Documents/ClasesU/Arqui/ArquiVoiceMail/src/Main.java", "pruebas.xml");
 
 
 

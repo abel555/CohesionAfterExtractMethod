@@ -42,10 +42,19 @@ public class RefactorInfo {
         classAfter.add(classToAdd);
     }
 
+    public String getMethodName() {
+        return methodName;
+    }
+
+    public void setMethodName(String methodName) {
+        this.methodName = methodName;
+    }
+
     String commitIdBefore;
     String commitIdAfter;
     List<String> classBefore;
     List<String> classAfter;
+    String methodName;
 
     public RefactorInfo(String commitIdBefore, String commitIdAfter, List<String> classBefore, List<String> classAfter) {
         this.commitIdBefore = commitIdBefore;
