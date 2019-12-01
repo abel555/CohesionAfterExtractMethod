@@ -1,9 +1,16 @@
-import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.filefilter.FileFilterUtils;
+import org.apache.commons.io.filefilter.IOFileFilter;
 import org.eclipse.jgit.lib.Repository;
-import org.junit.After;
+import org.jasome.executive.CommandLineExecutive;
+import org.jasome.executive.ProcessorFactory;
+import org.jasome.input.FileScanner;
+import org.jasome.input.Package;
+import org.jasome.input.Project;
+import org.jasome.metrics.calculators.LackOfCohesionMethodsCalculator;
+import org.jasome.output.XMLOutputter;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.refactoringminer.api.*;
 import org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl;
@@ -15,13 +22,18 @@ import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.*;
+import java.lang.reflect.Field;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -29,6 +41,7 @@ public class ExtractMethodProcessor {
 
     public List<String> repos;
     private static final String UTF_8 = "utf-8";
+    LackOfCohesionMethodsCalculator calculator = new LackOfCohesionMethodsCalculator();
 
     public ExtractMethodProcessor(String path) {
         this.repos = readUrlRepos(path);
@@ -43,77 +56,7 @@ public class ExtractMethodProcessor {
         }
         return allLines;
     }
-    public void abcd(String rep) throws Exception {
-        GitService gitService = new GitServiceImpl();
-        final boolean[] saveCommit = {false};
-        final int[] pos = new int[1];
-        GitHistoryRefactoringMiner miner = new GitHistoryRefactoringMinerImpl();
-        Repository repo = gitService.cloneIfNotExists("emp/" + FilenameUtils.getBaseName(rep), rep);
-        List<RefactorInfo> extractMethodsInfoList = new ArrayList<RefactorInfo>();
-        final String[] lastCommitId = new String[1];
 
-
-
-        try {
-            miner.detectAll(repo, "master", new RefactoringHandler() {
-
-
-                @Override
-                public void handle(String commitId, List<Refactoring> refactorings) {
-                if (saveCommit[0]){
-                    extractMethodsInfoList.get(pos[0]).setCommitIdBefore(commitId);
-                    saveCommit[0] = false;
-                }
-                RefactorInfo extractMethodsInfo = new RefactorInfo();
-                for (Refactoring ref : refactorings) {
-                    if(ref.getRefactoringType() == RefactoringType.EXTRACT_OPERATION) {
-                        setUpMethodInfo(commitId, ref, extractMethodsInfo, lastCommitId[0], "");
-                    }
-                }
-                if(extractMethodsInfo.getCommitIdAfter() != null) {
-                    extractMethodsInfoList.add(extractMethodsInfo);
-                    saveCommit[0] = true;
-                    pos[0] = extractMethodsInfoList.size() - 1;
-                }
-                lastCommitId[0] = commitId;
-
-                }
-            });
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-
-
-        for (RefactorInfo refInfo : extractMethodsInfoList) {
-            ClassInfo resultBefore = new ClassInfo();
-            ClassInfo resultAfter = new ClassInfo();
-            //visitClass
-            String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
-            try {
-                gitService.checkout(repo, refInfo.getCommitIdBefore());
-                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(0));
-                System.out.println(classFileBefore);
-                visitor(classFileBefore, resultBefore);
-            }
-            catch (Exception e) {
-                System.out.println(e);
-            }
-            try {
-                gitService.checkout(repo, refInfo.getCommitIdAfter());
-                String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(0));
-
-                visitor(classFileAfter, resultAfter);
-                if (!Float.isInfinite(resultAfter.getCohesion()) && resultAfter.name != null)
-                System.out.println(rep + "," + resultBefore.name + "," + resultAfter.name + "," + resultBefore.getCohesion() + "," + resultAfter.getCohesion());
-            }
-            catch (Exception e) {
-                System.out.println(e);
-            }
-
-
-
-        }
-    }
     public void analizeProjects(String rep) throws Exception {
         GitService gitService = new GitServiceImpl();
         final boolean[] saveCommit = {false};
@@ -142,8 +85,11 @@ public class ExtractMethodProcessor {
 
                         setUpMethodInfo(commitId, ref, extractMethodsInfo, lastCommitId[0], nn.getExtractedOperation().getName());
 
+                       // Field[] fieldDeclarations = nn.getExtractedOperation().getClass().getFields();
+                       // fieldDeclarations[0].get
+
                         String stadistics = nn.getExtractedOperation().getParameters() + ";" + nn.getExtractedOperation().getVisibility() + ";" + nn.getExtractedOperation().getReturnParameter();
-                        System.out.println(stadistics);
+                       // System.out.println(stadistics);
                     }
                 }
                 if(extractMethodsInfo.getCommitIdAfter() != null) {
@@ -161,49 +107,22 @@ public class ExtractMethodProcessor {
 
 
         for (RefactorInfo refInfo : extractMethodsInfoList) {
-            String towrite = null ;
-            String coheBefore = null;
+            ClassInfo resultAfter = new ClassInfo();
+            resultAfter.setMethodName(refInfo.getMethodName());
             String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
-            try {
-                gitService.checkout(repo, refInfo.getCommitIdBefore());
-                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(0));
-                String cohesionBefore = executeJasome(classFileBefore, "MetricsBeforeExtract.xml");
-                coheBefore = cohesionBefore;
-
-                //System.out.println(cohesionBefore);
-                towrite = classFileBefore + ";" + cohesionBefore;
-                /*try(FileWriter fw = new FileWriter("CohesionValuesBefore.txt", true);
-                    BufferedWriter bw = new BufferedWriter(fw);
-                    PrintWriter out = new PrintWriter(bw))
-                {
-                    out.println(classFileBefore + ";" + cohesionBefore);
-                } catch (IOException e) {
-                    //exception handling left as an exercise for the reader
-                }*/
-            }
-            catch (Exception e) {
-                System.out.println(e);
-            }
             try {
                 gitService.checkout(repo, refInfo.getCommitIdAfter());
                 String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(0));
-                String cohesionAfter = executeJasome(classFileAfter, "MetricsAfterExtract.xml");
-               // System.out.println(cohesionAfter);
+
+                hackedJasome(classFileAfter, refInfo.getMethodName());
+/*
                 try(FileWriter fw = new FileWriter("CohesionValuesBeforeAndAfter.txt", true);
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter out = new PrintWriter(bw))
                 {
 
-                        out.println(towrite + ";" + classFileAfter + ";" + refInfo.getMethodName() + ";"+ cohesionAfter);
+                        //out.println(towrite + ";" + classFileAfter + ";" + refInfo.getMethodName() + ";"+ cohesionAfter);
 
-                } catch (IOException e) {
-                    //exception handling left as an exercise for the reader
-                }
-                /*try(FileWriter fw = new FileWriter("CohesionValuesAfter.txt", true);
-                    BufferedWriter bw = new BufferedWriter(fw);
-                    PrintWriter out = new PrintWriter(bw))
-                {
-                    out.println(classFileAfter + ";" + refInfo.getMethodName() + ";"+ cohesionAfter);
                 } catch (IOException e) {
                     //exception handling left as an exercise for the reader
                 }*/
@@ -248,7 +167,7 @@ public class ExtractMethodProcessor {
         return base.substring(base.lastIndexOf(".") + 1);
     }
 
-    public void visitor(String path, ClassInfo result) {
+    /*public void visitor(String path, ClassInfo result) {
         //System.out.println("el path es: " + path);
         try(FileInputStream in = new FileInputStream(path)){
             CompilationUnit cu;
@@ -268,7 +187,7 @@ public class ExtractMethodProcessor {
             // We can ignore small errors here
             System.out.println(String.format("Error while processing the file %s.", path));
         }
-    }
+    }*/
     public String executeJasome(String path, String fileName) {
         String cohesion = null;
         ProcessBuilder processBuilder = new ProcessBuilder();
@@ -343,6 +262,46 @@ public class ExtractMethodProcessor {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void hackedJasome(String dir, String methodName) {
+
+        File scanDir = new File(dir).getAbsoluteFile();
+        FileScanner scanner = new FileScanner(scanDir);
+
+        IOFileFilter fileFilter = FileFilterUtils.trueFileFilter();
+
+        scanner.setFilter(fileFilter);
+
+        Project scannerOutput = scanner.scan();
+        ProcessorFactory.getProcessor().process(scannerOutput);
+
+        scannerOutput.getPackages().forEach(aPackage -> {aPackage.getTypes().forEach(type ->
+                    calculator.calculate(type, methodName, dir));
+        });
+
+
+        /*
+       // System.out.println(scannerOutput);
+        try {
+            Document outputDocument = new XMLOutputter().output(scannerOutput);
+
+            Transformer transformer = TransformerFactory.newInstance().newTransformer();
+            transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+            DOMSource source = new DOMSource(outputDocument);
+
+            StreamResult result;
+                result = new StreamResult(System.out);
+                transformer.transform(source, result);
+                System.out.println(result);
+
+        } catch (TransformerConfigurationException e) {
+            e.printStackTrace();
+        } catch (TransformerException e) {
+            e.printStackTrace();
+        }*/
     }
 
 }

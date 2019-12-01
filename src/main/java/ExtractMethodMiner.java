@@ -1,5 +1,4 @@
 import com.github.javaparser.JavaParser;
-import com.github.javaparser.StaticJavaParser;
 import com.github.javaparser.ast.CompilationUnit;
 import com.google.common.collect.Sets;
 
@@ -20,7 +19,8 @@ public class ExtractMethodMiner {
 
        }
 
-       //extractMethodProcessor.analizeProjects(extractMethodProcessor.repos.get(2));
+
+      // extractMethodProcessor.analizeProjects(extractMethodProcessor.repos.get(2));
      //extractMethodProcessor.executeJasome("/Users/Abel/Documents/ClasesU/Arqui/ArquiVoiceMail/src/Main.java", "pruebas.xml");
 
 

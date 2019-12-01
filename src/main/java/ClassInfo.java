@@ -4,17 +4,40 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class ClassInfo {
-    public String name;
-    public float methodsNumber;
-    public float methodParametersSum;
-    public Set<Type> objectTypeParameters = new HashSet<Type>();
+    public String methodName;
+    public int numberOfInstanceVariablesUsed;
+
+    public String getMethodName() {
+        return methodName;
+    }
+
+    public void setMethodName(String methodName) {
+        this.methodName = methodName;
+    }
+
+    public int getNumberOfInstanceVariablesUsed() {
+        return numberOfInstanceVariablesUsed;
+    }
+
+    public void setNumberOfInstanceVariablesUsed(int numberOfInstanceVariablesUsed) {
+        this.numberOfInstanceVariablesUsed = numberOfInstanceVariablesUsed;
+    }
+
+    public int getNumberOfMethodArguments() {
+        return numberOfMethodArguments;
+    }
+
+    public void setNumberOfMethodArguments(int numberOfMethodArguments) {
+        this.numberOfMethodArguments = numberOfMethodArguments;
+    }
+
+    public int numberOfMethodArguments;
+
+
+
 
     public ClassInfo(){
-        this.methodsNumber = 0;
-        this.methodParametersSum = 0;
-    }
-    public float getCohesion(){
-        return methodParametersSum / (methodsNumber * (objectTypeParameters.size()+0));
+
     }
 
 }

@@ -19,8 +19,8 @@ public class MethodVIsitor extends VoidVisitorAdapter<ClassInfo> {
             //info.objectTypeParameters.add(par.getType());
             distinctMethodsParams.add(par.getType());
         }
-        Set<Type> p = Sets.intersection(info.objectTypeParameters, distinctMethodsParams);
-        info.methodParametersSum += p.size() + 0;
+       // Set<Type> p = Sets.intersection(info.objectTypeParameters, distinctMethodsParams);
+        //info.methodParametersSum += p.size() + 0;
         super.visit(n, info);
     }
 
