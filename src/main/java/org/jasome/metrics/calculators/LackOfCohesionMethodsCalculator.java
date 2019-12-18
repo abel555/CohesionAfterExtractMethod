@@ -25,10 +25,12 @@ public class LackOfCohesionMethodsCalculator{
     int classFields;
     int fieldsUsedInMethod;
     int methodArguments;
+    String commitAfter;
     //@Override
-    public Set<Metric> calculate(Type type, String methodName, String classPath) {
+    public Set<Metric> calculate(Type type, String methodName, String classPath, String commitAfter) {
         this.methodName = methodName;
         this.classPath = classPath;
+        this.commitAfter = commitAfter;
         List<FieldDeclaration> fieldDeclarations = type.getSource().getFields();
         Set<VariableDeclarator> variables = new HashSet<>();
 
@@ -59,7 +61,7 @@ public class LackOfCohesionMethodsCalculator{
             }
             this.fieldsUsedInMethod = numberOfMethodsAccessingVariable;
 
-            System.out.println(this.classPath + ";" + this.methodName + ";" + this.methodArguments + ";" + this.classFields + ";" + this.fieldsUsedInMethod);
+            System.out.println(this.classPath + ";" + this.commitAfter + ";" + this.methodName + ";" + this.methodArguments + ";" + this.classFields + ";" + this.fieldsUsedInMethod);
         }
 
         try {

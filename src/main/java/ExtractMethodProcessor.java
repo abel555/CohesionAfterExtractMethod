@@ -102,7 +102,7 @@ public class ExtractMethodProcessor {
                 }
             });
         } catch (Exception e) {
-            System.out.println(e);
+            //System.out.println(e);
         }
 
 
@@ -113,8 +113,7 @@ public class ExtractMethodProcessor {
             try {
                 gitService.checkout(repo, refInfo.getCommitIdAfter());
                 String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(0));
-
-                hackedJasome(classFileAfter, refInfo.getMethodName());
+                hackedJasome(classFileAfter, refInfo.getMethodName(), refInfo.getCommitIdAfter());
 /*
                 try(FileWriter fw = new FileWriter("CohesionValuesBeforeAndAfter.txt", true);
                     BufferedWriter bw = new BufferedWriter(fw);
@@ -129,7 +128,7 @@ public class ExtractMethodProcessor {
 
             }
             catch (Exception e) {
-                System.out.println(e);
+                //System.out.println(e);
             }
 
 
@@ -264,7 +263,7 @@ public class ExtractMethodProcessor {
         return null;
     }
 
-    public void hackedJasome(String dir, String methodName) {
+    public void hackedJasome(String dir, String methodName, String commitAfter) {
 
         File scanDir = new File(dir).getAbsoluteFile();
         FileScanner scanner = new FileScanner(scanDir);
@@ -277,7 +276,7 @@ public class ExtractMethodProcessor {
         ProcessorFactory.getProcessor().process(scannerOutput);
 
         scannerOutput.getPackages().forEach(aPackage -> {aPackage.getTypes().forEach(type ->
-                    calculator.calculate(type, methodName, dir));
+                    calculator.calculate(type, methodName, dir, commitAfter));
         });
 
 
