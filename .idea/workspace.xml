@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_refactoringminer_RefactoringMiner_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_refactoringminer_RefactoringMiner_1_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/sample/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/sample/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.project" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/android-beacon-library" beforeDir="false" afterPath="$PROJECT_DIR$/emp/android-beacon-library" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/karate" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/_config.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/_includes/nav.html" beforeDir="false" />
@@ -344,17 +347,7 @@
       <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/netty/MainWinTestRunner.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/os-project-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/os-project-logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extractmethod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/extractmethod.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RefactorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RefactorInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClassVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ClassVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodMiner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MethodVIsitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MethodVIsitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RefactorInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RefactorInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pruebas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pruebas.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -372,53 +365,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CohesionValuesBeforeAndAfter.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="36" selection-end-line="903" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CohesionValuesAfter.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="97" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="97" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CohesionValuesBefore.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="69" selection-start-column="69" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ClassInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="225">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -426,40 +374,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="239" column="37" lean-forward="true" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
+            <state relative-caret-position="91">
+              <caret line="274" column="101" lean-forward="true" selection-start-line="274" selection-start-column="32" selection-end-line="274" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10114#10115#0" expanded="true" />
-                <element signature="e#10178#10179#0" expanded="true" />
+                <element signature="e#1094#1095#0" expanded="true" />
+                <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#1873#1887#0" expanded="true" />
+                <element signature="e#2005#3013#0" expanded="true" />
+                <element signature="e#3012#3013#0" expanded="true" />
+                <element signature="e#4846#4860#0" expanded="true" />
+                <element signature="e#4978#6364#0" expanded="true" />
+                <element signature="e#6363#6364#0" expanded="true" />
+                <element signature="e#10228#10229#0" expanded="true" />
+                <element signature="e#10292#10293#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MetricsAfterExtract.xml">
+        <entry file="file://$PROJECT_DIR$/pruebas.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21645">
-              <caret line="1443" column="91" selection-start-line="1443" selection-start-column="91" selection-end-line="1443" selection-end-column="91" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../Clases U/Seminario/XmlReader/MetricsBeforeExtract.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RefactorInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-              <folding>
-                <element signature="e#1040#1041#0" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="263">
+              <caret line="118" column="94" lean-forward="true" selection-start-line="118" selection-start-column="94" selection-end-line="118" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -481,7 +419,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pruebas.xml" />
         <option value="$PROJECT_DIR$/../../../Clases U/Seminario/XmlReader/MetricsBeforeExtract.txt" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/MetricsAfterExtract.xml" />
@@ -489,6 +426,7 @@
         <option value="$PROJECT_DIR$/CohesionValuesBeforeAndAfter.txt" />
         <option value="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" />
+        <option value="$PROJECT_DIR$/pruebas.xml" />
       </list>
     </option>
   </component>
@@ -533,24 +471,6 @@
             <path>
               <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -622,12 +542,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67432000" />
+    <option name="totallyTimeSpent" value="69369000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="23" width="1550" height="954" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="954" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.183687" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22100122" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -657,18 +577,42 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2320955" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38283062" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39907193" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006631" side_tool="true" weight="0.32830626" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49933687" weight="0.32830626" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.198939" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pruebas.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CohesionValues.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ClassInfo.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -705,27 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CohesionValuesBeforeAndAfter.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="36" selection-end-line="903" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CohesionValuesBefore.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="69" selection-start-column="69" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CohesionValuesAfter.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -733,14 +656,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CohesionValuesBefore.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10960">
+          <caret column="69" selection-start-column="69" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CohesionValuesBeforeAndAfter.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="36" selection-end-line="903" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pruebas.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="118" column="94" lean-forward="true" selection-start-line="118" selection-start-column="94" selection-end-line="118" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="239" column="37" lean-forward="true" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
+        <state relative-caret-position="91">
+          <caret line="274" column="101" lean-forward="true" selection-start-line="274" selection-start-column="32" selection-end-line="274" selection-end-column="101" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10114#10115#0" expanded="true" />
-            <element signature="e#10178#10179#0" expanded="true" />
+            <element signature="e#1094#1095#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1873#1887#0" expanded="true" />
+            <element signature="e#2005#3013#0" expanded="true" />
+            <element signature="e#3012#3013#0" expanded="true" />
+            <element signature="e#4846#4860#0" expanded="true" />
+            <element signature="e#4978#6364#0" expanded="true" />
+            <element signature="e#6363#6364#0" expanded="true" />
+            <element signature="e#10228#10229#0" expanded="true" />
+            <element signature="e#10292#10293#0" expanded="true" />
           </folding>
         </state>
       </provider>

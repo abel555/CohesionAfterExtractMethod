@@ -10,7 +10,7 @@
                 <Metric description="Class Categorical Relational Cohesion" name="CCRC" value="0,0"/>
                 <Metric description="Afferent Coupling" name="Ca" value="0"/>
                 <Metric description="Efferent Coupling" name="Ce" value="0"/>
-                <Metric description="Number of Classes" name="NOC" value="1"/>
+                <Metric description="Number of Classes" name="NOC" value="1"/>L
                 <Metric description="Number of Interfaces and Abstract Classes" name="NOI" value="0"/>
                 <Metric description="Package Relative System Complexity" name="PkgRCi" value="1,0"/>
                 <Metric description="Package Total System Complexity" name="PkgTCi" value="1,0"/>
