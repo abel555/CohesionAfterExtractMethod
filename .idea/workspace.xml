@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CouplingAndCOhesionValuesBeforeAndAfter.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" afterDir="false" />
@@ -9,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.project" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.project" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/HoloEverywhere" beforeDir="false" afterPath="$PROJECT_DIR$/emp/HoloEverywhere" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/android-beacon-library" beforeDir="false" afterPath="$PROJECT_DIR$/emp/android-beacon-library" afterDir="false" />
@@ -350,8 +352,11 @@
       <change beforePath="$PROJECT_DIR$/emp/karate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CouplingFactorCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CouplingFactorCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/CouplingFactorCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/CouplingFactorCalculator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -370,32 +375,48 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CouplingAndCOhesionValuesBeforeAndAfter.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3690">
+              <caret line="246" selection-end-line="260" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="84" lean-forward="true" selection-start-line="82" selection-start-column="19" selection-end-line="84" />
+            <state relative-caret-position="413">
+              <caret line="135" selection-start-line="135" selection-end-line="135" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1705#1706#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
+                <element signature="e#2496#2510#0" expanded="true" />
+                <element signature="e#2628#4173#0" expanded="true" />
+                <element signature="e#4172#4173#0" expanded="true" />
+                <element signature="e#6570#6571#0" expanded="true" />
+                <element signature="e#6634#6635#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/RobertMartinCouplingCalculator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CouplingFactorCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="67">
+              <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+              <folding>
+                <element signature="e#412#413#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -403,22 +424,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
+            <state relative-caret-position="55">
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/SpecializationIndexCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="119" column="2" selection-start-line="119" selection-start-column="2" selection-end-line="119" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#717#718#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -434,19 +444,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/output/Outputter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/executive/CommandLineExecutive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="-879">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/output/XMLOutputter.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pruebas.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="53">
+              <caret line="52" column="93" lean-forward="true" selection-start-line="52" selection-start-column="93" selection-end-line="52" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -489,6 +499,7 @@
         <option value="$PROJECT_DIR$/src/main/java/jasome/metrics/Metric.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/SpecializationIndexCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/executive/ProcessorFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CouplingFactorCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" />
@@ -519,7 +530,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="44" />
     <option name="y" value="23" />
-    <option name="width" value="1575" />
+    <option name="width" value="1535" />
     <option name="height" value="954" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -529,8 +540,63 @@
     </navigator>
     <panes>
       <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="jasome" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="jasome" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="executive" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -609,13 +675,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90658000" />
+    <option name="totallyTimeSpent" value="96793000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="954" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21855922" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2942613" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -624,14 +698,14 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38283062" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39675173" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39907193" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32946634" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32946634" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006631" side_tool="true" weight="0.32830626" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49933687" weight="0.32830626" />
@@ -681,24 +755,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ClassInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CalculationUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/value/NumericValueSummaryStatistics.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/util/ProjectMetadata.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/Calculator.java" />
@@ -736,13 +792,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/input/Project.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/calculators/TotalLinesOfCodeCalculator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/value/Coerce.java" />
-    <entry file="file://$PROJECT_DIR$/pruebas.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/calculators/SpecializationIndexCalculator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/calculators/RawTotalLinesOfCodeCalculator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/calculators/PackageAggregatorCalculator.java" />
@@ -766,9 +815,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/RawTotalLinesOfCodeCalculator.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/executive/CommandLineExecutive.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/value/NumericValue.java">
@@ -812,30 +858,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/RobertMartinCouplingCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="61" column="71" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -846,13 +872,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/executive/ProcessorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -870,13 +889,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/executive/ProcessorFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="84" lean-forward="true" selection-start-line="82" selection-start-column="19" selection-end-line="84" />
+        <state relative-caret-position="105">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/executive/CommandLineExecutive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-879">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CouplingFactorCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding>
+            <element signature="e#412#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#2496#2510#0" expanded="true" />
+            <element signature="e#2628#4173#0" expanded="true" />
+            <element signature="e#4172#4173#0" expanded="true" />
+            <element signature="e#6570#6571#0" expanded="true" />
+            <element signature="e#6634#6635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CouplingAndCOhesionValuesBeforeAndAfter.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3690">
+          <caret line="246" selection-end-line="260" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pruebas.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="52" column="93" lean-forward="true" selection-start-line="52" selection-start-column="93" selection-end-line="52" selection-end-column="93" />
         </state>
       </provider>
     </entry>

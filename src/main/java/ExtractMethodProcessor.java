@@ -9,6 +9,8 @@ import org.jasome.executive.ProcessorFactory;
 import org.jasome.input.FileScanner;
 import org.jasome.input.Package;
 import org.jasome.input.Project;
+import org.jasome.input.Type;
+import org.jasome.metrics.calculators.CouplingFactorCalculator;
 import org.jasome.metrics.calculators.LackOfCohesionMethodsCalculator;
 import org.jasome.output.XMLOutputter;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
@@ -41,7 +43,8 @@ public class ExtractMethodProcessor {
 
     public List<String> repos;
     private static final String UTF_8 = "utf-8";
-    LackOfCohesionMethodsCalculator calculator = new LackOfCohesionMethodsCalculator();
+    LackOfCohesionMethodsCalculator lcomCalculator = new LackOfCohesionMethodsCalculator();
+    CouplingFactorCalculator couplingFactorCalculator = new CouplingFactorCalculator();
 
     public ExtractMethodProcessor(String path) {
         this.repos = readUrlRepos(path);
@@ -109,22 +112,33 @@ public class ExtractMethodProcessor {
         for (RefactorInfo refInfo : extractMethodsInfoList) {
             ClassInfo resultAfter = new ClassInfo();
             resultAfter.setMethodName(refInfo.getMethodName());
+            String toWriteBefore = null;
+            String toWriteAfter;
             String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
+            try {
+                gitService.checkout(repo, refInfo.getCommitIdBefore());
+                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(0));
+
+                toWriteBefore = classFileBefore + ";" + refInfo.getCommitIdBefore() + ";" + hackedJasome(classFileBefore);
+            }
+            catch (Exception e) {
+                System.out.println(e);
+            }
             try {
                 gitService.checkout(repo, refInfo.getCommitIdAfter());
                 String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(0));
-                hackedJasome(classFileAfter, refInfo.getMethodName(), refInfo.getCommitIdAfter());
-/*
-                try(FileWriter fw = new FileWriter("CohesionValuesBeforeAndAfter.txt", true);
+                toWriteAfter = classFileAfter + ";" + refInfo.getCommitIdAfter() + ";" + hackedJasome(classFileAfter);
+
+                try(FileWriter fw = new FileWriter("CouplingAndCOhesionValuesBeforeAndAfter.txt", true);
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter out = new PrintWriter(bw))
                 {
 
-                        //out.println(towrite + ";" + classFileAfter + ";" + refInfo.getMethodName() + ";"+ cohesionAfter);
+                        out.println(refInfo.getMethodName() + ";" + toWriteBefore + ";" + toWriteAfter );
 
                 } catch (IOException e) {
                     //exception handling left as an exercise for the reader
-                }*/
+                }
 
             }
             catch (Exception e) {
@@ -263,7 +277,7 @@ public class ExtractMethodProcessor {
         return null;
     }
 
-    public void hackedJasome(String dir, String methodName, String commitAfter) {
+    public String hackedJasome(String dir) {
 
         File scanDir = new File(dir).getAbsoluteFile();
         FileScanner scanner = new FileScanner(scanDir);
@@ -275,10 +289,14 @@ public class ExtractMethodProcessor {
         Project scannerOutput = scanner.scan();
         ProcessorFactory.getProcessor().process(scannerOutput);
 
-        scannerOutput.getPackages().forEach(aPackage -> {aPackage.getTypes().forEach(type ->
-                    calculator.calculate(type, methodName, dir, commitAfter));
-        });
+        scannerOutput.getPackages().forEach(aPackage -> aPackage.getTypes().forEach(type -> {
+            couplingFactorCalculator.calculate(type);
+            lcomCalculator.calculate(type);
+        }
 
+
+        ));
+         return couplingFactorCalculator.getMetricValue().toString() + ";" + lcomCalculator.getMetricValue().toString();
 
         /*
        // System.out.println(scannerOutput);
@@ -301,6 +319,9 @@ public class ExtractMethodProcessor {
         } catch (TransformerException e) {
             e.printStackTrace();
         }*/
+    }
+    public void metricToExecute(Type type){
+
     }
 
 }

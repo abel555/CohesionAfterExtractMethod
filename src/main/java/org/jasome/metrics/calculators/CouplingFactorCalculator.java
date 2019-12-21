@@ -9,9 +9,18 @@ import org.jasome.metrics.value.NumericValue;
 
 import java.util.Set;
 
-public class CouplingFactorCalculator implements Calculator<Type> {
-    @Override
+public class CouplingFactorCalculator{
+    public NumericValue getMetricValue() {
+        return metricValue;
+    }
+
+    NumericValue metricValue;
+
+
     public Set<Metric> calculate(Type type) {
+
+
+
         Graph<Type> unchecked = type.getParentPackage().getParentProject().getMetadata().getClientGraph();
         
         Set<Type> clientRelationships = unchecked.successors(type);
@@ -26,6 +35,7 @@ public class CouplingFactorCalculator implements Calculator<Type> {
                 ;
 
         if(totalPossibleRelationships.isGreaterThan(NumericValue.ZERO)) {
+            metricValue = NumericValue.of(clientRelationships.size()+serverRelationships.size()).divide(totalPossibleRelationships);
             metricBuilder.add(Metric.of("CF", "Coupling Factor", NumericValue.of(clientRelationships.size()+serverRelationships.size()).divide(totalPossibleRelationships)));
         }
 
