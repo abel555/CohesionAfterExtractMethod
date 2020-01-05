@@ -15,12 +15,12 @@ public class ExtractMethodMiner {
     public static void main(String[] args) throws Exception {
         ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("/Users/Abel/Documents/projects-urls.txt");
        //System.out.println(extractMethodProcessor.repos);
-       for (String repo:extractMethodProcessor.repos ) {
+      for (String repo:extractMethodProcessor.repos ) {
             extractMethodProcessor.analizeProjects(repo);
 
        }
 
-       //extractMethodProcessor.analizeProjects(extractMethodProcessor.repos.get(2));
+       //extractMethodProcessor.analizeProjects(extractMethodProcessor.repos.get(4));
      //extractMethodProcessor.executeJasome("/Users/Abel/Documents/ClasesU/Arqui/ArquiVoiceMail/src/Main.java", "pruebas.xml");
 
 
