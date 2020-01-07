@@ -19,8 +19,7 @@ public class ExtractMethodMiner {
             extractMethodProcessor.analizeProjects(repo);
 
        }
-
-       //extractMethodProcessor.analizeProjects(extractMethodProcessor.repos.get(4));
+     //  extractMethodProcessor.analizeProjects(extractMethodProcessor.repos.get(4));
      //extractMethodProcessor.executeJasome("/Users/Abel/Documents/ClasesU/Arqui/ArquiVoiceMail/src/Main.java", "pruebas.xml");
 
 

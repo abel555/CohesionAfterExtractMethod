@@ -29,47 +29,7 @@ import java.util.stream.Stream;
 public class ExtractMethodProcessor {
     List<String> metricsList =  Arrays.asList(
 
-            "AHF",
-     "AIF",
-    "Aa",
-    "Ad",
-    "Ai",
-     "Ait",
-    "Ao",
-    "Av","ClRCi",
-     "ClTCi",
-     "DIT",
-     "HMd",
-     "HMi",
-    "LCOM*",
-     "MHF",
-     "MIF",
-    "Ma",
-    "Md",
-    "Mi",
-     "Mit",
-    "Mo",
-    "NF",
-    "NM",
-     "NMA",
-     "NMI",
-     "NOA",
-    "NOCh",
-     "NOD",
-     "NOL",
-    "NOPa",
-    "NORM",
-     "NPF",
-     "NPM",
-     "NSF",
-     "NSM",
-     "PMR",
-     "PMd",
-     "PMi",
-     "RTLOC",
-     "SIX",
-    "TLOC",
-     "WMC");
+     "Ci", "Di", "Fin", "Fout", "IOVars", "MCLC", "NBD", "NCOMP", "NOP", "NVAR", "Si", "TLOC", "VG");
 
 
     public List<String> repos;
@@ -112,7 +72,7 @@ public class ExtractMethodProcessor {
                 RefactorInfo extractMethodsInfo = new RefactorInfo();
                 for (Refactoring ref : refactorings) {
                     if(ref.getRefactoringType() == RefactoringType.EXTRACT_OPERATION) {
-                        setUpMethodInfo(commitId, ref, extractMethodsInfo, lastCommitId[0], "");
+                        setUpMethodInfo(commitId, ref, extractMethodsInfo, lastCommitId[0], "", "");
                     }
                 }
                 if(extractMethodsInfo.getCommitIdAfter() != null) {
@@ -185,8 +145,9 @@ public class ExtractMethodProcessor {
                     if(ref.getRefactoringType() == RefactoringType.EXTRACT_OPERATION) {
                         ExtractOperationRefactoring nn= (ExtractOperationRefactoring) ref;
 
-                        setUpMethodInfo(commitId, ref, extractMethodsInfo, lastCommitId[0], nn.getExtractedOperation().getName());
-
+                        setUpMethodInfo(commitId, ref, extractMethodsInfo, lastCommitId[0], nn.getExtractedOperation().getName(), nn.getSourceOperationAfterExtraction().getName());
+                        System.out.println(nn.getExtractedOperation().getName());//nombre del metodo extrahido
+                        System.out.println(nn.getSourceOperationBeforeExtraction()); //nombre del metodo de donde se extrayo el codigo
                         //String stadistics = nn.getExtractedOperation().getParameters() + ";" + nn.getExtractedOperation().getVisibility() + ";" + nn.getExtractedOperation().getReturnParameter();
                         //System.out.println(stadistics);
                     }
@@ -212,7 +173,7 @@ public class ExtractMethodProcessor {
             try {
                 gitService.checkout(repo, refInfo.getCommitIdBefore());
                 String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(0));
-                String cohesionBefore = executeJasome(classFileBefore, "MetricsBeforeExtractV2.xml");
+                String cohesionBefore = executeJasomeBefore(classFileBefore, refInfo.getBaseMethodName(), "MetricsBeforeExtractV2.xml");
                 coheBefore = cohesionBefore;
 
                 //  System.out.println(cohesionBefore);
@@ -232,9 +193,9 @@ public class ExtractMethodProcessor {
             try {
                 gitService.checkout(repo, refInfo.getCommitIdAfter());
                 String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(0));
-                String cohesionAfter = executeJasome(classFileAfter, "MetricsAfterExtractV2.xml");
+                String cohesionAfter = executeJasomeAfter(classFileAfter, refInfo.getBaseMethodName(), refInfo.getMethodName(), "MetricsAfterExtractV2.xml");
                // System.out.println(cohesionAfter);
-                try(FileWriter fw = new FileWriter("CohesionValuesBeforeAndAfterV2.txt", true);
+                try(FileWriter fw = new FileWriter("CohesionValuesBeforeAndAfterV3.txt", true);
                     BufferedWriter bw = new BufferedWriter(fw);
                     PrintWriter out = new PrintWriter(bw))
                 {
@@ -263,12 +224,13 @@ public class ExtractMethodProcessor {
         }
     }
 
-    private void setUpMethodInfo(String commitId, Refactoring ref, RefactorInfo extractMethodsInfo, String commitIdBefore, String methodName) {
+    private void setUpMethodInfo(String commitId, Refactoring ref, RefactorInfo extractMethodsInfo, String commitIdBefore, String methodName, String originMethodName) {
         extractMethodsInfo.setCommitIdBefore(commitIdBefore);
         extractMethodsInfo.setCommitIdAfter(commitId);
         extractMethodsInfo.addClassBefore(ref.getInvolvedClassesBeforeRefactoring().get(0));
         extractMethodsInfo.addClassAfter(ref.getInvolvedClassesAfterRefactoring().get(0));
         extractMethodsInfo.setMethodName(methodName);
+        extractMethodsInfo.setBaseMethodName(originMethodName);
 
     }
     public String getJavaFIle(Path root, String clas){
@@ -314,7 +276,7 @@ public class ExtractMethodProcessor {
             System.out.println(String.format("Error while processing the file %s.", path));
         }
     }
-    public String executeJasome(String path, String fileName) {
+    public String executeJasomeBefore(String path, String originMethod, String fileName) {
         String metrics = "";
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command("/Users/Abel/Documents/ClasesU/Seminario/jasome-0.6.8-alpha/bin/jasome", path);
@@ -329,7 +291,6 @@ public class ExtractMethodProcessor {
                 output.append(line + "\n");
             }
 
-
             int exitVal = process.waitFor();
             if (exitVal == 0) {
 
@@ -339,14 +300,18 @@ public class ExtractMethodProcessor {
                 for (String metric:metricsList) {
                     boolean flag = false;
                     for (int i = 0; i < list.getLength(); i++) {
-                        if (list.item(i).getParentNode().getParentNode().getNodeName() == "Class") {
-                            Element element = (Element) list.item(i);
+                        if (list.item(i).getParentNode().getParentNode().getNodeName() == "Method") {
+                            Element ancestor = (Element) list.item(i).getParentNode().getParentNode();
+                            if (ancestor.getAttribute("name").contains(originMethod)) {
+                                Element element = (Element) list.item(i);
 
-                            if(metric.equals(element.getAttribute("name"))){
-                                metrics = metrics + element.getAttribute("value") + ";";
-                                flag = true;
-                                break;
+                                if(metric.equals(element.getAttribute("name"))){
+                                    metrics = metrics + element.getAttribute("value") + ";";
+                                    flag = true;
+                                    break;
+                                }
                             }
+
 
 
 
@@ -358,19 +323,6 @@ public class ExtractMethodProcessor {
                     }
                 }
 
-
-
-               /* System.out.println("Success!");
-                //System.out.println(output);
-                //System.exit(0);
-                try(FileWriter fw = new FileWriter(fileName, true);
-                    BufferedWriter bw = new BufferedWriter(fw);
-                    PrintWriter out = new PrintWriter(bw))
-                {
-                    out.println(output);
-                } catch (IOException e) {
-                    //exception handling left as an exercise for the reader
-                }*/
             } else {
                 //abnormal...
             }
@@ -381,6 +333,74 @@ public class ExtractMethodProcessor {
             e.printStackTrace();
         }
         return metrics;
+    }
+    public String executeJasomeAfter(String path, String originMethod, String extractedMethod, String fileName) {
+        String metrics = "";
+        String metrics2 = "extractedMethod;";
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        processBuilder.command("/Users/Abel/Documents/ClasesU/Seminario/jasome-0.6.8-alpha/bin/jasome", path);
+        try {
+
+            Process process = processBuilder.start();
+            StringBuilder output = new StringBuilder();
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line + "\n");
+            }
+
+            int exitVal = process.waitFor();
+            if (exitVal == 0) {
+
+
+                Document doc = convertStringToXMLDocument(output.toString());
+                NodeList list = doc.getElementsByTagName("Metric");
+                for (String metric:metricsList) {
+                    boolean flag = false;
+                    for (int i = 0; i < list.getLength(); i++) {
+                        if (list.item(i).getParentNode().getParentNode().getNodeName() == "Method") {
+                            Element ancestor = (Element) list.item(i).getParentNode().getParentNode();
+                            if (ancestor.getAttribute("name").contains(originMethod)) {
+                                Element element = (Element) list.item(i);
+
+                                if(metric.equals(element.getAttribute("name"))){
+                                    metrics = metrics + element.getAttribute("value") + ";";
+                                    flag = true;
+                                   // break;
+                                }
+                            }
+                            if (ancestor.getAttribute("name").contains(extractedMethod)) {
+                                Element element = (Element) list.item(i);
+
+                                if(metric.equals(element.getAttribute("name"))){
+                                    metrics2 = metrics2 + element.getAttribute("value") + ";";
+                                    flag = true;
+
+                                }
+                            }
+
+
+
+
+                        }
+
+                    }
+                    if(!flag){
+                        metrics = metrics + "null" + ";";
+                    }
+                }
+
+            } else {
+                //abnormal...
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return metrics + metrics2;
     }
 
     private Document convertStringToXMLDocument(String xmlString)
