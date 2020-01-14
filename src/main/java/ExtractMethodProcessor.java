@@ -1,19 +1,13 @@
-import com.github.javaparser.Position;
-import com.github.javaparser.ast.CompilationUnit;
 import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.eclipse.jgit.lib.Repository;
-import org.jasome.executive.CommandLineExecutive;
 import org.jasome.executive.ProcessorFactory;
 import org.jasome.input.FileScanner;
 import org.jasome.input.Method;
-import org.jasome.input.Package;
 import org.jasome.input.Project;
 import org.jasome.metrics.calculators.*;
-import org.jasome.output.XMLOutputter;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.refactoringminer.api.*;
 import org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl;
 import org.refactoringminer.util.GitServiceImpl;
@@ -24,18 +18,12 @@ import org.xml.sax.InputSource;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.transform.*;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import java.io.*;
-import java.lang.reflect.Field;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -61,6 +49,7 @@ public class ExtractMethodProcessor {
     }
 
     public void analizeProjects(String rep) throws Exception {
+
         GitService gitService = new GitServiceImpl();
         final boolean[] saveCommit = {false};
         final int[] pos = new int[1];
@@ -68,20 +57,28 @@ public class ExtractMethodProcessor {
         Repository repo = gitService.cloneIfNotExists("emp/" + FilenameUtils.getBaseName(rep), rep);
         List<RefactorInfo> extractMethodsInfoList = new ArrayList<RefactorInfo>();
         final String[] lastCommitId = new String[1];
+
         try {
+
             miner.detectAll(repo, "master", new RefactoringHandler() {
                 @Override
                 public void handle(String commitId, List<Refactoring> refactorings) {
+
                 if (saveCommit[0]){
                     extractMethodsInfoList.get(pos[0]).setCommitIdBefore(commitId);
                     saveCommit[0] = false;
                 }
-                RefactorInfo extractMethodsInfo = null;
+                RefactorInfo extractMethodsInfo = new RefactorInfo();
                 for (Refactoring ref : refactorings) {
-                    if(ref.getRefactoringType() == RefactoringType.EXTRACT_OPERATION) {
-                        extractMethodsInfo = new RefactorInfo(lastCommitId[0], commitId, ref);
-                        ExtractOperationRefactoring nn= (ExtractOperationRefactoring) ref;
+                    if(ref.getRefactoringType().equals(RefactoringType.EXTRACT_OPERATION)) {
 
+                        ExtractOperationRefactoring nn= (ExtractOperationRefactoring) ref;
+                        System.out.println(repo);
+                        System.out.println(commitId);
+                        System.out.println(nn.getExtractedOperation().getName());
+                        System.out.println(nn.getSourceOperationCodeRangeBeforeExtraction().getStartLine());
+                        System.out.println(nn.getSourceOperationBeforeExtraction().getName());
+                        extractMethodsInfo = new RefactorInfo(lastCommitId[0], commitId, ref);
                     }
                 }
                 if(extractMethodsInfo.getCommitIdAfter() != null) {
@@ -97,13 +94,13 @@ public class ExtractMethodProcessor {
             //System.out.println(e);
         }
 
-
+        String toWrite="";
         for (RefactorInfo refInfo : extractMethodsInfoList) {
             String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
             try {
                 gitService.checkout(repo, refInfo.getCommitIdBefore());
                 String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore());
-                hackedJasome(classFileBefore, refInfo);
+                toWrite = hackedJasome(classFileBefore, refInfo.getOriginMethodStarline(), refInfo.getOriginMethodName());
 
             }
             catch (Exception e) {
@@ -112,12 +109,14 @@ public class ExtractMethodProcessor {
             try {
                 gitService.checkout(repo, refInfo.getCommitIdAfter());
                 String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter());
-                hackedJasome(classFileAfter, refInfo);
+                toWrite += hackedJasome(classFileAfter, refInfo.getOriginMethodStarlineAfter(), refInfo.getOriginMethodNameAfter());
+                toWrite += hackedJasome(classFileAfter, refInfo.getExtractMethodStarLine(), refInfo.getExtractedMethodName());
 
             }
             catch (Exception e) {
                 //System.out.println(e);
             }
+
 
 
 
@@ -131,7 +130,7 @@ public class ExtractMethodProcessor {
         extractMethodsInfo.setCommitIdAfter(commitId);
         extractMethodsInfo.setClassBefore(ref.getInvolvedClassesBeforeRefactoring().get(0));
         extractMethodsInfo.setClassAfter(ref.getInvolvedClassesAfterRefactoring().get(0));
-        extractMethodsInfo.setMethodName(methodName);
+        extractMethodsInfo.setExtractedMethodName(methodName);
 
 
     }

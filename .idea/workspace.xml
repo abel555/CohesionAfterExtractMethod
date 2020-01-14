@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/sample/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/sample/project.properties" afterDir="false" />
@@ -11,7 +10,7 @@
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android-beacon-library" beforeDir="false" afterPath="$PROJECT_DIR$/emp/android-beacon-library" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/jmonkeyengine/engine/src/core/com/jme3/util/BufferUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/jmonkeyengine/engine/src/core/com/jme3/util/BufferUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/.travis.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/_config.yml" beforeDir="false" />
@@ -348,16 +347,12 @@
       <change beforePath="$PROJECT_DIR$/emp/karate/karate-netty/src/test/java/com/intuit/karate/netty/MainWinTestRunner.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/os-project-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/os-project-logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/nutz/doc/manual/history/1_b_35.man" beforeDir="false" afterPath="$PROJECT_DIR$/emp/nutz/doc/manual/history/1_b_35.man" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/nutz/doc/manual/nutz_release_notes.man" beforeDir="false" afterPath="$PROJECT_DIR$/emp/nutz/doc/manual/nutz_release_notes.man" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/plantuml/src/ext/plantuml/com/google/zxing/ReaderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml/src/ext/plantuml/com/google/zxing/ReaderException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RefactorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RefactorInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/FanCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/FanCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/McclureCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/McclureCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/NestedBlockDepthCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/NestedBlockDepthCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodMiner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -372,53 +367,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+            <state relative-caret-position="294">
+              <caret line="108" column="17" lean-forward="true" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1773#1774#0" expanded="true" />
+                <element signature="e#1820#1821#0" expanded="true" />
+                <element signature="e#2564#2578#0" expanded="true" />
+                <element signature="e#2693#3775#0" expanded="true" />
+                <element signature="e#3774#3775#0" expanded="true" />
+                <element signature="e#6085#6086#0" expanded="true" />
+                <element signature="e#6149#6150#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/refactoringminer/RefactoringMiner/1.0/RefactoringMiner-1.0.jar!/org/refactoringminer/api/RefactoringHandler.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/MethodAndAttributeInheritanceCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/NestedBlockDepthCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/McclureCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="61" column="146" selection-start-line="61" selection-start-column="146" selection-end-line="61" selection-end-column="146" />
+            <state relative-caret-position="105">
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -426,50 +407,49 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/RefactorInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="82" />
+            <state relative-caret-position="140">
+              <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#555#556#0" expanded="true" />
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#627#628#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+                <element signature="e#849#850#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#964#965#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+                <element signature="e#1060#1061#0" expanded="true" />
+                <element signature="e#1102#1103#0" expanded="true" />
+                <element signature="e#1136#1137#0" expanded="true" />
+                <element signature="e#1195#1196#0" expanded="true" />
+                <element signature="e#1241#1242#0" expanded="true" />
                 <element signature="e#1396#1397#0" expanded="true" />
                 <element signature="e#1427#1428#0" expanded="true" />
-                <element signature="e#1472#1473#0" expanded="true" />
-                <element signature="e#1512#1513#0" expanded="true" />
+                <element signature="e#1614#1615#0" expanded="true" />
+                <element signature="e#1657#1658#0" expanded="true" />
+                <element signature="e#1726#1727#0" expanded="true" />
+                <element signature="e#1790#1791#0" expanded="true" />
+                <element signature="e#1833#1834#0" expanded="true" />
+                <element signature="e#1872#1873#0" expanded="true" />
+                <element signature="e#1936#1937#0" expanded="true" />
+                <element signature="e#1992#1993#0" expanded="true" />
+                <element signature="e#1678#1679#0" expanded="true" />
+                <element signature="e#1726#1727#0" expanded="true" />
+                <element signature="e#1927#1928#0" expanded="true" />
+                <element signature="e#1971#1972#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LinkCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/FanCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CouplingFactorCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="42" column="12" selection-start-line="42" selection-start-column="12" selection-end-line="42" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -517,14 +497,14 @@
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/SpecializationIndexCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/executive/ProcessorFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/MethodAndAttributeInheritanceCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/FanCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/McclureCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/NestedBlockDepthCalculator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/RefactorInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" />
         <option value="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RefactorInfo.java" />
       </list>
     </option>
   </component>
@@ -584,44 +564,6 @@
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="jasome" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="jasome" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="metrics" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="extractmethod" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="extractmethod" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="org" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="jasome" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="metrics" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="calculators" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -709,7 +651,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123655000" />
+    <option name="totallyTimeSpent" value="125603000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -724,7 +666,7 @@
     <frame x="0" y="23" width="1680" height="954" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23992674" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23992674" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -732,8 +674,8 @@
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32946634" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38283062" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32946634" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38283062" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39907193" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -790,7 +732,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/calculators/SpecializationIndexCalculator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/calculators/RawTotalLinesOfCodeCalculator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/calculators/PackageAggregatorCalculator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/jasome/metrics/calculators/NumberOfParametersCalculator.java" />
@@ -875,13 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="15" column="85" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
@@ -1081,25 +1015,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/refactoringminer/RefactoringMiner/1.0/RefactoringMiner-1.0.jar!/org/refactoringminer/api/RefactoringHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RefactorInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="76" column="7" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="82" />
+        <state relative-caret-position="140">
+          <caret line="56" column="21" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1102#1103#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
             <element signature="e#1396#1397#0" expanded="true" />
             <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1512#1513#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+            <element signature="e#1790#1791#0" expanded="true" />
+            <element signature="e#1833#1834#0" expanded="true" />
+            <element signature="e#1872#1873#0" expanded="true" />
+            <element signature="e#1936#1937#0" expanded="true" />
+            <element signature="e#1992#1993#0" expanded="true" />
+            <element signature="e#1678#1679#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+            <element signature="e#1927#1928#0" expanded="true" />
+            <element signature="e#1971#1972#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
+        <state relative-caret-position="294">
+          <caret line="108" column="17" lean-forward="true" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="e#2564#2578#0" expanded="true" />
+            <element signature="e#2693#3775#0" expanded="true" />
+            <element signature="e#3774#3775#0" expanded="true" />
+            <element signature="e#6085#6086#0" expanded="true" />
+            <element signature="e#6149#6150#0" expanded="true" />
           </folding>
         </state>
       </provider>

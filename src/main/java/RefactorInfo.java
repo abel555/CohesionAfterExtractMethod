@@ -1,9 +1,6 @@
 import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
 import org.refactoringminer.api.Refactoring;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class RefactorInfo {
 
     public String getCommitIdBefore() {
@@ -39,12 +36,12 @@ public class RefactorInfo {
     }
 
 
-    public String getMethodName() {
-        return methodName;
+    public String getExtractedMethodName() {
+        return extractedMethodName;
     }
 
-    public void setMethodName(String methodName) {
-        this.methodName = methodName;
+    public void setExtractedMethodName(String extractedMethodName) {
+        this.extractedMethodName = extractedMethodName;
     }
     public Refactoring getRefactoring() {
         return refactoring;
@@ -57,17 +54,55 @@ public class RefactorInfo {
     String commitIdAfter;
     String classBefore;
     String classAfter;
-    String methodName;
+    String extractedMethodName;
 
-    public int getStarLine() {
-        return starLine;
+    public int getExtractMethodStarLine() {
+        return extractMethodStarLine;
     }
 
-    public void setStarLine(int starLine) {
-        this.starLine = starLine;
+    public void setExtractMethodStarLine(int extractMethodStarLine) {
+        this.extractMethodStarLine = extractMethodStarLine;
     }
 
-    int starLine;
+    int extractMethodStarLine;
+
+    public int getOriginMethodStarline() {
+        return originMethodStarline;
+    }
+
+    public void setOriginMethodStarline(int originMethodStarline) {
+        this.originMethodStarline = originMethodStarline;
+    }
+
+    public String getOriginMethodName() {
+        return originMethodName;
+    }
+
+    public void setOriginMethodName(String originMethodName) {
+        this.originMethodName = originMethodName;
+    }
+
+    int originMethodStarline;
+    String originMethodName;
+
+    public int getOriginMethodStarlineAfter() {
+        return originMethodStarlineAfter;
+    }
+
+    public void setOriginMethodStarlineAfter(int originMethodStarlineAfter) {
+        this.originMethodStarlineAfter = originMethodStarlineAfter;
+    }
+
+    public String getOriginMethodNameAfter() {
+        return originMethodNameAfter;
+    }
+
+    public void setOriginMethodNameAfter(String originMethodNameAfter) {
+        this.originMethodNameAfter = originMethodNameAfter;
+    }
+
+    int originMethodStarlineAfter;
+    String originMethodNameAfter;
 
 
 
@@ -79,8 +114,15 @@ public class RefactorInfo {
         this.commitIdAfter = commitIdAfter;
         this.classBefore = refactoring.getInvolvedClassesBeforeRefactoring().get(0);
         this.classAfter = refactoring.getInvolvedClassesAfterRefactoring().get(0);
-        this.methodName =  nn.getExtractedOperation().getName();
-        this.starLine = nn.getExtractedOperationCodeRange().getStartLine();
+        this.extractedMethodName =  nn.getExtractedOperation().getName();
+        this.extractMethodStarLine = nn.getExtractedOperationCodeRange().getStartLine();
+        this.originMethodStarline = nn.getSourceOperationCodeRangeBeforeExtraction().getStartLine();
+        this.originMethodName = nn.getSourceOperationBeforeExtraction().getName();
+        this.originMethodStarlineAfter = nn.getSourceOperationCodeRangeAfterExtraction().getStartLine();
+        this.originMethodNameAfter = nn.getSourceOperationAfterExtraction().getName();
+
+
+
 
 
     }
