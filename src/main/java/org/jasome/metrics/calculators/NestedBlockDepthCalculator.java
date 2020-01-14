@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.OptionalInt;
 import java.util.Set;
 
-public class NestedBlockDepthCalculator implements Calculator<Method> {
-    @Override
-    public Set<Metric> calculate(Method method) {
+public class NestedBlockDepthCalculator {
+
+    public String calculate(Method method) {
         List<BlockStmt> blocks = method.getSource().getNodesByType(BlockStmt.class);
         List<SwitchEntryStmt> switchEntries = method.getSource().getNodesByType(SwitchEntryStmt.class);
 
@@ -62,6 +62,7 @@ public class NestedBlockDepthCalculator implements Calculator<Method> {
             return i;
         }).max();
 
-        return ImmutableSet.of(Metric.of("NBD", "Nested Block Depth", maxDepth.orElse(1)));
+       // return ImmutableSet.of(Metric.of("NBD", "Nested Block Depth", maxDepth.orElse(1)));
+        return maxDepth.orElse(1) + ";";
     }
 }

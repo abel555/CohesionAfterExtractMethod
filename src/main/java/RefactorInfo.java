@@ -1,3 +1,6 @@
+import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
+import org.refactoringminer.api.Refactoring;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,28 +22,22 @@ public class RefactorInfo {
         this.commitIdAfter = commitIdAfter;
     }
 
-    public List<String> getClassBefore() {
+    public String getClassBefore() {
         return classBefore;
     }
 
-    public void setClassBefore(List<String> classBefore) {
+    public void setClassBefore(String classBefore) {
         this.classBefore = classBefore;
     }
 
-    public List<String> getClassAfter() {
+    public String getClassAfter() {
         return classAfter;
     }
 
-    public void setClassAfter(List<String> classAfter) {
+    public void setClassAfter(String classAfter) {
         this.classAfter = classAfter;
     }
 
-    public void addClassBefore(String classToAdd) {
-        classBefore.add(classToAdd);
-    }
-    public void addClassAfter(String classToAdd) {
-        classAfter.add(classToAdd);
-    }
 
     public String getMethodName() {
         return methodName;
@@ -49,25 +46,49 @@ public class RefactorInfo {
     public void setMethodName(String methodName) {
         this.methodName = methodName;
     }
+    public Refactoring getRefactoring() {
+        return refactoring;
+    }
 
+    public void setRefactoring(Refactoring refactoring) {
+        this.refactoring = refactoring;
+    }
     String commitIdBefore;
     String commitIdAfter;
-    List<String> classBefore;
-    List<String> classAfter;
+    String classBefore;
+    String classAfter;
     String methodName;
 
-    public RefactorInfo(String commitIdBefore, String commitIdAfter, List<String> classBefore, List<String> classAfter) {
+    public int getStarLine() {
+        return starLine;
+    }
+
+    public void setStarLine(int starLine) {
+        this.starLine = starLine;
+    }
+
+    int starLine;
+
+
+
+    Refactoring refactoring;
+
+    public RefactorInfo(String commitIdBefore, String commitIdAfter, Refactoring refactoring) {
+        ExtractOperationRefactoring nn= (ExtractOperationRefactoring) refactoring;
         this.commitIdBefore = commitIdBefore;
         this.commitIdAfter = commitIdAfter;
-        this.classBefore = classBefore;
-        this.classAfter = classAfter;
+        this.classBefore = refactoring.getInvolvedClassesBeforeRefactoring().get(0);
+        this.classAfter = refactoring.getInvolvedClassesAfterRefactoring().get(0);
+        this.methodName =  nn.getExtractedOperation().getName();
+        this.starLine = nn.getExtractedOperationCodeRange().getStartLine();
+
+
     }
 
 
 
 
     public RefactorInfo(){
-        classBefore = new ArrayList<>();
-        classAfter = new ArrayList<>();
+
     }
 }

@@ -16,9 +16,9 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class McclureCalculator implements Calculator<Method> {
-    @Override
-    public Set<Metric> calculate(Method method) {
+public class McclureCalculator{
+
+    public String calculate(Method method) {
         MethodDeclaration methodDeclaration = method.getSource();
 
         List<BinaryExpr> comparisons = methodDeclaration.findAll(BinaryExpr.class);
@@ -53,11 +53,12 @@ public class McclureCalculator implements Calculator<Method> {
         List<NameExpr> controlVariables = conditionalExprs.stream().flatMap(cond->cond.findAll(NameExpr.class).stream()).collect(Collectors.toList());
 
         Set<String> uniqueControlVariableNames = controlVariables.stream().map(NameExpr::getNameAsString).collect(Collectors.toSet());
-
+        /*
         return ImmutableSet.of(
                 Metric.of("NCOMP", "Number of Comparisons", comparisons.size()),
                 Metric.of("NVAR", "Number of Control Variables", uniqueControlVariableNames.size()),
                 Metric.of("MCLC", "McClure's Complexity Metric", uniqueControlVariableNames.size() + comparisons.size())
-        );
+        );*/
+        return comparisons.size() + ";" + uniqueControlVariableNames.size()  + ";" + uniqueControlVariableNames.size() + comparisons.size() + ";";
     }
 }

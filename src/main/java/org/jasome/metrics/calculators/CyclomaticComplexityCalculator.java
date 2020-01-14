@@ -16,9 +16,8 @@ import java.util.stream.Collectors;
 import static com.github.javaparser.ast.expr.BinaryExpr.Operator.AND;
 import static com.github.javaparser.ast.expr.BinaryExpr.Operator.OR;
 
-public class CyclomaticComplexityCalculator implements Calculator<Method> {
-    @Override
-    public Set<Metric> calculate(Method method) {
+public class CyclomaticComplexityCalculator{
+    public String calculate(Method method) {
         List<IfStmt> ifStmts = method.getSource().getNodesByType(IfStmt.class);
         List<ForStmt> forStmts = method.getSource().getNodesByType(ForStmt.class);
         List<WhileStmt> whileStmts = method.getSource().getNodesByType(WhileStmt.class);
@@ -41,7 +40,7 @@ public class CyclomaticComplexityCalculator implements Calculator<Method> {
                 andExprs.size() +
                 orExprs.size() +
                 1); //There's always at least 1 path through the method
-
-        return ImmutableSet.of(Metric.of("VG", "McCabe Cyclomatic Complexity", total));
+        //VG
+        return total + ";";
     }
 }
