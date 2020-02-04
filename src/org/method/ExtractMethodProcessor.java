@@ -26,6 +26,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -33,6 +34,13 @@ import java.util.stream.Stream;
 import com.github.javaparser.ast.body.Parameter;
 
 public class ExtractMethodProcessor {
+    List<String> metricsList =  Arrays.asList(
+
+            "AHF","AIF","Aa","Ad","Ai","Ait","Ao",
+            "Av","ClRCi","ClTCi","DIT","HMd","HMi","LCOM*",
+            "MHF","MIF","Ma","Md","Mi","Mit","Mo","NF","NM","NMA","NMI",
+            "NOA","NOCh","NOD","NOL","NOPa","NORM","NPF","NPM","NSF","NSM",
+            "PMR","PMd","PMi","RTLOC","SIX","TLOC","WMC");
 
     public String outPutFileName;
     private static final String UTF_8 = "utf-8";
@@ -100,10 +108,10 @@ public class ExtractMethodProcessor {
                     String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
 
                     toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
-                    toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
-
-
-                  toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
+                    String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdBefore();
+                    toWriteBefore.append( linkTocommit);
+                    toWriteBefore.append(";");
+                    toWriteBefore.append(executeJasome(classFileBefore));
 
                 }
                 catch (Exception e) {
@@ -114,18 +122,10 @@ public class ExtractMethodProcessor {
                     String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
                     StringBuilder toWrite = new StringBuilder();
                     toWrite.append(classFileAfter);toWrite.append(";");
-                    toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
-
-                    toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
-                    toWrite.append(refInfo.getExtractedMethodName().get(i));
-                    toWrite.append(";");
-                    toWrite.append(nn.getExtractedOperation().getParametersWithoutReturnType().toString());
-                    toWrite.append(";");
                     String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdAfter();
                     toWrite.append( linkTocommit);
                     toWrite.append(";");
-
-                    toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
+                    toWrite.append(executeJasome(classFileAfter));
                     try(FileWriter fw = new FileWriter(outPutFileName, true);
                         BufferedWriter bw = new BufferedWriter(fw);
                         PrintWriter out = new PrintWriter(bw))
@@ -174,8 +174,8 @@ public class ExtractMethodProcessor {
         return base.substring(base.lastIndexOf(".") + 1);
     }
 
-    public String executeJasome(String path, String fileName) {
-        String cohesion = null;
+    public String executeJasome(String path) {
+        String metrics = "";
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command("/Users/Abel/Documents/ClasesU/Seminario/jasome-0.6.8-alpha/bin/jasome", path);
         try {
@@ -188,21 +188,28 @@ public class ExtractMethodProcessor {
             while ((line = reader.readLine()) != null) {
                 output.append(line + "\n");
             }
-
-
             int exitVal = process.waitFor();
             if (exitVal == 0) {
-
-
                 Document doc = convertStringToXMLDocument(output.toString());
                 NodeList list = doc.getElementsByTagName("Metric");
-                for (int i=0; i<list.getLength(); i++) {
-                    Element element = (Element)list.item(i);
-                    if(element.getAttribute("name").equals("LCOM*")){
-                        cohesion = element.getAttribute("value");
+                for (String metric:metricsList) {
+                    boolean flag = false;
+                    for (int i = 0; i < list.getLength(); i++) {
+                        if (list.item(i).getParentNode().getParentNode().getNodeName() == "Class") {
+                            Element element = (Element) list.item(i);
+
+                            if(metric.equals(element.getAttribute("name"))){
+                                metrics = metrics + element.getAttribute("value") + ";";
+                                flag = true;
+                                break;
+                            }
+                        }
+
+                    }
+                    if(!flag){
+                        metrics = metrics + "null" + ";";
                     }
                 }
-
             } else {
                 //abnormal...
             }
@@ -212,7 +219,7 @@ public class ExtractMethodProcessor {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return cohesion;
+        return metrics;
     }
 
     private Document convertStringToXMLDocument(String xmlString)
