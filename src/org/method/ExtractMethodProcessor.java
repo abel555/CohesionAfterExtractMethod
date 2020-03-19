@@ -121,8 +121,10 @@ public class ExtractMethodProcessor {
                     toWrite.append(";");
                     toWrite.append(nn.getExtractedOperation().getParametersWithoutReturnType().toString());
                     toWrite.append(";");
-                    String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdAfter();
-                    toWrite.append( linkTocommit);
+                    String linkTocommit = rep.split("\\.git")[0] + "/commit/";
+                    toWrite.append( linkTocommit + refInfo.getCommitIdBefore());
+                    toWrite.append(";");
+                    toWrite.append( linkTocommit + refInfo.getCommitIdAfter());
                     toWrite.append(";");
 
                     toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));

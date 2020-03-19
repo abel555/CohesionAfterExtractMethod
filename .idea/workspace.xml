@@ -7,54 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/androidDexCompiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/extractmethod_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/flexCompiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/emp/android-beacon-library/.idea/android-beacon-library.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_javafaker_javafaker_0_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_mifmif_generex_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_1_jre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_4_jre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dk_brics_automaton_automaton_1_11_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_all_2_4_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_commands_3_9_500.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_commands_3_9_600.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_contenttype_3_7_400.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_contenttype_3_7_500.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_expressions_3_6_500.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_expressions_3_6_600.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_filesystem_1_7_500.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_filesystem_1_7_600.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_jobs_3_10_500.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_jobs_3_10_600.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_resources_3_13_500.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_resources_3_13_600.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_runtime_3_16_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_core_runtime_3_17_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_common_3_10_500.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_common_3_10_600.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_preferences_3_7_500.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_preferences_3_7_600.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_registry_3_8_500.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_equinox_registry_3_8_600.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_osgi_3_15_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_osgi_3_15_100.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_text_3_9_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_platform_org_eclipse_text_3_10_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_pcollections_pcollections_3_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spockframework_spock_core_1_0_groovy_2_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetricsAfterExtract.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/extractmethod_jar/extractmethod.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/sample/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/sample/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.classpath" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.project" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/.project" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/HoloEverywhere" beforeDir="false" afterPath="$PROJECT_DIR$/emp/HoloEverywhere" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/JGrowing" beforeDir="false" afterPath="$PROJECT_DIR$/emp/JGrowing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/JGrowing/CaseStudy/排查工具/解密阿里线上问题诊断工具Arthas和jvm-sandbox.md" beforeDir="false" afterPath="$PROJECT_DIR$/emp/JGrowing/CaseStudy/排查工具/解密阿里线上问题诊断工具Arthas和jvm-sandbox.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
@@ -405,62 +366,8 @@
       <change beforePath="$PROJECT_DIR$/emp/nutz/src/org/nutz/repo/org/objectweb/asm/ClassWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/nutz/src/org/nutz/repo/org/objectweb/asm/ClassWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/plantuml/src/ext/plantuml/com/google/zxing/ReaderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml/src/ext/plantuml/com/google/zxing/ReaderException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extractmethod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/extractmethod.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pruebas.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ClassInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ClassVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ClassVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ExtractMethodProcessor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MethodVIsitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/MethodVIsitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RefactorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/RefactorInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/executive/CommandLineExecutive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/executive/CommandLineExecutive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/executive/ProcessorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/executive/ProcessorFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/input/Code.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/Code.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/input/FileScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/FileScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/input/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/Method.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/input/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/Package.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/input/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/input/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/input/Scanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/Scanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/input/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/Type.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/Metric.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/Metric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/ClassInheritanceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/ClassInheritanceCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CouplingFactorCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/CouplingFactorCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/FanCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/FanCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/LinkCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/LinkCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/McclureCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/McclureCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/MethodAndAttributeInheritanceCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/MethodAndAttributeInheritanceCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/NestedBlockDepthCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/NestedBlockDepthCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/NumberOfClassesCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/NumberOfClassesCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/NumberOfFieldsCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/NumberOfFieldsCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/NumberOfParametersCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/NumberOfParametersCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/PackageAggregatorCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/PackageAggregatorCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/RawTotalLinesOfCodeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/RawTotalLinesOfCodeCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/RobertMartinCouplingCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/RobertMartinCouplingCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/SpecializationIndexCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/SpecializationIndexCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/TotalLinesOfCodeCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/TotalLinesOfCodeCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/TypeAggregatorCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/TypeAggregatorCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/calculators/WeightedMethodsCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/WeightedMethodsCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/value/Coerce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/value/Coerce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/value/NumericValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/value/NumericValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/metrics/value/NumericValueSummaryStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/value/NumericValueSummaryStatistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/output/Outputter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/output/Outputter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/output/XMLOutputter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/output/XMLOutputter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/util/CalculationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/util/CalculationUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/util/Distinct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/util/Distinct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/jasome/util/ProjectMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/util/ProjectMetadata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClassInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ClassVisitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodMiner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ExtractMethodProcessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MethodVIsitor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RefactorInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/input/FileScanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/input/FileScanner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -592,6 +499,7 @@
       <workItem from="1579616570230" duration="2583000" />
       <workItem from="1580001441311" duration="6409000" />
       <workItem from="1580008691171" duration="1104000" />
+      <workItem from="1584658430005" duration="713000" />
     </task>
     <servers />
   </component>
