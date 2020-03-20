@@ -9,7 +9,6 @@
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/emp/android-beacon-library/.idea/android-beacon-library.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/extractmethod_jar/extractmethod.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/lib/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/sample/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/sample/project.properties" afterDir="false" />
@@ -366,7 +365,10 @@
       <change beforePath="$PROJECT_DIR$/emp/nutz/src/org/nutz/repo/org/objectweb/asm/ClassWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/nutz/src/org/nutz/repo/org/objectweb/asm/ClassWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/plantuml/src/ext/plantuml/com/google/zxing/ReaderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml/src/ext/plantuml/com/google/zxing/ReaderException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/extractmethod.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -499,7 +501,7 @@
       <workItem from="1579616570230" duration="2583000" />
       <workItem from="1580001441311" duration="6409000" />
       <workItem from="1580008691171" duration="1104000" />
-      <workItem from="1584658430005" duration="713000" />
+      <workItem from="1584658430005" duration="7664000" />
     </task>
     <servers />
   </component>
@@ -555,10 +557,10 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="235" y="139" key="SettingsEditor/0.23.1680.954@0.23.1680.954" timestamp="1579474432757" />
-    <state x="540" y="252" key="extract.method.dialog" timestamp="1580005604343">
+    <state x="964" y="297" key="extract.method.dialog" timestamp="1584664700929">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state x="540" y="252" key="extract.method.dialog/0.23.1680.954@0.23.1680.954" timestamp="1580005604343" />
+    <state x="964" y="297" key="extract.method.dialog/0.23.1680.954@0.23.1680.954" timestamp="1584664700929" />
     <state x="152" y="221" key="new project wizard" timestamp="1579548323270">
       <screen x="0" y="23" width="1680" height="954" />
     </state>

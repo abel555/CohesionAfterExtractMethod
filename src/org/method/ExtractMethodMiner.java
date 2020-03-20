@@ -5,10 +5,10 @@ import java.util.List;
 
 public class ExtractMethodMiner {
     public static void main(String[] args) throws Exception {
-        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor(args[1]);
+        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("/Users/abel/Documents/ClasesU/ClonesPruebas.txt"); //args[1]
 
 
-        extractMethodProcessor.analizeProjects(args[0]);
+        extractMethodProcessor.analizeProjects("https://github.com/AigeStudio/WheelPicker.git"); //argo[0]
 
     }
 

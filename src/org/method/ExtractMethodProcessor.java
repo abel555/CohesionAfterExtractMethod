@@ -55,20 +55,7 @@ public class ExtractMethodProcessor {
         }
         return allLines;
     }
-    public  void testRefactoringMiner(String rep) throws Exception{
-        GitService gitService = new GitServiceImpl();
-        GitHistoryRefactoringMiner miner = new GitHistoryRefactoringMinerImpl();
-        StringBuilder localFile = new StringBuilder();
-        localFile.append("emp/");localFile.append(FilenameUtils.getBaseName(rep));
-        Repository repo = gitService.cloneIfNotExists(localFile.toString(), rep);
-        testHandler hanlder = new testHandler();
-        try {
-            miner.detectAll(repo, "master", hanlder);
 
-        } catch (Exception e) {
-            //System.out.println(e);
-        }
-    }
     public void analizeProjects(String rep) throws Exception {
 
         GitService gitService = new GitServiceImpl();
@@ -77,7 +64,6 @@ public class ExtractMethodProcessor {
         localFile.append("/Users/abel/Documents/ClasesU/Seminario/CohesionAfterExtractMethod/emp/");localFile.append(FilenameUtils.getBaseName(rep));
         Repository repo = gitService.cloneIfNotExists(localFile.toString(), rep);
         RefactoringHandler extractHandler = new ExtractHandler();
-        RefactoringHandler testHandler = new testHandler();
         try {
 
             miner.detectAll(repo, "master", extractHandler);
@@ -89,69 +75,73 @@ public class ExtractMethodProcessor {
         System.out.println(refactorInfoList.size());
 
         for (RefactorInfo refInfo :refactorInfoList ) {
-
-
             for (int i = 0; i< refInfo.getRefactoring().size() ; i++){
                 ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
                 StringBuilder toWriteBefore = new StringBuilder();
-                try {
-                    gitService.checkout(repo, refInfo.getCommitIdBefore());
-                    String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
-
-                    toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
-                    toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
-
-
-                  toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
-
-                }
-                catch (Exception e) {
-                    //System.out.println(e);
-                }
-                try {
-                    gitService.checkout(repo, refInfo.getCommitIdAfter());
-                    String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                    StringBuilder toWrite = new StringBuilder();
-                    toWrite.append(classFileAfter);toWrite.append(";");
-                    toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
-
-                    toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
-                    toWrite.append(refInfo.getExtractedMethodName().get(i));
-                    toWrite.append(";");
-                    toWrite.append(nn.getExtractedOperation().getParametersWithoutReturnType().toString());
-                    toWrite.append(";");
-                    String linkTocommit = rep.split("\\.git")[0] + "/commit/";
-                    toWrite.append( linkTocommit + refInfo.getCommitIdBefore());
-                    toWrite.append(";");
-                    toWrite.append( linkTocommit + refInfo.getCommitIdAfter());
-                    toWrite.append(";");
-
-                    toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
-                    try(FileWriter fw = new FileWriter(outPutFileName, true);
-                        BufferedWriter bw = new BufferedWriter(fw);
-                        PrintWriter out = new PrintWriter(bw))
-                    {
-                        toWriteBefore.append(toWrite);
-                        out.println(toWriteBefore);
-
-
-
-                    } catch (IOException e) {
-                        //exception handling left as an exercise for the reader
-                    }
-                    toWriteBefore = null;
-                    toWrite = null;
-
-                }
-                catch (Exception e) {
-                    //System.out.println(e);
-                }
+                calculateMetricsBeforeRefactoring(gitService, repo, refInfo, i, nn, split, toWriteBefore);
+                calculateMetricsAfterRefactoring(rep, gitService, repo, refInfo, i, nn, split, toWriteBefore);
             }
         }
-        //aa
-        refactorInfoList = null;
 
+    }
+
+    public void calculateMetricsAfterRefactoring(String rep, GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split, StringBuilder toWriteBefore) {
+        try {
+            gitService.checkout(repo, refInfo.getCommitIdAfter());
+            String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
+            StringBuilder toWrite = new StringBuilder();
+            toWrite.append(classFileAfter);toWrite.append(";");
+            toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
+
+            toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
+            toWrite.append(refInfo.getExtractedMethodName().get(i));
+            toWrite.append(";");
+            toWrite.append(nn.getExtractedOperation().getParametersWithoutReturnType().toString());
+            toWrite.append(";");
+            String linkTocommit = rep.split("\\.git")[0] + "/commit/";
+            toWrite.append( linkTocommit + refInfo.getCommitIdBefore());
+            toWrite.append(";");
+            toWrite.append( linkTocommit + refInfo.getCommitIdAfter());
+            toWrite.append(";");
+
+            toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
+            writeOutPutFIle(toWriteBefore, toWrite);
+        }
+        catch (Exception e) {
+            //System.out.println(e);
+        }
+    }
+
+    public void writeOutPutFIle(StringBuilder toWriteBefore, StringBuilder toWrite) {
+        try(FileWriter fw = new FileWriter(outPutFileName, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            toWriteBefore.append(toWrite);
+            out.println(toWriteBefore);
+
+
+
+        } catch (IOException e) {
+            //exception handling left as an exercise for the reader
+        }
+    }
+
+    public void calculateMetricsBeforeRefactoring(GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split, StringBuilder toWriteBefore) {
+        try {
+            gitService.checkout(repo, refInfo.getCommitIdBefore());
+            String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+
+            toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
+            toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
+
+            toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
+
+        }
+        catch (Exception e) {
+            //System.out.println(e);
+        }
     }
 
     public String getJavaFIle(Path root, String clas){
@@ -176,69 +166,6 @@ public class ExtractMethodProcessor {
         return base.substring(base.lastIndexOf(".") + 1);
     }
 
-    public String executeJasome(String path, String fileName) {
-        String cohesion = null;
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        processBuilder.command("/Users/Abel/Documents/ClasesU/Seminario/jasome-0.6.8-alpha/bin/jasome", path);
-        try {
-
-            Process process = processBuilder.start();
-            StringBuilder output = new StringBuilder();
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(process.getInputStream()));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                output.append(line + "\n");
-            }
-
-
-            int exitVal = process.waitFor();
-            if (exitVal == 0) {
-
-
-                Document doc = convertStringToXMLDocument(output.toString());
-                NodeList list = doc.getElementsByTagName("Metric");
-                for (int i=0; i<list.getLength(); i++) {
-                    Element element = (Element)list.item(i);
-                    if(element.getAttribute("name").equals("LCOM*")){
-                        cohesion = element.getAttribute("value");
-                    }
-                }
-
-            } else {
-                //abnormal...
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return cohesion;
-    }
-
-    private Document convertStringToXMLDocument(String xmlString)
-    {
-        //Parser that produces DOM object trees from XML content
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
-        //API to obtain DOM Document instance
-        DocumentBuilder builder = null;
-        try
-        {
-            //Create DocumentBuilder with default configuration
-            builder = factory.newDocumentBuilder();
-
-            //Parse the content to Document object
-            Document doc = builder.parse(new InputSource(new StringReader(xmlString)));
-            return doc;
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
     public String hackedJasome(String dir, int starLine, String methodName) {
 
@@ -337,15 +264,4 @@ public class ExtractMethodProcessor {
     }
 
 
-
-
 }
-/* for (UMLParameter pr : nn.getExtractedOperation().getParametersWithoutReturnType()) {
-         extractedMethodParameters.add(pr.getType());
-         }
-         for (UMLParameter pr : nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType()){
-         originMethodParameters.add(pr.getType());
-         }
-         for (UMLParameter pr : nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType()){
-         originMethodParametersAfter.add(pr.getType());
-         }*/
