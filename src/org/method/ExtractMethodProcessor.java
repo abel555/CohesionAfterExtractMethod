@@ -79,6 +79,7 @@ public class ExtractMethodProcessor {
                 ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
                 StringBuilder toWriteBefore = new StringBuilder();
+                detectClonesBefore(rep, refInfo, i, split);
                 calculateMetricsBeforeRefactoring(gitService, repo, refInfo, i, nn, split, toWriteBefore);
                 calculateMetricsAfterRefactoring(rep, gitService, repo, refInfo, i, nn, split, toWriteBefore);
             }
@@ -132,6 +133,7 @@ public class ExtractMethodProcessor {
         try {
             gitService.checkout(repo, refInfo.getCommitIdBefore());
             String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+
 
             toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
             toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
@@ -261,6 +263,57 @@ public class ExtractMethodProcessor {
             listAsString.add(pr.getType().toString());
         }
         return listAsString;
+    }
+
+    public boolean createFolderIn(String path){
+        //Creating a File object
+        File file = new File(path);
+        //Creating the directory
+        return file.mkdirs();
+    }
+
+
+    public static void copyFile(String from, String to) throws IOException{
+        Path src = Paths.get(from);
+        Path dest = Paths.get(to);
+        Files.copy(src, dest);
+    }
+
+    public void ExecuteOpenAnalzyer(String jarPath,String projectName, String projectPath){
+        ProcessBuilder processBuilder = new ProcessBuilder();
+
+        processBuilder.command("OpenStaticAnalyzerJava", "-projectName=" + projectName, "-projectBaseDir=" + projectPath, "-resultsDir=Results",
+                "-cloneGenealogy=true", "-cloneMinLines=4");
+        try {
+
+            Process process = processBuilder.start();
+            StringBuilder output = new StringBuilder();
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line + "\n");
+            }
+
+
+            int exitVal = process.waitFor();
+            System.out.println(output);
+            System.out.println("\nCódigo de salida: "+ exitVal);
+
+
+        } catch (InterruptedException | IOException e) {
+            e.printStackTrace(System.err);
+        }
+    }
+
+    public void detectClonesBefore(String rep, RefactorInfo refactorInfo, int i, String split) throws IOException {
+        String classFile = getJavaFIle(Paths.get(split), refactorInfo.getClassBefore().get(i));
+        String[] classN = classFile.split("/");
+        String className = classN[classN.length-1];
+        String destFolder = className.replace(".", "");
+        createFolderIn(destFolder);
+        copyFile(classFile, destFolder + "/" + className);
+
     }
 
 

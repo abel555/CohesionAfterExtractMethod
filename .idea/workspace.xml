@@ -17,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Android-Skin-Loader/skin-package/SkinPackage/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/JGrowing" beforeDir="false" afterPath="$PROJECT_DIR$/emp/JGrowing" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/JGrowing/CaseStudy/排查工具/解密阿里线上问题诊断工具Arthas和jvm-sandbox.md" beforeDir="false" afterPath="$PROJECT_DIR$/emp/JGrowing/CaseStudy/排查工具/解密阿里线上问题诊断工具Arthas和jvm-sandbox.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/WheelPicker" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WheelPicker" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/android-beacon-library" beforeDir="false" afterPath="$PROJECT_DIR$/emp/android-beacon-library" afterDir="false" />
@@ -365,10 +366,7 @@
       <change beforePath="$PROJECT_DIR$/emp/nutz/src/org/nutz/repo/org/objectweb/asm/ClassWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/nutz/src/org/nutz/repo/org/objectweb/asm/ClassWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/plantuml/src/ext/plantuml/com/google/zxing/ReaderException.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml/src/ext/plantuml/com/google/zxing/ReaderException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/extractmethod.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -533,22 +531,22 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579556025260" />
-    <state width="1109" height="273" key="GridCell.Tab.0.bottom" timestamp="1580009796939">
+    <state width="926" height="226" key="GridCell.Tab.0.bottom" timestamp="1584838214887">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1109" height="273" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1580009796939" />
-    <state width="1109" height="273" key="GridCell.Tab.0.center" timestamp="1580009796938">
+    <state width="926" height="226" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1584838214887" />
+    <state width="926" height="226" key="GridCell.Tab.0.center" timestamp="1584838214886">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1109" height="273" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1580009796938" />
-    <state width="1109" height="273" key="GridCell.Tab.0.left" timestamp="1580009796938">
+    <state width="926" height="226" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1584838214886" />
+    <state width="926" height="226" key="GridCell.Tab.0.left" timestamp="1584838214886">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1109" height="273" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1580009796938" />
-    <state width="1109" height="273" key="GridCell.Tab.0.right" timestamp="1580009796938">
+    <state width="926" height="226" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1584838214886" />
+    <state width="926" height="226" key="GridCell.Tab.0.right" timestamp="1584838214887">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1109" height="273" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1580009796938" />
+    <state width="926" height="226" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1584838214887" />
     <state x="340" y="153" key="Maven.ArtifactSearchDialog" timestamp="1579474335885">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
