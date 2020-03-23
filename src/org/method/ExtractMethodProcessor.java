@@ -1,7 +1,9 @@
 package org.method;
 
+import com.opencsv.CSVReader;
 import gr.uom.java.xmi.UMLParameter;
 import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.filefilter.IOFileFilter;
@@ -61,7 +63,8 @@ public class ExtractMethodProcessor {
         GitService gitService = new GitServiceImpl();
         GitHistoryRefactoringMiner miner = new GitHistoryRefactoringMinerImpl();
         StringBuilder localFile = new StringBuilder();
-        localFile.append("/Users/abel/Documents/ClasesU/Seminario/CohesionAfterExtractMethod/emp/");localFile.append(FilenameUtils.getBaseName(rep));
+        localFile.append("emp/");
+        localFile.append(FilenameUtils.getBaseName(rep));
         Repository repo = gitService.cloneIfNotExists(localFile.toString(), rep);
         RefactoringHandler extractHandler = new ExtractHandler();
         try {
@@ -79,9 +82,12 @@ public class ExtractMethodProcessor {
                 ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
                 StringBuilder toWriteBefore = new StringBuilder();
-                detectClonesBefore(rep, refInfo, i, split);
-                calculateMetricsBeforeRefactoring(gitService, repo, refInfo, i, nn, split, toWriteBefore);
-                calculateMetricsAfterRefactoring(rep, gitService, repo, refInfo, i, nn, split, toWriteBefore);
+                if (refInfo.getClassBefore().get(i)!= null && refInfo.getClassAfter().get(i) !=null){
+                    detectClonesBefore(rep, refInfo, i, split);
+                    calculateMetricsBeforeRefactoring(gitService, repo, refInfo, i, nn, split, toWriteBefore);
+                    calculateMetricsAfterRefactoring(rep, gitService, repo, refInfo, i, nn, split, toWriteBefore);
+
+                }
             }
         }
 
@@ -271,6 +277,15 @@ public class ExtractMethodProcessor {
         //Creating the directory
         return file.mkdirs();
     }
+    static boolean deleteDirectory(File directoryToBeDeleted) {
+        File[] allContents = directoryToBeDeleted.listFiles();
+        if (allContents != null) {
+            for (File file : allContents) {
+                deleteDirectory(file);
+            }
+        }
+        return directoryToBeDeleted.delete();
+    }
 
 
     public static void copyFile(String from, String to) throws IOException{
@@ -279,11 +294,11 @@ public class ExtractMethodProcessor {
         Files.copy(src, dest);
     }
 
-    public void ExecuteOpenAnalzyer(String jarPath,String projectName, String projectPath){
+    public void executeOpenAnalzyer(String jarPath,String projectName, String projectPath){
         ProcessBuilder processBuilder = new ProcessBuilder();
 
-        processBuilder.command("OpenStaticAnalyzerJava", "-projectName=" + projectName, "-projectBaseDir=" + projectPath, "-resultsDir=Results",
-                "-cloneGenealogy=true", "-cloneMinLines=4");
+        processBuilder.command(jarPath+ "OpenStaticAnalyzerJava", "-projectName=" + projectName, "-projectBaseDir=" + projectPath, "-resultsDir=Results",
+                "-cloneGenealogy=true", "-cloneMinLines=4", "-currentDate=" + projectName);
         try {
 
             Process process = processBuilder.start();
@@ -308,11 +323,51 @@ public class ExtractMethodProcessor {
 
     public void detectClonesBefore(String rep, RefactorInfo refactorInfo, int i, String split) throws IOException {
         String classFile = getJavaFIle(Paths.get(split), refactorInfo.getClassBefore().get(i));
-        String[] classN = classFile.split("/");
+        System.out.println(classFile);
+        String[] classN = classFile.split("\\\\");
         String className = classN[classN.length-1];
+        System.out.println(className);
         String destFolder = className.replace(".", "");
+        System.out.println(destFolder);
         createFolderIn(destFolder);
         copyFile(classFile, destFolder + "/" + className);
+        executeOpenAnalzyer("E:\\Downloads\\OpenStaticAnalyzer-4.0.0-x64-Windows\\Java\\", destFolder, destFolder);
+        readDataLineByLine("Results\\" + destFolder + "\\java\\" + destFolder + "\\" + destFolder + "-CloneInstance.csv");
+        //comparar con los metodos
+        //deleteDirectory(new File(destFolder));
+        FileUtils.deleteDirectory(new File((destFolder)));
+        FileUtils.deleteDirectory(new File("Results"));
+
+
+
+
+    }
+    public static void readDataLineByLine(String file) throws IOException {
+
+        try {
+
+            // Create an object of filereader
+            // class with CSV file as a parameter.
+            FileReader filereader = new FileReader(file);
+
+            // create csvReader object passing
+            // file reader as a parameter
+            CSVReader csvReader = new CSVReader(filereader);
+            String[] nextRecord;
+
+            // we are going to read data line by line
+            while ((nextRecord = csvReader.readNext()) != null) {
+                for (String cell : nextRecord) {
+                    System.out.print(cell + "\t");
+                }
+                System.out.println();
+            }
+            csvReader.close();
+
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
