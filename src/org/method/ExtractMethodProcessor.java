@@ -3,6 +3,7 @@ package org.method;
 import com.opencsv.CSVReader;
 import gr.uom.java.xmi.UMLParameter;
 import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
+import javafx.util.Pair;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.io.filefilter.FileFilterUtils;
@@ -16,13 +17,7 @@ import org.jasome.metrics.calculators.*;
 import org.refactoringminer.api.*;
 import org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl;
 import org.refactoringminer.util.GitServiceImpl;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -82,10 +77,19 @@ public class ExtractMethodProcessor {
                 ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
                 StringBuilder toWriteBefore = new StringBuilder();
+                StringBuilder toWrite = new StringBuilder();
                 if (refInfo.getClassBefore().get(i)!= null && refInfo.getClassAfter().get(i) !=null){
-                    detectClonesBefore(rep, refInfo, i, split);
-                    calculateMetricsBeforeRefactoring(gitService, repo, refInfo, i, nn, split, toWriteBefore);
-                    calculateMetricsAfterRefactoring(rep, gitService, repo, refInfo, i, nn, split, toWriteBefore);
+                    //List<Pair<String, String>> clonesBefore= detectClones(repo, refInfo.getCommitIdBefore(), refInfo.getClassBefore().get(i), split);
+
+                    toWriteBefore = calculateMetricsBeforeRefactoring(gitService, repo, refInfo, i, nn, split);
+                    //String codeCloneLinesBefore = compareCodeRangeClone(clonesBefore, refInfo.getSourceOperationCodeRangeBefore());
+                    //toWriteBefore.append(codeCloneLinesBefore);
+
+
+                    toWrite = calculateMetricsAfterRefactoring(rep, gitService, repo, refInfo, i, nn, split);
+
+                   // toWriteBefore.append(codeCloneLinesAfter);
+                    writeOutPutFIle(toWriteBefore, toWrite);
 
                 }
             }
@@ -93,13 +97,19 @@ public class ExtractMethodProcessor {
 
     }
 
-    public void calculateMetricsAfterRefactoring(String rep, GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split, StringBuilder toWriteBefore) {
+
+
+    public StringBuilder calculateMetricsAfterRefactoring(String rep, GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split) {
+        StringBuilder toWrite = new StringBuilder();
         try {
             gitService.checkout(repo, refInfo.getCommitIdAfter());
             String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-            StringBuilder toWrite = new StringBuilder();
+
             toWrite.append(classFileAfter);toWrite.append(";");
+           // List<Pair<String, String>> clonesAfter= detectClones(repo, refInfo.getCommitIdAfter(), refInfo.getClassAfter().get(i), split);
+           //String codeCloneLinesAfter = compareCodeRangeClone(clonesAfter, refInfo.getSourceOperationCodeRangeAfter());
             toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
+            //toWrite.append(codeCloneLinesAfter);
 
             toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
             toWrite.append(refInfo.getExtractedMethodName().get(i));
@@ -113,11 +123,34 @@ public class ExtractMethodProcessor {
             toWrite.append(";");
 
             toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
-            writeOutPutFIle(toWriteBefore, toWrite);
+
+           // List<Pair<String, String>> clonesInExtractedMethod= detectClones(repo, refInfo.getCommitIdAfter(), refInfo.getClassAfter().get(i), split);
+           // String codeCloneLinesInExtractedMethod= compareCodeRangeClone(clonesInExtractedMethod, refInfo.getExtracOperationCodeRange());
+           // toWrite.append(codeCloneLinesInExtractedMethod);
+           // System.out.println(toWrite);
+            return toWrite;
+
         }
         catch (Exception e) {
             //System.out.println(e);
         }
+        return toWrite;
+    }
+
+    public StringBuilder calculateMetricsBeforeRefactoring(GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split) {
+        StringBuilder toWriteBefore = new StringBuilder();
+        try {
+            gitService.checkout(repo, refInfo.getCommitIdBefore());
+            String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+            toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
+            toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
+            toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
+
+        }
+        catch (Exception e) {
+            //System.out.println(e);
+        }
+        return toWriteBefore;
     }
 
     public void writeOutPutFIle(StringBuilder toWriteBefore, StringBuilder toWrite) {
@@ -128,27 +161,8 @@ public class ExtractMethodProcessor {
             toWriteBefore.append(toWrite);
             out.println(toWriteBefore);
 
-
-
         } catch (IOException e) {
             //exception handling left as an exercise for the reader
-        }
-    }
-
-    public void calculateMetricsBeforeRefactoring(GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split, StringBuilder toWriteBefore) {
-        try {
-            gitService.checkout(repo, refInfo.getCommitIdBefore());
-            String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
-
-
-            toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
-            toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
-
-            toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
-
-        }
-        catch (Exception e) {
-            //System.out.println(e);
         }
     }
 
@@ -224,12 +238,8 @@ public class ExtractMethodProcessor {
         Set<Type> types = scannerOutput.getPackages().stream().findFirst().get().getTypes();
         for (Type type:types){
             Set<Method> methods = type.getMethods();
-
-
             for (Method method:methods) {
-
                 if ( method.getSource().getNameAsString().equals(methodName)) {
-
                     if (method.getSource().getParameters().size() == originMethodParameters.size()) {
                         boolean isTheMethod= true;
                         int i = 0;
@@ -243,6 +253,7 @@ public class ExtractMethodProcessor {
                             }
                         }
                         if (isTheMethod) {
+                            System.out.println("never entre");
                             response.append(method.getSource().getParameters().size());
                             response.append(";");
                             response.append(cyclomaticComplexityCalculator.calculate(method));
@@ -253,11 +264,8 @@ public class ExtractMethodProcessor {
                             response.append(";");
                             response.append(nestedBlockDepthCalculator.calculate(method));
                             response.append(";");
-
                         }
                     }
-
-
                 }
             }
         }
@@ -321,55 +329,52 @@ public class ExtractMethodProcessor {
         }
     }
 
-    public void detectClonesBefore(String rep, RefactorInfo refactorInfo, int i, String split) throws IOException {
-        String classFile = getJavaFIle(Paths.get(split), refactorInfo.getClassBefore().get(i));
-        System.out.println(classFile);
+    public List<Pair<String, String>> detectClones(Repository repo, String commit, String classToAnalyze , String split) throws Exception {
+        GitService gitService = new GitServiceImpl();
+        gitService.checkout(repo, commit);
+        String classFile = getJavaFIle(Paths.get(split), classToAnalyze);
         String[] classN = classFile.split("\\\\");
         String className = classN[classN.length-1];
-        System.out.println(className);
         String destFolder = className.replace(".", "");
-        System.out.println(destFolder);
         createFolderIn(destFolder);
         copyFile(classFile, destFolder + "/" + className);
         executeOpenAnalzyer("E:\\Downloads\\OpenStaticAnalyzer-4.0.0-x64-Windows\\Java\\", destFolder, destFolder);
-        readDataLineByLine("Results\\" + destFolder + "\\java\\" + destFolder + "\\" + destFolder + "-CloneInstance.csv");
-        //comparar con los metodos
-        //deleteDirectory(new File(destFolder));
+        List<Pair<String, String>> clones = readDataLineByLine("Results\\" + destFolder + "\\java\\" + destFolder + "\\" + destFolder + "-CloneInstance.csv");
         FileUtils.deleteDirectory(new File((destFolder)));
         FileUtils.deleteDirectory(new File("Results"));
-
-
-
-
+        return clones;
     }
-    public static void readDataLineByLine(String file) throws IOException {
-
+    public static List<Pair<String, String>> readDataLineByLine(String file) throws IOException {
+        List<Pair<String, String>> duplicatesRange = new ArrayList<>();
         try {
-
-            // Create an object of filereader
-            // class with CSV file as a parameter.
             FileReader filereader = new FileReader(file);
-
-            // create csvReader object passing
-            // file reader as a parameter
             CSVReader csvReader = new CSVReader(filereader);
+            csvReader.readNext();
             String[] nextRecord;
-
-            // we are going to read data line by line
             while ((nextRecord = csvReader.readNext()) != null) {
-                for (String cell : nextRecord) {
-                    System.out.print(cell + "\t");
-                }
-                System.out.println();
+                Pair<String, String> cloneRange = new Pair(nextRecord[5], nextRecord[7]);
+                duplicatesRange.add(cloneRange);
             }
             csvReader.close();
-
         }
         catch (Exception e) {
             e.printStackTrace();
         }
-
+        return duplicatesRange;
     }
-
-
+    private String compareCodeRangeClone(List<Pair<String, String>> clones, Pair<Integer, Integer> operationCodeRange) {
+        String cloneLines = "Sin clones;";
+        for(Pair<String, String> cloneRange: clones){
+            int startClone = Integer.parseInt(cloneRange.getKey());
+            int endClone = Integer.parseInt(cloneRange.getValue());
+            int startMethod = operationCodeRange.getKey();
+            int endMethod = operationCodeRange.getValue();
+            if (startClone >= startMethod &&
+                endClone <= endMethod){
+                cloneLines = cloneRange.toString() + clones.toString();
+                break;
+            }
+        }
+        return cloneLines + ";";
+    }
 }

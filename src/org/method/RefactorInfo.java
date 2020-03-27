@@ -1,10 +1,7 @@
 package org.method;
-
-import gr.uom.java.xmi.UMLParameter;
-import gr.uom.java.xmi.UMLType;
 import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
 import org.refactoringminer.api.Refactoring;
-
+import javafx.util.Pair;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +22,24 @@ public class RefactorInfo {
     public void setCommitIdAfter(String commitIdAfter) {
         this.commitIdAfter = commitIdAfter;
     }
+
+
+
+    public Pair<Integer, Integer> getSourceOperationCodeRangeBefore() {
+        return sourceOperationCodeRangeBefore;
+    }
+
+    public Pair<Integer, Integer> getSourceOperationCodeRangeAfter() {
+        return sourceOperationCodeRangeAfter;
+    }
+
+    public Pair<Integer, Integer> getExtracOperationCodeRange() {
+        return extracOperationCodeRange;
+    }
+
+    Pair<Integer, Integer> sourceOperationCodeRangeBefore;
+    Pair<Integer, Integer> sourceOperationCodeRangeAfter;
+    Pair<Integer, Integer> extracOperationCodeRange;
 
     String commitIdBefore;
     String commitIdAfter;
@@ -100,6 +115,27 @@ public class RefactorInfo {
         this.extractedMethodName.add(nn.getExtractedOperation().getName());
         this.originMethodName.add(nn.getSourceOperationBeforeExtraction().getName());
         this.originMethodNameAfter.add(nn.getSourceOperationAfterExtraction().getName());
+
+        this.sourceOperationCodeRangeBefore = new Pair<Integer, Integer>(((ExtractOperationRefactoring) ref).
+                                                        getSourceOperationCodeRangeBeforeExtraction().
+                                                        getStartLine(),
+                                                        ((ExtractOperationRefactoring) ref).
+                                                        getSourceOperationCodeRangeBeforeExtraction().
+                                                        getEndLine());
+        this.sourceOperationCodeRangeAfter = new Pair<Integer, Integer>(((ExtractOperationRefactoring) ref).
+                                                        getSourceOperationCodeRangeAfterExtraction().
+                                                        getStartLine(),
+                                                        ((ExtractOperationRefactoring) ref).
+                                                        getSourceOperationCodeRangeAfterExtraction().
+                                                        getEndLine());
+        this.extracOperationCodeRange = new Pair<Integer, Integer>(((ExtractOperationRefactoring) ref).
+                                                        getExtractedOperationCodeRange().
+                                                        getStartLine(),
+                                                        ((ExtractOperationRefactoring) ref).
+                                                        getExtractedOperationCodeRange().
+                                                        getEndLine());
+
+
     }
 
 

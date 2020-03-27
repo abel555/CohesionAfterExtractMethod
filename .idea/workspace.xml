@@ -7,118 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_opencsv_opencsv_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/abeltest/jajax2d.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/abeltest/jajaxd.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/9GAG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/AdapterDelegates" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Album" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Android-Clean-Boilerplate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Android-Skin-Loader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Android-Terminal-Emulator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/AndroidPhotoFilters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/AnimationEasingFunctions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/AppMethodOrder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/BeautifulRefreshLayout" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/BlurView" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/BottomSheet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/CameraFragment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/CardSlidePanel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/CircleDemo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Euclid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/FabulousFilter" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/FlycoDialog_Master" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Genius-Android" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Guns" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/HoloEverywhere" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/JGrowing" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Java8InAction" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Leaf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/LifeHelper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/ListenerMusicPlayer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/LookLook" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/MaterialIntroView" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/MinimalistWeather" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/MvpApp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/NetGuard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/PRDownloader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/PagerBottomTabStrip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/PagerSlidingTabStrip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Phonograph" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/ProgressManager" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/PullZoomView" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/ReactiveNetwork" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/RecyclerView-FlexibleDivider" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/RxRelay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/ShadowImageView" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/SimpleCropView" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Skeleton" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/SmartYouTubeTV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/SopCastComponent" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Spotlight" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/SpringIndicator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/SublimePicker" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Swipecards" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/TableView" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/ViewInspector" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WheelPicker" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WheelPicker" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/ZLayoutManager" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android-beacon-library" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android-mvp-mvvm-flytour" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android-open-source-project-analysis" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android-styled-dialogs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android-ui" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android_packages_apps_GmsCore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/beakerx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/booksource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/condom" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/cordova-plugin-local-notifications" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/dddsample-core" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/distributedlog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/docker-maven-plugin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/droidicon" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/excelPanel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/flowable-engine" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/fnlp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/graphhopper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/h2o-2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/jackson-databind" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/java-tron" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/jmonkeyengine" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/karate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/leetcode" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/loaderviewlibrary" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/mall-learning" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/material-icon-lib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/material-ripple" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/mockserver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/mongo-java-driver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/mortar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/nice-spinner" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/nutz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/overscroll-decor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/paper-onboarding-android" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/philm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/plantuml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/search-guard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/springmvc-mybatis-learning" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/transmittable-thread-local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/tray" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/uid-generator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/understand-plugin-framework" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/voldemort" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/wycheproof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extractmethod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/extractmethod.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/method/RefactorInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/RefactorInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/method/RefactorInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/RefactorInfo.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -136,17 +34,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="484">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="201">
+              <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/NumberFormatException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="814">
+              <caret line="64" column="15" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java">
+        <entry file="file://$PROJECT_DIR$/src/org/method/RefactorInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="831">
-              <caret line="325" column="36" selection-start-line="325" selection-start-column="36" selection-end-line="325" selection-end-column="36" />
+            <state relative-caret-position="283">
+              <caret line="130" column="65" selection-start-line="130" selection-start-column="65" selection-end-line="130" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/method/ExtractHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -176,7 +110,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/org/method/RefactorInfo.java" />
         <option value="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" />
+        <option value="$PROJECT_DIR$/src/org/method/ExtractHandler.java" />
+        <option value="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" />
       </list>
     </option>
   </component>
@@ -193,6 +130,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,14 +142,37 @@
             <path>
               <item name="extractmethod" type="b2602c69:ProjectViewProjectNode" />
               <item name="CohesionAfterExtractMethod" type="462c0819:PsiDirectoryNode" />
-              <item name="RefactoringMiner-master" type="462c0819:PsiDirectoryNode" />
+              <item name="emp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CohesionAfterExtractMethod" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CohesionAfterExtractMethod" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CohesionAfterExtractMethod" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="jasome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="extractmethod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CohesionAfterExtractMethod" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -337,32 +299,35 @@
       <workItem from="1580008691171" duration="1104000" />
       <workItem from="1584658430005" duration="7664000" />
       <workItem from="1584893095685" duration="17171000" />
-      <workItem from="1584982576084" duration="600000" />
+      <workItem from="1584982576084" duration="1812000" />
+      <workItem from="1585148976240" duration="24980000" />
+      <workItem from="1585277656381" duration="2865000" />
+      <workItem from="1585341587327" duration="5931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17771000" />
+    <option name="totallyTimeSpent" value="52759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14872068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33152762" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
@@ -456,10 +421,17 @@
     <entry file="file://$PROJECT_DIR$/Results/example/java/2020-03-22-15-20-07/example-CloneClass.csv" />
     <entry file="file://$PROJECT_DIR$/Results/example/java/2020-03-22-15-20-07/example-CloneInstance.csv" />
     <entry file="file://$PROJECT_DIR$/Results/WheelPickerjava/java/WheelPickerjava/WheelPickerjava-CloneInstance.csv" />
-    <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java">
+    <entry file="file://$PROJECT_DIR$/emp/WheelPicker/WheelPicker/src/main/java/com/aigestudio/wheelpicker/widget/curved/WheelDatePicker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="100">
+          <caret line="131" column="5" lean-forward="true" selection-start-line="131" selection-start-column="5" selection-end-line="131" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="64" column="15" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -470,10 +442,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/method/ExtractHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="325" column="36" selection-start-line="325" selection-start-column="36" selection-end-line="325" selection-end-column="36" />
+        <state relative-caret-position="201">
+          <caret line="66" column="50" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/method/RefactorInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="130" column="65" selection-start-line="130" selection-start-column="65" selection-end-line="130" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
