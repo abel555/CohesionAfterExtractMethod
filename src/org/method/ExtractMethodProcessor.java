@@ -32,6 +32,7 @@ import com.github.javaparser.ast.body.Parameter;
 public class ExtractMethodProcessor {
 
     public String outPutFileName;
+    String projectName;
     private static final String UTF_8 = "utf-8";
     LackOfCohesionMethodsCalculator calculator = new LackOfCohesionMethodsCalculator();
     CyclomaticComplexityCalculator cyclomaticComplexityCalculator = new CyclomaticComplexityCalculator();
@@ -61,6 +62,7 @@ public class ExtractMethodProcessor {
         localFile.append("emp/");
         localFile.append(FilenameUtils.getBaseName(rep));
         Repository repo = gitService.cloneIfNotExists(localFile.toString(), rep);
+        projectName = repo.toString().split("\\\\")[1];
         RefactoringHandler extractHandler = new ExtractHandler();
         try {
 
@@ -79,16 +81,12 @@ public class ExtractMethodProcessor {
                 StringBuilder toWriteBefore = new StringBuilder();
                 StringBuilder toWrite = new StringBuilder();
                 if (refInfo.getClassBefore().get(i)!= null && refInfo.getClassAfter().get(i) !=null){
-                    //List<Pair<String, String>> clonesBefore= detectClones(repo, refInfo.getCommitIdBefore(), refInfo.getClassBefore().get(i), split);
-
-                    toWriteBefore = calculateMetricsBeforeRefactoring(gitService, repo, refInfo, i, nn, split);
-                    //String codeCloneLinesBefore = compareCodeRangeClone(clonesBefore, refInfo.getSourceOperationCodeRangeBefore());
-                    //toWriteBefore.append(codeCloneLinesBefore);
 
 
-                    toWrite = calculateMetricsAfterRefactoring(rep, gitService, repo, refInfo, i, nn, split);
 
-                   // toWriteBefore.append(codeCloneLinesAfter);
+                    toWriteBefore = smellsInfo(rep, gitService, repo, refInfo, i, nn, split);
+
+
                     writeOutPutFIle(toWriteBefore, toWrite);
 
                 }
@@ -106,27 +104,23 @@ public class ExtractMethodProcessor {
             String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
 
             toWrite.append(classFileAfter);toWrite.append(";");
-           // List<Pair<String, String>> clonesAfter= detectClones(repo, refInfo.getCommitIdAfter(), refInfo.getClassAfter().get(i), split);
-           //String codeCloneLinesAfter = compareCodeRangeClone(clonesAfter, refInfo.getSourceOperationCodeRangeAfter());
+            List<Pair<String, String>> clonesAfter= detectClones(repo, refInfo.getCommitIdAfter(), refInfo.getClassAfter().get(i), split);
+           String codeCloneLinesAfter = compareCodeRangeClone(clonesAfter, refInfo.getSourceOperationCodeRangeAfter());
             toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
-            //toWrite.append(codeCloneLinesAfter);
+            toWrite.append(codeCloneLinesAfter);
 
-            toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
+           // toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
             toWrite.append(refInfo.getExtractedMethodName().get(i));
             toWrite.append(";");
             toWrite.append(nn.getExtractedOperation().getParametersWithoutReturnType().toString());
             toWrite.append(";");
-            String linkTocommit = rep.split("\\.git")[0] + "/commit/";
-            toWrite.append( linkTocommit + refInfo.getCommitIdBefore());
-            toWrite.append(";");
-            toWrite.append( linkTocommit + refInfo.getCommitIdAfter());
-            toWrite.append(";");
 
-            toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
 
-           // List<Pair<String, String>> clonesInExtractedMethod= detectClones(repo, refInfo.getCommitIdAfter(), refInfo.getClassAfter().get(i), split);
-           // String codeCloneLinesInExtractedMethod= compareCodeRangeClone(clonesInExtractedMethod, refInfo.getExtracOperationCodeRange());
-           // toWrite.append(codeCloneLinesInExtractedMethod);
+            //toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
+
+           List<Pair<String, String>> clonesInExtractedMethod= detectClones(repo, refInfo.getCommitIdAfter(), refInfo.getClassAfter().get(i), split);
+           String codeCloneLinesInExtractedMethod= compareCodeRangeClone(clonesInExtractedMethod, refInfo.getExtracOperationCodeRange());
+           toWrite.append(codeCloneLinesInExtractedMethod);
            // System.out.println(toWrite);
             return toWrite;
 
@@ -137,14 +131,67 @@ public class ExtractMethodProcessor {
         return toWrite;
     }
 
-    public StringBuilder calculateMetricsBeforeRefactoring(GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split) {
+    public StringBuilder smellsInfo(String rep,GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split) throws Exception {
+        StringBuilder toWriteBefore = new StringBuilder();
+
+            toWriteBefore.append(projectName).append(";");
+            String linkTocommit = rep.split("\\.git")[0] + "/commit/";
+            toWriteBefore.append(linkTocommit + refInfo.getCommitIdBefore());
+            toWriteBefore.append(";");
+            toWriteBefore.append(linkTocommit + refInfo.getCommitIdAfter());
+            toWriteBefore.append(";");
+
+            toWriteBefore.append(refInfo.getClassBefore().get(i));
+            toWriteBefore.append(";");
+            toWriteBefore.append(refInfo.getClassAfter().get(i));
+            toWriteBefore.append(";");
+            toWriteBefore.append(refInfo.getOriginMethodName().get(i));
+            toWriteBefore.append(";");
+            toWriteBefore.append(refInfo.getExtractedMethodName().get(i));
+            toWriteBefore.append(";");
+        List<Pair<String, String>> clonesBefore=  detectClones(repo, refInfo.getCommitIdBefore(), refInfo.getClassBefore().get(i), split);
+
+        String codeCloneLinesBefore = compareCodeRangeClone(clonesBefore, refInfo.getSourceOperationCodeRangeBefore());
+            toWriteBefore.append(codeCloneLinesBefore).append(";");
+
+        List<Pair<String, String>> clonesAfter= detectClones(repo, refInfo.getCommitIdAfter(), refInfo.getClassAfter().get(i), split);
+
+        String codeCloneLinesAfter = compareCodeRangeClone(clonesAfter, refInfo.getSourceOperationCodeRangeAfter());
+            toWriteBefore.append(codeCloneLinesAfter).append(";");
+
+        List<Pair<String, String>> clonesInExtractedMethod=  detectClones(repo, refInfo.getCommitIdAfter(), refInfo.getClassAfter().get(i), split);
+
+        String codeCloneLinesInExtractedMethod= compareCodeRangeClone(clonesInExtractedMethod, refInfo.getExtracOperationCodeRange());
+            toWriteBefore.append(codeCloneLinesInExtractedMethod).append(";");
+
+
+
+            toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType().size()).append(";");
+            toWriteBefore.append(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType().size()).append(";");
+            toWriteBefore.append(nn.getExtractedOperation().getParametersWithoutReturnType().size()).append(";");
+
+            toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getBody().statementCount()).append(";");
+            toWriteBefore.append(nn.getSourceOperationAfterExtraction().getBody().statementCount()).append(";");
+            toWriteBefore.append(nn.getExtractedOperation().getBody().statementCount()).append(";");
+
+        return toWriteBefore;
+    }
+
+    public StringBuilder calculateMetricsBeforeRefactoring(String rep,GitService gitService, Repository repo, RefactorInfo refInfo, int i, ExtractOperationRefactoring nn, String split) {
         StringBuilder toWriteBefore = new StringBuilder();
         try {
+            toWriteBefore.append(projectName).append(";");
+            String linkTocommit = rep.split("\\.git")[0] + "/commit/";
+            toWriteBefore.append( linkTocommit + refInfo.getCommitIdBefore());
+            toWriteBefore.append(";");
+            toWriteBefore.append( linkTocommit + refInfo.getCommitIdAfter());
+            toWriteBefore.append(";");
             gitService.checkout(repo, refInfo.getCommitIdBefore());
-            String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
-            toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
+            //String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+            toWriteBefore.append(refInfo.getClassBefore().get(i));toWriteBefore.append(";");
+            toWriteBefore.append(refInfo.getClassAfter().get(i));toWriteBefore.append(";");
             toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
-            toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
+            //toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
 
         }
         catch (Exception e) {
@@ -329,19 +376,28 @@ public class ExtractMethodProcessor {
         }
     }
 
-    public List<Pair<String, String>> detectClones(Repository repo, String commit, String classToAnalyze , String split) throws Exception {
+    public List<Pair<String, String>> detectClones(Repository repo, String commit, String classToAnalyze , String split) throws IOException {
         GitService gitService = new GitServiceImpl();
-        gitService.checkout(repo, commit);
-        String classFile = getJavaFIle(Paths.get(split), classToAnalyze);
-        String[] classN = classFile.split("\\\\");
-        String className = classN[classN.length-1];
-        String destFolder = className.replace(".", "");
-        createFolderIn(destFolder);
-        copyFile(classFile, destFolder + "/" + className);
-        executeOpenAnalzyer("E:\\Downloads\\OpenStaticAnalyzer-4.0.0-x64-Windows\\Java\\", destFolder, destFolder);
-        List<Pair<String, String>> clones = readDataLineByLine("Results\\" + destFolder + "\\java\\" + destFolder + "\\" + destFolder + "-CloneInstance.csv");
-        FileUtils.deleteDirectory(new File((destFolder)));
-        FileUtils.deleteDirectory(new File("Results"));
+        List<Pair<String, String>> clones = null;
+        try {
+            gitService.checkout(repo, commit);
+            String classFile = getJavaFIle(Paths.get(split), classToAnalyze);
+
+            if (classFile != null) {
+                String[] classN = classFile.split("\\\\");
+                String className = classN[classN.length - 1];
+                String destFolder = className.replace(".", "");
+                createFolderIn(destFolder);
+                copyFile(classFile, destFolder + "/" + className);
+                executeOpenAnalzyer("E:\\Downloads\\OpenStaticAnalyzer-4.0.0-x64-Windows\\Java\\", destFolder, destFolder);
+                clones = readDataLineByLine("Results\\" + destFolder + "\\java\\" + destFolder + "\\" + destFolder + "-CloneInstance.csv");
+                FileUtils.deleteDirectory(new File((destFolder)));
+                FileUtils.deleteDirectory(new File("Results"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return clones;
     }
     public static List<Pair<String, String>> readDataLineByLine(String file) throws IOException {
@@ -363,7 +419,12 @@ public class ExtractMethodProcessor {
         return duplicatesRange;
     }
     private String compareCodeRangeClone(List<Pair<String, String>> clones, Pair<Integer, Integer> operationCodeRange) {
-        String cloneLines = "Sin clones;";
+
+        int clonesNumber = 0;
+        String cloneLines = "Sin clones";
+        if (clones == null){
+            return ";;";
+        }
         for(Pair<String, String> cloneRange: clones){
             int startClone = Integer.parseInt(cloneRange.getKey());
             int endClone = Integer.parseInt(cloneRange.getValue());
@@ -372,9 +433,10 @@ public class ExtractMethodProcessor {
             if (startClone >= startMethod &&
                 endClone <= endMethod){
                 cloneLines = cloneRange.toString() + clones.toString();
+                clonesNumber = clones.size();
                 break;
             }
         }
-        return cloneLines + ";";
+        return clonesNumber + ";" + cloneLines + ";";
     }
 }

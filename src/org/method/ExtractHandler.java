@@ -1,6 +1,7 @@
 package org.method;
 
 import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.refactoringminer.api.Refactoring;
 import org.refactoringminer.api.RefactoringHandler;
 import org.refactoringminer.api.RefactoringType;
@@ -32,13 +33,13 @@ public class ExtractHandler extends RefactoringHandler {
         }
         RefactorInfo extractMethodsInfo = new RefactorInfo();
         for (Refactoring ref : refactorings) {
-            System.out.println(ref.getRefactoringType());
             if(ref.getRefactoringType().equals(RefactoringType.EXTRACT_OPERATION)) {
-                System.out.println("+1");
+
                 if(extractMethodsInfo.isEmpty())
                     extractMethodsInfo.setUpRefactorInfo(lastCommitId, commitId, ref);
                 else {
                     ExtractOperationRefactoring nn = (ExtractOperationRefactoring) ref;
+
                     ExtractOperationRefactoring n2 = (ExtractOperationRefactoring)extractMethodsInfo.getRefactoring().get(extractMethodsInfo.getRefactoring().size() -1);
                     if (!nn.getExtractedOperation().getName().equals(n2.getExtractedOperation().getName())){
                         extractMethodsInfo.addRefactoringData(ref);

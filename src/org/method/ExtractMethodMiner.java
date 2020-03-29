@@ -8,10 +8,13 @@ import java.util.List;
 
 public class ExtractMethodMiner {
     public static void main(String[] args) throws Exception {
-        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("E:\\clonesPruebas.txt"); //args[1]
 
 
-        extractMethodProcessor.analizeProjects("https://github.com/Dimezis/BlurView.git"); //argo[0]
+        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("E:\\smells3.txt"); //args[1]
+        List<String> repos = extractMethodProcessor.readUrlRepos("E:\\projects-urls.txt");
+        for (String rep:repos){
+            extractMethodProcessor.analizeProjects(rep); //argo[0]
+        }
 
 
     }
