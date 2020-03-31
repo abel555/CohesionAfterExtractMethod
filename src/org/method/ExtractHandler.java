@@ -10,7 +10,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ExtractHandler extends RefactoringHandler {
+    public int getnCommits() {
+        return nCommits;
+    }
+
+    public int getnRefactorings() {
+        return nRefactorings;
+    }
+
+    public int getnExtractMethods() {
+        return nExtractMethods;
+    }
+
+    int nCommits = 0;
+    int nRefactorings = 0;
+    int nExtractMethods = 0;
+
     boolean saveCommit = false;
+
+    public String getLastCommitId() {
+        return lastCommitId;
+    }
+
     String lastCommitId = null;
     int pos;
     List<RefactorInfo> extractMethodsInfoList;
@@ -26,36 +47,15 @@ public class ExtractHandler extends RefactoringHandler {
 
     @Override
     public void handle(String commitId, List<Refactoring> refactorings) {
-
-        if (saveCommit){
-            extractMethodsInfoList.get(pos).setCommitIdBefore(commitId);
-            saveCommit = false;
+        nCommits += 1;
+        if (lastCommitId == null){
+            lastCommitId = commitId;
         }
-        RefactorInfo extractMethodsInfo = new RefactorInfo();
         for (Refactoring ref : refactorings) {
+            nRefactorings += 1;
             if(ref.getRefactoringType().equals(RefactoringType.EXTRACT_OPERATION)) {
-
-                if(extractMethodsInfo.isEmpty())
-                    extractMethodsInfo.setUpRefactorInfo(lastCommitId, commitId, ref);
-                else {
-                    ExtractOperationRefactoring nn = (ExtractOperationRefactoring) ref;
-
-                    ExtractOperationRefactoring n2 = (ExtractOperationRefactoring)extractMethodsInfo.getRefactoring().get(extractMethodsInfo.getRefactoring().size() -1);
-                    if (!nn.getExtractedOperation().getName().equals(n2.getExtractedOperation().getName())){
-                        extractMethodsInfo.addRefactoringData(ref);
-                    }
-                }
-
+                nExtractMethods += 1;
             }
         }
-        if(extractMethodsInfo.getCommitIdAfter() != null) {
-            extractMethodsInfoList.add(extractMethodsInfo);
-
-            saveCommit = true;
-            pos = extractMethodsInfoList.size() - 1;
-        }
-        lastCommitId = commitId;
-
-
     }
 }

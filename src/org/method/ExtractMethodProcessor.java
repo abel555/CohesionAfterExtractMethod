@@ -71,27 +71,24 @@ public class ExtractMethodProcessor {
         } catch (Exception e) {
             //System.out.println(e);
         }
-        List<RefactorInfo> refactorInfoList = ((ExtractHandler) extractHandler).getExtractMethodsInfoList();
-        System.out.println(refactorInfoList.size());
 
-        for (RefactorInfo refInfo :refactorInfoList ) {
-            for (int i = 0; i< refInfo.getRefactoring().size() ; i++){
-                ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
-                String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
-                StringBuilder toWriteBefore = new StringBuilder();
-                StringBuilder toWrite = new StringBuilder();
-                if (refInfo.getClassBefore().get(i)!= null && refInfo.getClassAfter().get(i) !=null){
+        StringBuilder infoProject= new StringBuilder(projectName).append(";");
+        infoProject.append(((ExtractHandler) extractHandler).getnCommits()).append(";");
+        infoProject.append(((ExtractHandler) extractHandler).getnRefactorings()).append(";");
+        infoProject.append(((ExtractHandler) extractHandler).getnExtractMethods()).append(";");
+        String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
 
 
+       // gitService.checkout(repo, ((ExtractHandler) extractHandler).getLastCommitId());
 
-                    toWriteBefore = smellsInfo(rep, gitService, repo, refInfo, i, nn, split);
+        infoProject.append(getNumberFiles(Paths.get(split))).append(";");
+
+        writeOutPutFIle(infoProject, new StringBuilder());
 
 
-                    writeOutPutFIle(toWriteBefore, toWrite);
 
-                }
-            }
-        }
+
+
 
     }
 
@@ -230,6 +227,21 @@ public class ExtractMethodProcessor {
             }
         }
         return javaFile;
+    }
+
+    public int getNumberFiles(Path root){
+        List<String> filesList = new ArrayList<>();
+        String javaFile = null;
+        try (Stream<Path> walk = Files.walk(root)) {
+
+            filesList = walk.map(x -> x.toString())
+                    .filter(f -> f.endsWith(".java")).collect(Collectors.toList());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return filesList.size();
     }
     public String getClass (String base){
         return base.substring(base.lastIndexOf(".") + 1);
