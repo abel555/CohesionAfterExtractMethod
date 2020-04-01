@@ -8,26 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/HoloEverywhere" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Leaf" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Leaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/ReactiveNetwork" beforeDir="false" afterPath="$PROJECT_DIR$/emp/ReactiveNetwork" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android-mvp-mvvm-flytour" beforeDir="false" afterPath="$PROJECT_DIR$/emp/android-mvp-mvvm-flytour" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/condom" beforeDir="false" afterPath="$PROJECT_DIR$/emp/condom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/distributedlog" beforeDir="false" afterPath="$PROJECT_DIR$/emp/distributedlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/excelPanel" beforeDir="false" afterPath="$PROJECT_DIR$/emp/excelPanel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/graphhopper" beforeDir="false" afterPath="$PROJECT_DIR$/emp/graphhopper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/java-tron" beforeDir="false" afterPath="$PROJECT_DIR$/emp/java-tron" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/karate" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/mall-learning" beforeDir="false" afterPath="$PROJECT_DIR$/emp/mall-learning" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/paper-onboarding-android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/paper-onboarding-android" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/wycheproof" beforeDir="false" afterPath="$PROJECT_DIR$/emp/wycheproof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
@@ -162,6 +146,7 @@
       <workItem from="1580001441311" duration="6409000" />
       <workItem from="1580008691171" duration="1104000" />
       <workItem from="1584658430005" duration="713000" />
+      <workItem from="1585673984000" duration="2211000" />
     </task>
     <servers />
   </component>
@@ -193,22 +178,22 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579556025260" />
-    <state width="1288" height="218" key="GridCell.Tab.0.bottom" timestamp="1585673831961">
+    <state width="1504" height="218" key="GridCell.Tab.0.bottom" timestamp="1585688967139">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1288" height="218" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1585673831961" />
-    <state width="1288" height="218" key="GridCell.Tab.0.center" timestamp="1585673831960">
+    <state width="1504" height="218" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1585688967139" />
+    <state width="1504" height="218" key="GridCell.Tab.0.center" timestamp="1585688967138">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1288" height="218" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1585673831960" />
-    <state width="1288" height="218" key="GridCell.Tab.0.left" timestamp="1585673831960">
+    <state width="1504" height="218" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1585688967138" />
+    <state width="1504" height="218" key="GridCell.Tab.0.left" timestamp="1585688967137">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1288" height="218" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1585673831960" />
-    <state width="1288" height="218" key="GridCell.Tab.0.right" timestamp="1585673831961">
+    <state width="1504" height="218" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1585688967137" />
+    <state width="1504" height="218" key="GridCell.Tab.0.right" timestamp="1585688967138">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1288" height="218" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1585673831961" />
+    <state width="1504" height="218" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1585688967138" />
     <state x="340" y="153" key="Maven.ArtifactSearchDialog" timestamp="1579474335885">
       <screen x="0" y="23" width="1680" height="954" />
     </state>

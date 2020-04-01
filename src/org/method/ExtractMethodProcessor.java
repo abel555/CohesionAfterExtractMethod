@@ -99,7 +99,7 @@ public class ExtractMethodProcessor {
                 ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
                 StringBuilder toWriteBefore = infoSmells(rep, refInfo, i, nn);
-
+                StringBuilder toWrite = new StringBuilder();
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdBefore());
                     String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
@@ -113,18 +113,15 @@ public class ExtractMethodProcessor {
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdAfter());
                     String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                    StringBuilder toWrite = new StringBuilder();
-
                     toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
-
-
                     toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
-                    writeOutput(toWriteBefore, toWrite);
+
 
                 }
                 catch (Exception e) {
                     //System.out.println(e);
                 }
+                writeOutput(toWriteBefore, toWrite);
             }
         }
 
