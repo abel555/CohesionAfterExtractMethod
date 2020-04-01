@@ -33,7 +33,7 @@ import java.util.stream.Stream;
 import com.github.javaparser.ast.body.Parameter;
 
 public class ExtractMethodProcessor {
-
+    String projectName;
     public String outPutFileName;
     private static final String UTF_8 = "utf-8";
     LackOfCohesionMethodsCalculator calculator = new LackOfCohesionMethodsCalculator();
@@ -74,8 +74,9 @@ public class ExtractMethodProcessor {
         GitService gitService = new GitServiceImpl();
         GitHistoryRefactoringMiner miner = new GitHistoryRefactoringMinerImpl();
         StringBuilder localFile = new StringBuilder();
-        localFile.append("/Users/abel/Documents/ClasesU/Seminario/CohesionAfterExtractMethod/emp/");localFile.append(FilenameUtils.getBaseName(rep));
+        localFile.append("emp/");localFile.append(FilenameUtils.getBaseName(rep));
         Repository repo = gitService.cloneIfNotExists(localFile.toString(), rep);
+        projectName = repo.toString().split("/")[1];
         RefactoringHandler extractHandler = new ExtractHandler();
         RefactoringHandler testHandler = new testHandler();
         try {
@@ -89,44 +90,45 @@ public class ExtractMethodProcessor {
 
         for (RefactorInfo refInfo :refactorInfoList ) {
 
-
             for (int i = 0; i< refInfo.getRefactoring().size() ; i++){
                 ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
-                StringBuilder toWriteBefore = new StringBuilder();
-                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
-                toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
-                toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
+                StringBuilder toWriteBefore = new StringBuilder(projectName);
+                String linkTocommit = rep.split("\\.git")[0] + "/commit/";
+                toWriteBefore.append( linkTocommit + refInfo.getCommitIdBefore());
+                toWriteBefore.append(";");
+                toWriteBefore.append( linkTocommit + refInfo.getCommitIdAfter());
+                toWriteBefore.append(";");
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdBefore());
-                    toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
+
+                }
+                catch (Exception e) {
+                    //System.out.println(e);
+                }
+                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+                toWriteBefore.append(refInfo.getClassBefore().get(i));toWriteBefore.append(";");
+                toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
+                toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
+
+                StringBuilder toWrite = new StringBuilder();
+
+                toWrite.append(refInfo.getClassAfter().get(i));toWrite.append(";");
+                toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
+                toWrite.append(refInfo.getExtractedMethodName().get(i));
+                toWrite.append(";");
+
+                try {
+                    gitService.checkout(repo, refInfo.getCommitIdAfter());
 
                 }
                 catch (Exception e) {
                     //System.out.println(e);
                 }
                 String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                StringBuilder toWrite = new StringBuilder();
-                toWrite.append(classFileAfter);toWrite.append(";");
-                toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
-                toWrite.append(refInfo.getExtractedMethodName().get(i));
-                toWrite.append(";");
-                String linkTocommit = rep.split("\\.git")[0] + "/commit/";
-                toWrite.append( linkTocommit + refInfo.getCommitIdBefore());
-                toWrite.append(";");
-                toWrite.append( linkTocommit + refInfo.getCommitIdAfter());
-                toWrite.append(";");
-                try {
-                    gitService.checkout(repo, refInfo.getCommitIdAfter());
-                    toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
-                    toWrite.append(";;");
-                    toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
-
-
-                }
-                catch (Exception e) {
-                    //System.out.println(e);
-                }
+                toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
+                toWrite.append(";;");
+                toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
                 writeOutput(toWriteBefore, toWrite);
             }
         }
@@ -274,49 +276,51 @@ public class ExtractMethodProcessor {
     }
     public String hackedJasomeConsole(String dir, String methodName, List<String> originMethodParameters) {
         StringBuilder response = new StringBuilder();
-        File scanDir = new File(dir).getAbsoluteFile();
-        FileScanner scanner = new FileScanner(scanDir);
-        IOFileFilter fileFilter = FileFilterUtils.trueFileFilter();
-        scanner.setFilter(fileFilter);
-        Project scannerOutput = scanner.scan();
+        if (dir != null) {
+            File scanDir = new File(dir).getAbsoluteFile();
+            FileScanner scanner = new FileScanner(scanDir);
+            IOFileFilter fileFilter = FileFilterUtils.trueFileFilter();
+            scanner.setFilter(fileFilter);
+            Project scannerOutput = scanner.scan();
 
-        Set<Type> types = scannerOutput.getPackages().stream().findFirst().get().getTypes();
-        for (Type type:types){
-            Set<Method> methods = type.getMethods();
+            Set<Type> types = scannerOutput.getPackages().stream().findFirst().get().getTypes();
+            for (Type type : types) {
+                Set<Method> methods = type.getMethods();
 
 
-            for (Method method:methods) {
+                for (Method method : methods) {
 
-                if ( method.getSource().getNameAsString().equals(methodName)) {
+                    if (method.getSource().getNameAsString().equals(methodName)) {
 
-                    if (method.getSource().getParameters().size() == originMethodParameters.size()) {
-                        boolean isTheMethod= true;
-                        int i = 0;
-                        for (Parameter pr : method.getSource().getParameters()) {
-                            if (!pr.getType().toString().equals(originMethodParameters.get(i).toString())) {
-                                isTheMethod = false;
+                        if (method.getSource().getParameters().size() == originMethodParameters.size()) {
+                            boolean isTheMethod = true;
+                            int i = 0;
+                            for (Parameter pr : method.getSource().getParameters()) {
+                                if (!pr.getType().toString().equals(originMethodParameters.get(i).toString())) {
+                                    isTheMethod = false;
+                                }
+                                i++;
+                                if (!isTheMethod) {
+                                    break;
+                                }
                             }
-                            i++;
-                            if (!isTheMethod) {
-                                break;
+                            if (isTheMethod) {
+                                response.append(method.getSource().getParameters().size());
+                                response.append(";");
+                                response.append(cyclomaticComplexityCalculator.calculate(method));
+                                response.append(";");
+                                response.append(fanCalculator.calculate(method));
+                                response.append(";");
+                                response.append(mcclureCalculator.calculate(method));
+                                response.append(";");
+                                response.append(nestedBlockDepthCalculator.calculate(method));
+                                response.append(";");
+
                             }
                         }
-                        if (isTheMethod) {
-                            response.append(method.getSource().getParameters().size());
-                            response.append(";");
-                            response.append(cyclomaticComplexityCalculator.calculate(method));
-                            response.append(";");
-                            response.append(fanCalculator.calculate(method));
-                            response.append(";");
-                            response.append(mcclureCalculator.calculate(method));
-                            response.append(";");
-                            response.append(nestedBlockDepthCalculator.calculate(method));
-                            response.append(";");
 
-                        }
+
                     }
-
-
                 }
             }
         }
