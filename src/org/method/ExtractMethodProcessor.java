@@ -79,7 +79,6 @@ public class ExtractMethodProcessor {
         RefactoringHandler extractHandler = new ExtractHandler();
         RefactoringHandler testHandler = new testHandler();
         try {
-
             miner.detectAll(repo, "master", extractHandler);
 
         } catch (Exception e) {
@@ -95,63 +94,58 @@ public class ExtractMethodProcessor {
                 ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
                 StringBuilder toWriteBefore = new StringBuilder();
+                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+                toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
+                toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdBefore());
-                    String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
-
-                    toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
-                    toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
-
-
-                  toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
+                    toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
 
                 }
                 catch (Exception e) {
                     //System.out.println(e);
                 }
+                String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
+                StringBuilder toWrite = new StringBuilder();
+                toWrite.append(classFileAfter);toWrite.append(";");
+                toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
+                toWrite.append(refInfo.getExtractedMethodName().get(i));
+                toWrite.append(";");
+                String linkTocommit = rep.split("\\.git")[0] + "/commit/";
+                toWrite.append( linkTocommit + refInfo.getCommitIdBefore());
+                toWrite.append(";");
+                toWrite.append( linkTocommit + refInfo.getCommitIdAfter());
+                toWrite.append(";");
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdAfter());
-                    String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                    StringBuilder toWrite = new StringBuilder();
-                    toWrite.append(classFileAfter);toWrite.append(";");
-                    toWrite.append(refInfo.getOriginMethodNameAfter().get(i));toWrite.append(";");
-
                     toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
-                    toWrite.append(refInfo.getExtractedMethodName().get(i));
-                    toWrite.append(";");
-                    toWrite.append(nn.getExtractedOperation().getParametersWithoutReturnType().toString());
-                    toWrite.append(";");
-                    String linkTocommit = rep.split("\\.git")[0] + "/commit/";
-                    toWrite.append( linkTocommit + refInfo.getCommitIdBefore());
-                    toWrite.append(";");
-                    toWrite.append( linkTocommit + refInfo.getCommitIdAfter());
-                    toWrite.append(";");
-
+                    toWrite.append(";;");
                     toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
-                    try(FileWriter fw = new FileWriter(outPutFileName, true);
-                        BufferedWriter bw = new BufferedWriter(fw);
-                        PrintWriter out = new PrintWriter(bw))
-                    {
-                        toWriteBefore.append(toWrite);
-                        out.println(toWriteBefore);
 
-
-
-                    } catch (IOException e) {
-                        //exception handling left as an exercise for the reader
-                    }
-                    toWriteBefore = null;
-                    toWrite = null;
 
                 }
                 catch (Exception e) {
                     //System.out.println(e);
                 }
+                writeOutput(toWriteBefore, toWrite);
             }
         }
-        //aa
-        refactorInfoList = null;
 
+    }
+
+    public void writeOutput(StringBuilder toWriteBefore, StringBuilder toWrite) {
+        try(FileWriter fw = new FileWriter(outPutFileName, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            toWriteBefore.append(toWrite);
+            out.println(toWriteBefore);
+
+
+
+        } catch (IOException e) {
+            //exception handling left as an exercise for the reader
+        }
     }
 
     public String getJavaFIle(Path root, String clas){
