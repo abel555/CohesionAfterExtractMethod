@@ -6,9 +6,14 @@ import java.util.List;
 public class ExtractMethodMiner {
     public static void main(String[] args) throws Exception {
 
-        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor(args[1]);
+        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("/Users/abel/Desktop/classMacSmells.txt");
 
-        extractMethodProcessor.analizeProjects(args[0]);
+        List<String> repos =  extractMethodProcessor.readUrlRepos("/Users/abel/Desktop/projects-urls.txt");
+
+        for (String rep:repos){
+            extractMethodProcessor.analizeProjects(rep);
+
+        }
 
     }
 

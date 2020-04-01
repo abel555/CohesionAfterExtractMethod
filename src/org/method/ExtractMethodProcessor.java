@@ -102,54 +102,56 @@ public class ExtractMethodProcessor {
             for (int i = 0; i< refInfo.getRefactoring().size() ; i++){
                 ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
+
                 StringBuilder toWriteBefore = new StringBuilder();
+                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+                toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
+                String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdBefore();
+                toWriteBefore.append( linkTocommit);
+                toWriteBefore.append(";");
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdBefore());
-                    String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
 
-                    toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
-                    String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdBefore();
-                    toWriteBefore.append( linkTocommit);
-                    toWriteBefore.append(";");
                     toWriteBefore.append(executeJasome(classFileBefore));
 
                 }
                 catch (Exception e) {
                     //System.out.println(e);
                 }
+                StringBuilder toWrite = new StringBuilder();
+                String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
+                toWrite.append(classFileAfter);toWrite.append(";");
+                String linkTocommitAfter = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdAfter();
+                toWrite.append( linkTocommitAfter);
+                toWrite.append(";");
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdAfter());
-                    String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                    StringBuilder toWrite = new StringBuilder();
-                    toWrite.append(classFileAfter);toWrite.append(";");
-                    String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdAfter();
-                    toWrite.append( linkTocommit);
-                    toWrite.append(";");
+
                     toWrite.append(executeJasome(classFileAfter));
-                    try(FileWriter fw = new FileWriter(outPutFileName, true);
-                        BufferedWriter bw = new BufferedWriter(fw);
-                        PrintWriter out = new PrintWriter(bw))
-                    {
-                        toWriteBefore.append(toWrite);
-                        out.println(toWriteBefore);
-
-
-
-                    } catch (IOException e) {
-                        //exception handling left as an exercise for the reader
-                    }
-                    toWriteBefore = null;
-                    toWrite = null;
 
                 }
                 catch (Exception e) {
                     //System.out.println(e);
                 }
+                writeOutput(toWriteBefore, toWrite);
             }
         }
-        //aa
-        refactorInfoList = null;
 
+    }
+
+    public void writeOutput(StringBuilder toWriteBefore, StringBuilder toWrite) {
+        try(FileWriter fw = new FileWriter(outPutFileName, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+        {
+            toWriteBefore.append(toWrite);
+            out.println(toWriteBefore);
+
+
+
+        } catch (IOException e) {
+            //exception handling left as an exercise for the reader
+        }
     }
 
     public String getJavaFIle(Path root, String clas){
