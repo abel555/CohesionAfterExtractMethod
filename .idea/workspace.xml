@@ -7,26 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/Leaf" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Leaf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/ReactiveNetwork" beforeDir="false" afterPath="$PROJECT_DIR$/emp/ReactiveNetwork" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/PagerBottomTabStrip" beforeDir="false" afterPath="$PROJECT_DIR$/emp/PagerBottomTabStrip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/android-mvp-mvvm-flytour" beforeDir="false" afterPath="$PROJECT_DIR$/emp/android-mvp-mvvm-flytour" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/condom" beforeDir="false" afterPath="$PROJECT_DIR$/emp/condom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/distributedlog" beforeDir="false" afterPath="$PROJECT_DIR$/emp/distributedlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/excelPanel" beforeDir="false" afterPath="$PROJECT_DIR$/emp/excelPanel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/graphhopper" beforeDir="false" afterPath="$PROJECT_DIR$/emp/graphhopper" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/java-tron" beforeDir="false" afterPath="$PROJECT_DIR$/emp/java-tron" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/karate" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/mall-learning" beforeDir="false" afterPath="$PROJECT_DIR$/emp/mall-learning" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/paper-onboarding-android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/paper-onboarding-android" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/wycheproof" beforeDir="false" afterPath="$PROJECT_DIR$/emp/wycheproof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
