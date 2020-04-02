@@ -104,35 +104,35 @@ public class ExtractMethodProcessor {
                 String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
 
                 StringBuilder toWriteBefore = new StringBuilder();
-                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
-                toWriteBefore.append(classFileBefore);toWriteBefore.append(";");
+
+                toWriteBefore.append(refInfo.getClassBefore().get(i));toWriteBefore.append(";");
                 String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdBefore();
                 toWriteBefore.append( linkTocommit);
                 toWriteBefore.append(";");
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdBefore());
-
-                    toWriteBefore.append(executeJasome(classFileBefore));
-
                 }
                 catch (Exception e) {
                     //System.out.println(e);
                 }
+                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+                toWriteBefore.append(executeJasome(classFileBefore));
                 StringBuilder toWrite = new StringBuilder();
-                String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                toWrite.append(classFileAfter);toWrite.append(";");
+
+                toWrite.append(refInfo.getClassAfter().get(i));toWrite.append(";");
                 String linkTocommitAfter = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdAfter();
                 toWrite.append( linkTocommitAfter);
                 toWrite.append(";");
                 try {
                     gitService.checkout(repo, refInfo.getCommitIdAfter());
 
-                    toWrite.append(executeJasome(classFileAfter));
 
                 }
                 catch (Exception e) {
                     //System.out.println(e);
                 }
+                String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
+                toWrite.append(executeJasome(classFileAfter));
                 writeOutput(toWriteBefore, toWrite);
             }
         }
@@ -178,48 +178,50 @@ public class ExtractMethodProcessor {
 
     public String executeJasome(String path) {
         String metrics = "";
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        processBuilder.command("/Users/Abel/Documents/ClasesU/Seminario/jasome-0.6.8-alpha/bin/jasome", path);
-        try {
+        if (path != null) {
+            ProcessBuilder processBuilder = new ProcessBuilder();
+            processBuilder.command("/Users/Abel/Documents/ClasesU/Seminario/jasome-0.6.8-alpha/bin/jasome", path);
+            try {
 
-            Process process = processBuilder.start();
-            StringBuilder output = new StringBuilder();
-            BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(process.getInputStream()));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                output.append(line + "\n");
-            }
-            int exitVal = process.waitFor();
-            if (exitVal == 0) {
-                Document doc = convertStringToXMLDocument(output.toString());
-                NodeList list = doc.getElementsByTagName("Metric");
-                for (String metric:metricsList) {
-                    boolean flag = false;
-                    for (int i = 0; i < list.getLength(); i++) {
-                        if (list.item(i).getParentNode().getParentNode().getNodeName() == "Class") {
-                            Element element = (Element) list.item(i);
-
-                            if(metric.equals(element.getAttribute("name"))){
-                                metrics = metrics + element.getAttribute("value") + ";";
-                                flag = true;
-                                break;
-                            }
-                        }
-
-                    }
-                    if(!flag){
-                        metrics = metrics + "null" + ";";
-                    }
+                Process process = processBuilder.start();
+                StringBuilder output = new StringBuilder();
+                BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(process.getInputStream()));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    output.append(line + "\n");
                 }
-            } else {
-                //abnormal...
-            }
+                int exitVal = process.waitFor();
+                if (exitVal == 0) {
+                    Document doc = convertStringToXMLDocument(output.toString());
+                    NodeList list = doc.getElementsByTagName("Metric");
+                    for (String metric : metricsList) {
+                        boolean flag = false;
+                        for (int i = 0; i < list.getLength(); i++) {
+                            if (list.item(i).getParentNode().getParentNode().getNodeName() == "Class") {
+                                Element element = (Element) list.item(i);
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+                                if (metric.equals(element.getAttribute("name"))) {
+                                    metrics = metrics + element.getAttribute("value") + ";";
+                                    flag = true;
+                                    break;
+                                }
+                            }
+
+                        }
+                        if (!flag) {
+                            metrics = metrics + "null" + ";";
+                        }
+                    }
+                } else {
+                    //abnormal...
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         return metrics;
     }
