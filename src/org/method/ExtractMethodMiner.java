@@ -5,12 +5,13 @@ import java.util.List;
 
 public class ExtractMethodMiner {
     public static void main(String[] args) throws Exception {
-        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("/Users/abel/Desktop/macsSmells3.txt");
+        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("/Users/abel/Desktop/errores.txt");
         List<String> repos = extractMethodProcessor.readUrlRepos("/Users/abel/Desktop/projects-urls.txt");
 
-        for(String rep: repos){
+       /* for(String rep: repos){
             extractMethodProcessor.analizeProjects(rep);
-        }
+        }*/
+            extractMethodProcessor.analizeProjects("https://github.com/tyzlmjj/PagerBottomTabStrip.git");
        // extractMethodProcessor.analizeProjects("https://github.com/tyzlmjj/PagerBottomTabStrip.git");
 
     }

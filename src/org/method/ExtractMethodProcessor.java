@@ -1,5 +1,6 @@
 package org.method;
 
+import com.github.javaparser.ast.Modifier;
 import gr.uom.java.xmi.UMLParameter;
 import gr.uom.java.xmi.diff.ExtractOperationRefactoring;
 import org.apache.commons.io.FilenameUtils;
@@ -145,6 +146,13 @@ public class ExtractMethodProcessor {
         toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getBody().statementCount()).append(";");
         toWriteBefore.append(nn.getSourceOperationAfterExtraction().getBody().statementCount()).append(";");
         toWriteBefore.append(nn.getExtractedOperation().getBody().statementCount()).append(";");
+
+        toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getVisibility()).append(";");
+        toWriteBefore.append(nn.getSourceOperationAfterExtraction().getVisibility()).append(";");
+        toWriteBefore.append(nn.getExtractedOperation().getVisibility()).append(";");
+        toWriteBefore.append(nn.getExtractedOperationInvocations().size()).append(";");
+
+
         return toWriteBefore;
     }
 
@@ -317,6 +325,13 @@ public class ExtractMethodProcessor {
                         if (isTheMethod) {
                             response.append(hackedlcom.calculate(type, method));
                             response.append(";");
+                            String isStatic = "NO-STATIC";
+                            for (Modifier mod:method.getSource().getModifiers()){
+                                if (mod.equals(Modifier.STATIC)){
+                                    isStatic = "STATIC";
+                                }
+                            }
+                            response.append(isStatic).append(";");
 
                         }
                     }

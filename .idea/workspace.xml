@@ -10,8 +10,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
@@ -178,22 +180,22 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579556025260" />
-    <state width="1504" height="218" key="GridCell.Tab.0.bottom" timestamp="1585688967139">
+    <state width="1504" height="277" key="GridCell.Tab.0.bottom" timestamp="1586568027097">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1504" height="218" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1585688967139" />
-    <state width="1504" height="218" key="GridCell.Tab.0.center" timestamp="1585688967138">
+    <state width="1504" height="277" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586568027097" />
+    <state width="1504" height="277" key="GridCell.Tab.0.center" timestamp="1586568027096">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1504" height="218" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1585688967138" />
-    <state width="1504" height="218" key="GridCell.Tab.0.left" timestamp="1585688967137">
+    <state width="1504" height="277" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586568027096" />
+    <state width="1504" height="277" key="GridCell.Tab.0.left" timestamp="1586568027095">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1504" height="218" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1585688967137" />
-    <state width="1504" height="218" key="GridCell.Tab.0.right" timestamp="1585688967138">
+    <state width="1504" height="277" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586568027095" />
+    <state width="1504" height="277" key="GridCell.Tab.0.right" timestamp="1586568027096">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1504" height="218" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1585688967138" />
+    <state width="1504" height="277" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586568027096" />
     <state x="340" y="153" key="Maven.ArtifactSearchDialog" timestamp="1579474335885">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
