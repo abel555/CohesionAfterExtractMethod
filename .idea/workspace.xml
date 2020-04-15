@@ -10,6 +10,24 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jasome/input/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/input/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jasome/metrics/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/FanCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/FanCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/McclureCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/McclureCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/NestedBlockDepthCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/NestedBlockDepthCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/SpecializationIndexCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/jasome/metrics/calculators/SpecializationIndexCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/input/Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/input/Processor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/CyclomaticComplexityCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/FanCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/FanCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/LackOfCohesionMethodsCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/McclureCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/McclureCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/NestedBlockDepthCalculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/jasome/metrics/calculators/NestedBlockDepthCalculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +63,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/org/jasome/metrics" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -54,16 +72,17 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/org/jasome/metrics" />
+      <recent name="$PROJECT_DIR$/src/main/java/org" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/org" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ExtractMethodMiner">
@@ -172,22 +191,22 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579556025260" />
-    <state width="943" height="218" key="GridCell.Tab.0.bottom" timestamp="1585951137654">
+    <state width="1504" height="317" key="GridCell.Tab.0.bottom" timestamp="1586914218433">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="943" height="218" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1585951137654" />
-    <state width="943" height="218" key="GridCell.Tab.0.center" timestamp="1585951137653">
+    <state width="1504" height="317" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586914218433" />
+    <state width="1504" height="317" key="GridCell.Tab.0.center" timestamp="1586914218432">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="943" height="218" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1585951137653" />
-    <state width="943" height="218" key="GridCell.Tab.0.left" timestamp="1585951137652">
+    <state width="1504" height="317" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586914218432" />
+    <state width="1504" height="317" key="GridCell.Tab.0.left" timestamp="1586914218432">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="943" height="218" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1585951137652" />
-    <state width="943" height="218" key="GridCell.Tab.0.right" timestamp="1585951137653">
+    <state width="1504" height="317" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586914218432" />
+    <state width="1504" height="317" key="GridCell.Tab.0.right" timestamp="1586914218432">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="943" height="218" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1585951137653" />
+    <state width="1504" height="317" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586914218432" />
     <state x="340" y="153" key="Maven.ArtifactSearchDialog" timestamp="1579474335885">
       <screen x="0" y="23" width="1680" height="954" />
     </state>

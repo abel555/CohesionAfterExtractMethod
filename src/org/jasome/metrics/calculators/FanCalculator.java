@@ -12,9 +12,10 @@ import org.jasome.util.Distinct;
 
 import java.util.Set;
 
-public class FanCalculator{
+public class FanCalculator implements Calculator<Method> {
 
-    public String calculate(Method method) {
+    @Override
+    public synchronized Set<Metric> calculate(Method method) {
 
         Network<Method, Distinct<Expression>> methodCalls = method.getParentType().getParentPackage().getParentProject().getMetadata().getCallNetwork();
 
@@ -44,8 +45,14 @@ public class FanCalculator{
         NumericValue structuralComplexity = NumericValue.of(fanOut).pow(2);
         NumericValue systemComplexity = dataComplexity.plus(structuralComplexity.divide(NumericValue.ONE));
 
-        return fanOut + ";" + fanIn + ";" + structuralComplexity + ";" + iovars + ";" + dataComplexity + ";" + systemComplexity + ";";
-
+        return ImmutableSet.of(
+                Metric.of("Fout", "Fan-out", fanOut),
+                Metric.of("Fin", "Fan-in", fanIn),
+                Metric.of("Si", "Structural Complexity", structuralComplexity),
+                Metric.of("IOVars", "Input/Output Variables", iovars),
+                Metric.of("Di", "Data Complexity", dataComplexity),
+                Metric.of("Ci", "System Complexity", systemComplexity)
+        );
 
 
     }

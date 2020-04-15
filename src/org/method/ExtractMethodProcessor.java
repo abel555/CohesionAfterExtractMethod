@@ -11,6 +11,7 @@ import org.jasome.input.Method;
 import org.jasome.input.Project;
 import org.jasome.input.Type;
 import org.jasome.metrics.calculators.*;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 import org.refactoringminer.api.*;
 import org.refactoringminer.rm1.GitHistoryRefactoringMinerImpl;
 import org.refactoringminer.util.GitServiceImpl;
@@ -44,11 +45,11 @@ public class ExtractMethodProcessor {
 
     public String outPutFileName;
     private static final String UTF_8 = "utf-8";
-    LackOfCohesionMethodsCalculator calculator = new LackOfCohesionMethodsCalculator();
+   /* LackOfCohesionMethodsCalculator calculator = new LackOfCohesionMethodsCalculator();
     CyclomaticComplexityCalculator cyclomaticComplexityCalculator = new CyclomaticComplexityCalculator();
     FanCalculator fanCalculator = new FanCalculator();
     McclureCalculator mcclureCalculator = new McclureCalculator();
-    NestedBlockDepthCalculator nestedBlockDepthCalculator = new NestedBlockDepthCalculator();
+    NestedBlockDepthCalculator nestedBlockDepthCalculator = new NestedBlockDepthCalculator();*/
 
     public ExtractMethodProcessor(String path) {
         this.outPutFileName = path;
@@ -155,6 +156,7 @@ public class ExtractMethodProcessor {
     }
 
     public String getJavaFIle(Path root, String clas){
+
         List<String> filesList = new ArrayList<>();
         String javaFile = null;
         try (Stream<Path> walk = Files.walk(root)) {
@@ -166,7 +168,9 @@ public class ExtractMethodProcessor {
             e.printStackTrace();
         }
         for (String dir: filesList) {
-            if (dir.endsWith(getClass(clas) + ".java")){
+            String[] javaclass = dir.split("/");
+            String shortDir = javaclass[javaclass.length -1];
+            if (shortDir.equals(getClass(clas) + ".java")){
                 javaFile = dir;
             }
         }
@@ -248,7 +252,7 @@ public class ExtractMethodProcessor {
         }
         return null;
     }
-
+/*
     public String hackedJasome(String dir, int starLine, String methodName) {
 
 
@@ -267,7 +271,7 @@ public class ExtractMethodProcessor {
 
             for (Method method:methods) {
 
-                if (/*method.getSource().getBegin().get().line == starLine &&*/
+                if (method.getSource().getBegin().get().line == starLine &&
                         method.getSource().getNameAsString().equals(methodName)){
                     response.append(method.getSource().getParameters().size());
                     response.append(";");
@@ -286,8 +290,9 @@ public class ExtractMethodProcessor {
             }
         }
         return  response.toString();
-    }
-    public String hackedJasomeConsole(String dir, String methodName, List<String> originMethodParameters) {
+    }*/
+    public String hackedJasomeLcom(String dir) {
+        LackOfCohesionMethodsCalculator lcomcal = new LackOfCohesionMethodsCalculator();
         StringBuilder response = new StringBuilder();
         File scanDir = new File(dir).getAbsoluteFile();
         FileScanner scanner = new FileScanner(scanDir);
@@ -297,43 +302,7 @@ public class ExtractMethodProcessor {
 
         Set<Type> types = scannerOutput.getPackages().stream().findFirst().get().getTypes();
         for (Type type:types){
-            Set<Method> methods = type.getMethods();
-
-
-            for (Method method:methods) {
-
-                if ( method.getSource().getNameAsString().equals(methodName)) {
-
-                    if (method.getSource().getParameters().size() == originMethodParameters.size()) {
-                        boolean isTheMethod= true;
-                        int i = 0;
-                        for (Parameter pr : method.getSource().getParameters()) {
-                            if (!pr.getType().toString().equals(originMethodParameters.get(i).toString())) {
-                                isTheMethod = false;
-                            }
-                            i++;
-                            if (!isTheMethod) {
-                                break;
-                            }
-                        }
-                        if (isTheMethod) {
-                            response.append(method.getSource().getParameters().size());
-                            response.append(";");
-                            response.append(cyclomaticComplexityCalculator.calculate(method));
-                            response.append(";");
-                            response.append(fanCalculator.calculate(method));
-                            response.append(";");
-                            response.append(mcclureCalculator.calculate(method));
-                            response.append(";");
-                            response.append(nestedBlockDepthCalculator.calculate(method));
-                            response.append(";");
-
-                        }
-                    }
-
-
-                }
-            }
+            response.append(lcomcal.calculate(type));
         }
         return response.toString();
     }
@@ -345,16 +314,4 @@ public class ExtractMethodProcessor {
         return listAsString;
     }
 
-
-
-
 }
-/* for (UMLParameter pr : nn.getExtractedOperation().getParametersWithoutReturnType()) {
-         extractedMethodParameters.add(pr.getType());
-         }
-         for (UMLParameter pr : nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType()){
-         originMethodParameters.add(pr.getType());
-         }
-         for (UMLParameter pr : nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType()){
-         originMethodParametersAfter.add(pr.getType());
-         }*/
