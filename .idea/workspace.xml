@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/PagerBottomTabStrip" beforeDir="false" afterPath="$PROJECT_DIR$/emp/PagerBottomTabStrip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
@@ -59,16 +58,16 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/org" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/org" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/" />
     </key>
   </component>
   <component name="RunManager" selected="Application.ExtractMethodMiner">
@@ -178,22 +177,22 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579556025260" />
-    <state width="945" height="218" key="GridCell.Tab.0.bottom" timestamp="1585776322879">
+    <state width="1504" height="317" key="GridCell.Tab.0.bottom" timestamp="1586979551567">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="945" height="218" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1585776322879" />
-    <state width="945" height="218" key="GridCell.Tab.0.center" timestamp="1585776322878">
+    <state width="1504" height="317" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1586979551567" />
+    <state width="1504" height="317" key="GridCell.Tab.0.center" timestamp="1586979551566">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="945" height="218" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1585776322878" />
-    <state width="945" height="218" key="GridCell.Tab.0.left" timestamp="1585776322878">
+    <state width="1504" height="317" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1586979551566" />
+    <state width="1504" height="317" key="GridCell.Tab.0.left" timestamp="1586979551565">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="945" height="218" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1585776322878" />
-    <state width="945" height="218" key="GridCell.Tab.0.right" timestamp="1585776322879">
+    <state width="1504" height="317" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1586979551565" />
+    <state width="1504" height="317" key="GridCell.Tab.0.right" timestamp="1586979551566">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="945" height="218" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1585776322879" />
+    <state width="1504" height="317" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1586979551566" />
     <state x="340" y="153" key="Maven.ArtifactSearchDialog" timestamp="1579474335885">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
