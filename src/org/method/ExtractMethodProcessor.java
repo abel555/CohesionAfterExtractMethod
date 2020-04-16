@@ -181,7 +181,9 @@ public class ExtractMethodProcessor {
             e.printStackTrace();
         }
         for (String dir: filesList) {
-            if (dir.endsWith(getClass(clas) + ".java")){
+            String[] javaclass = dir.split("/");
+            String shortDir = javaclass[javaclass.length -1];
+            if (shortDir.equals(getClass(clas) + ".java")){
                 javaFile = dir;
             }
         }
