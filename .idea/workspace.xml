@@ -19,6 +19,7 @@
       <change beforePath="$PROJECT_DIR$/emp/CircleDemo" beforeDir="false" afterPath="$PROJECT_DIR$/emp/CircleDemo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Genius-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Genius-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Guns" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Guns" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/Leaf" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Leaf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/LifeHelper" beforeDir="false" afterPath="$PROJECT_DIR$/emp/LifeHelper" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/MaterialIntroView" beforeDir="false" afterPath="$PROJECT_DIR$/emp/MaterialIntroView" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/MvpApp" beforeDir="false" afterPath="$PROJECT_DIR$/emp/MvpApp" afterDir="false" />
@@ -28,6 +29,7 @@
       <change beforePath="$PROJECT_DIR$/emp/PagerSlidingTabStrip" beforeDir="false" afterPath="$PROJECT_DIR$/emp/PagerSlidingTabStrip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/Phonograph" beforeDir="false" afterPath="$PROJECT_DIR$/emp/Phonograph" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/PullZoomView" beforeDir="false" afterPath="$PROJECT_DIR$/emp/PullZoomView" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/ReactiveNetwork" beforeDir="false" afterPath="$PROJECT_DIR$/emp/ReactiveNetwork" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/RecyclerView-FlexibleDivider" beforeDir="false" afterPath="$PROJECT_DIR$/emp/RecyclerView-FlexibleDivider" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/RxRelay" beforeDir="false" afterPath="$PROJECT_DIR$/emp/RxRelay" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/SimpleCropView" beforeDir="false" afterPath="$PROJECT_DIR$/emp/SimpleCropView" afterDir="false" />
@@ -57,6 +59,7 @@
       <change beforePath="$PROJECT_DIR$/emp/jmonkeyengine" beforeDir="false" afterPath="$PROJECT_DIR$/emp/jmonkeyengine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/karate" beforeDir="false" afterPath="$PROJECT_DIR$/emp/karate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/loaderviewlibrary" beforeDir="false" afterPath="$PROJECT_DIR$/emp/loaderviewlibrary" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/mall-learning" beforeDir="false" afterPath="$PROJECT_DIR$/emp/mall-learning" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/material-ripple" beforeDir="false" afterPath="$PROJECT_DIR$/emp/material-ripple" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/mockserver" beforeDir="false" afterPath="$PROJECT_DIR$/emp/mockserver" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/mongo-java-driver" beforeDir="false" afterPath="$PROJECT_DIR$/emp/mongo-java-driver" afterDir="false" />
@@ -64,18 +67,16 @@
       <change beforePath="$PROJECT_DIR$/emp/nice-spinner" beforeDir="false" afterPath="$PROJECT_DIR$/emp/nice-spinner" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/nutz" beforeDir="false" afterPath="$PROJECT_DIR$/emp/nutz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/overscroll-decor" beforeDir="false" afterPath="$PROJECT_DIR$/emp/overscroll-decor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/paper-onboarding-android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/paper-onboarding-android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/philm" beforeDir="false" afterPath="$PROJECT_DIR$/emp/philm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emp/plantuml" beforeDir="false" afterPath="$PROJECT_DIR$/emp/plantuml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/transmittable-thread-local" beforeDir="false" afterPath="$PROJECT_DIR$/emp/transmittable-thread-local" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/tray" beforeDir="false" afterPath="$PROJECT_DIR$/emp/tray" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/understand-plugin-framework" beforeDir="false" afterPath="$PROJECT_DIR$/emp/understand-plugin-framework" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/voldemort" beforeDir="false" afterPath="$PROJECT_DIR$/emp/voldemort" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/wycheproof" beforeDir="false" afterPath="$PROJECT_DIR$/emp/wycheproof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -93,8 +94,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="-4">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,29 +103,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/method/ExtractHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-              <folding>
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#484#485#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="572">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1144">
-              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+            <state relative-caret-position="3454">
+              <caret line="220" column="33" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1606">
+            <state relative-caret-position="516">
               <caret line="73" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
@@ -177,6 +169,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,7 +205,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -349,20 +341,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89347000" />
+    <option name="totallyTimeSpent" value="90939000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="79" y="84" width="1830" height="913" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.120338984" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.77570623" weight="0.38076922" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7750533" weight="0.3802817" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -370,7 +361,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4997164" weight="0.26153848" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.22429378" side_tool="true" visible="true" weight="0.38076922" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2249467" side_tool="true" visible="true" weight="0.3802817" />
       <window_info anchor="bottom" id="Version Control" order="11" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -508,18 +499,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
+        <state relative-caret-position="-4">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -528,23 +509,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1606">
+        <state relative-caret-position="516">
           <caret line="73" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/method/ExtractHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="572">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3454">
+          <caret line="220" column="33" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
           <folding>
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -10,11 +10,11 @@ public class ExtractMethodMiner {
     public static void main(String[] args) throws Exception {
 
 
-        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("E:\\projectsinfo25.txt"); //args[1]
+        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("E:\\projectsinfoHolo.txt"); //args[1]
         List<String> repos = extractMethodProcessor.readUrlRepos("E:\\projects-urls.txt");
-        for (String rep:repos){
-        extractMethodProcessor.analizeProjects(rep); //argo[0]
-        }
+        /*for (String rep:repos){
+        }*/
+        extractMethodProcessor.analizeProjects("https://github.com/Prototik/HoloEverywhere.git"); //argo[0]
 
 
     }
