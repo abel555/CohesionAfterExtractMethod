@@ -93,37 +93,38 @@ public class ExtractMethodProcessor {
         }
         List<RefactorInfo> refactorInfoList = ((ExtractHandler) extractHandler).getExtractMethodsInfoList();
         System.out.println(refactorInfoList.size());
+        try {
+            for (RefactorInfo refInfo : refactorInfoList) {
 
-        for (RefactorInfo refInfo :refactorInfoList ) {
+                for (int i = 0; i < refInfo.getRefactoring().size(); i++) {
+                    ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
+                    String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
+                    StringBuilder toWriteBefore = infoSmells(rep, refInfo, i, nn);
+                    StringBuilder toWrite = new StringBuilder();
+                    try {
+                        gitService.checkout(repo, refInfo.getCommitIdBefore());
+                        String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
 
-            for (int i = 0; i< refInfo.getRefactoring().size() ; i++){
-                ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
-                String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
-                StringBuilder toWriteBefore = infoSmells(rep, refInfo, i, nn);
-                StringBuilder toWrite = new StringBuilder();
-                try {
-                    gitService.checkout(repo, refInfo.getCommitIdBefore());
-                    String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+                        toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
 
-                    toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                    try {
+                        gitService.checkout(repo, refInfo.getCommitIdAfter());
+                        String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
+                        toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
+                        toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
 
+
+                    } catch (Exception e) {
+                        //System.out.println(e);
+                    }
+                    writeOutput(toWriteBefore, toWrite);
                 }
-                catch (Exception e) {
-                    System.out.println(e);
-                }
-                try {
-                    gitService.checkout(repo, refInfo.getCommitIdAfter());
-                    String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                    toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
-                    toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
-
-
-                }
-                catch (Exception e) {
-                    //System.out.println(e);
-                }
-                writeOutput(toWriteBefore, toWrite);
             }
+        }catch (StackOverflowError e){
+            System.out.println("error");
         }
 
     }
@@ -146,7 +147,7 @@ public class ExtractMethodProcessor {
         toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getBody().statementCount()).append(";");
         toWriteBefore.append(nn.getSourceOperationAfterExtraction().getBody().statementCount()).append(";");
         toWriteBefore.append(nn.getExtractedOperation().getBody().statementCount()).append(";");
-
+        //nn.getSourceOperationBeforeExtraction().
         toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getVisibility()).append(";");
         toWriteBefore.append(nn.getSourceOperationAfterExtraction().getVisibility()).append(";");
         toWriteBefore.append(nn.getExtractedOperation().getVisibility()).append(";");
