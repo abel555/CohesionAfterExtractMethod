@@ -102,20 +102,12 @@ public class ExtractMethodProcessor {
                     StringBuilder toWriteBefore = infoSmells(rep, refInfo, i, nn);
                     StringBuilder toWrite = new StringBuilder();
                     try {
-                        gitService.checkout(repo, refInfo.getCommitIdBefore());
-                        String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
-
-                        toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
-
-                    } catch (Exception e) {
-                        System.out.println(e);
-                    }
-                    try {
                         gitService.checkout(repo, refInfo.getCommitIdAfter());
-                        String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                        toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
-                        toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
-
+                        String methodSignature = nn.getSourceOperationAfterExtraction().getKey().split("#")[1];
+                        methodSignature = methodSignature.replaceAll("\\s+", "");
+                        String extractKey = nn.getExtractedOperation().getKey().split("#")[1];
+                        extractKey = extractKey.replaceAll("\\s+", "");
+                        toWrite.append(executeFanIn(Paths.get(split).toString(), getClass(refInfo.getClassAfter().get(i)), methodSignature, refInfo.getExtractedMethodName().get(i),extractKey));
 
                     } catch (Exception e) {
                         //System.out.println(e);
@@ -139,21 +131,6 @@ public class ExtractMethodProcessor {
         toWriteBefore.append(refInfo.getClassAfter().get(i)).append(";");
         toWriteBefore.append(refInfo.getOriginMethodName().get(i)).append(";");
         toWriteBefore.append(refInfo.getExtractedMethodName().get(i)).append(";");
-
-        toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType().size()).append(";");
-        toWriteBefore.append(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType().size()).append(";");
-        toWriteBefore.append(nn.getExtractedOperation().getParametersWithoutReturnType().size()).append(";");
-
-        toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getBody().statementCount()).append(";");
-        toWriteBefore.append(nn.getSourceOperationAfterExtraction().getBody().statementCount()).append(";");
-        toWriteBefore.append(nn.getExtractedOperation().getBody().statementCount()).append(";");
-        //nn.getSourceOperationBeforeExtraction().
-        toWriteBefore.append(nn.getSourceOperationBeforeExtraction().getVisibility()).append(";");
-        toWriteBefore.append(nn.getSourceOperationAfterExtraction().getVisibility()).append(";");
-        toWriteBefore.append(nn.getExtractedOperation().getVisibility()).append(";");
-        toWriteBefore.append(nn.getExtractedOperationInvocations().size()).append(";");
-
-
         return toWriteBefore;
     }
 
@@ -352,14 +329,38 @@ public class ExtractMethodProcessor {
         }
         return listAsString;
     }
+    private String executeFanIn(String dirPath, String refactoredClass, String refactorMethodKey, String extractMethodName, String extracKey){
+        StringBuilder metrics = new StringBuilder();
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        processBuilder.command("java", "-jar", "/Users/abel/Downloads/collections-explorer-master/out/artifacts/collections_explorer_jar/collections-explorer.jar", dirPath, refactoredClass, refactorMethodKey, extractMethodName, extracKey);
+
+        try {
+
+            Process process = processBuilder.start();
+            StringBuilder output = new StringBuilder();
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // output.append(line + "\n");
+                metrics.append(line).append(";");
+            }
+
+
+            int exitVal = process.waitFor();
+            if (exitVal == 0) {
+                System.out.println(output);
+
+            } else {
+                System.out.println("ops");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return metrics.toString();
+    }
 
 }
-/* for (UMLParameter pr : nn.getExtractedOperation().getParametersWithoutReturnType()) {
-         extractedMethodParameters.add(pr.getType());
-         }
-         for (UMLParameter pr : nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType()){
-         originMethodParameters.add(pr.getType());
-         }
-         for (UMLParameter pr : nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType()){
-         originMethodParametersAfter.add(pr.getType());
-         }*/

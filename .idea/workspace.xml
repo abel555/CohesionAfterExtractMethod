@@ -9,7 +9,6 @@
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/PagerBottomTabStrip" beforeDir="false" afterPath="$PROJECT_DIR$/emp/PagerBottomTabStrip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/PagerBottomTabStrip/app/src/main/java/me/majiajie/pagerbottomtabstriptest/TestControllerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/PagerBottomTabStrip/app/src/main/java/me/majiajie/pagerbottomtabstriptest/TestControllerActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
@@ -54,7 +53,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.58965516" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -149,7 +148,8 @@
       <workItem from="1580008691171" duration="1104000" />
       <workItem from="1584658430005" duration="713000" />
       <workItem from="1585673984000" duration="2211000" />
-      <workItem from="1587335450610" duration="332000" />
+      <workItem from="1587335450610" duration="27930000" />
+      <workItem from="1588040042491" duration="9337000" />
     </task>
     <servers />
   </component>
@@ -161,10 +161,6 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="593" y="342" key="#BuildArtifactsBeforeRunChooser/0.23.1680.954@0.23.1680.954" timestamp="1579467882620" />
-    <state x="540" y="265" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1579149233199">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="540" y="265" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579149233199" />
     <state x="270" y="192" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579467884392">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
@@ -173,38 +169,38 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="615" y="200" key="#com.intellij.ide.util.MemberChooser/0.23.1680.954@0.23.1680.954" timestamp="1580005114863" />
-    <state x="599" y="348" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579467092097">
+    <state x="599" y="348" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587515786497">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state x="599" y="348" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.954@0.23.1680.954" timestamp="1579467092097" />
+    <state x="599" y="348" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.954@0.23.1680.954" timestamp="1587515786497" />
     <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579556025260">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579556025260" />
-    <state width="1504" height="317" key="GridCell.Tab.0.bottom" timestamp="1587159961178">
+    <state width="1528" height="318" key="GridCell.Tab.0.bottom" timestamp="1588193179182">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1504" height="317" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1587159961178" />
-    <state width="1504" height="317" key="GridCell.Tab.0.center" timestamp="1587159961177">
+    <state width="1528" height="318" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1588193179182" />
+    <state width="1528" height="318" key="GridCell.Tab.0.center" timestamp="1588193179182">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1504" height="317" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1587159961177" />
-    <state width="1504" height="317" key="GridCell.Tab.0.left" timestamp="1587159961177">
+    <state width="1528" height="318" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1588193179182" />
+    <state width="1528" height="318" key="GridCell.Tab.0.left" timestamp="1588193179181">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1504" height="317" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1587159961177" />
-    <state width="1504" height="317" key="GridCell.Tab.0.right" timestamp="1587159961177">
+    <state width="1528" height="318" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1588193179181" />
+    <state width="1528" height="318" key="GridCell.Tab.0.right" timestamp="1588193179182">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1504" height="317" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1587159961177" />
+    <state width="1528" height="318" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1588193179182" />
     <state x="340" y="153" key="Maven.ArtifactSearchDialog" timestamp="1579474335885">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="340" y="153" key="Maven.ArtifactSearchDialog/0.23.1680.954@0.23.1680.954" timestamp="1579474335885" />
-    <state x="235" y="139" key="SettingsEditor" timestamp="1579474432757">
+    <state x="235" y="139" key="SettingsEditor" timestamp="1587515800967">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state x="235" y="139" key="SettingsEditor/0.23.1680.954@0.23.1680.954" timestamp="1579474432757" />
+    <state x="235" y="139" key="SettingsEditor/0.23.1680.954@0.23.1680.954" timestamp="1587515800967" />
     <state x="540" y="252" key="extract.method.dialog" timestamp="1585599581337">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
@@ -213,10 +209,6 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="152" y="221" key="new project wizard/0.23.1680.954@0.23.1680.954" timestamp="1579548323270" />
-    <state x="509" y="114" key="refactoring.ChangeSignatureDialog" timestamp="1579367932767">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="509" y="114" key="refactoring.ChangeSignatureDialog/0.23.1680.954@0.23.1680.954" timestamp="1579367932767" />
     <state x="467" y="230" width="670" height="676" key="search.everywhere.popup" timestamp="1579467736865">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
@@ -227,7 +219,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java</url>
-          <line>137</line>
+          <line>129</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
