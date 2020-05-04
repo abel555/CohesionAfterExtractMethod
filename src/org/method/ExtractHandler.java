@@ -32,11 +32,11 @@ public class ExtractHandler extends RefactoringHandler {
         }
         RefactorInfo extractMethodsInfo = new RefactorInfo();
         for (Refactoring ref : refactorings) {
-            System.out.println(ref.getRefactoringType());
             if(ref.getRefactoringType().equals(RefactoringType.EXTRACT_OPERATION)) {
                 if(extractMethodsInfo.isEmpty())
                     extractMethodsInfo.setUpRefactorInfo(lastCommitId, commitId, ref);
                 else {
+
                     ExtractOperationRefactoring nn = (ExtractOperationRefactoring) ref;
                     ExtractOperationRefactoring n2 = (ExtractOperationRefactoring)extractMethodsInfo.getRefactoring().get(extractMethodsInfo.getRefactoring().size() -1);
                     if (!nn.getExtractedOperation().getName().equals(n2.getExtractedOperation().getName())){

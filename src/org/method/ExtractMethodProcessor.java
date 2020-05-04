@@ -30,18 +30,25 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
+import java.util.function.BooleanSupplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import com.github.javaparser.ast.body.Parameter;
 
 public class ExtractMethodProcessor {
-    List<String> metricsList =  Arrays.asList(
+    /*List<String> metricsList =  Arrays.asList(
 
             "AHF","AIF","Aa","Ad","Ai","Ait","Ao",
             "Av","ClRCi","ClTCi","DIT","HMd","HMi","LCOM*",
             "MHF","MIF","Ma","Md","Mi","Mit","Mo","NF","NM","NMA","NMI",
             "NOA","NOCh","NOD","NOL","NOPa","NORM","NPF","NPM","NSF","NSM",
-            "PMR","PMd","PMi","RTLOC","SIX","TLOC","WMC");
+            "PMR","PMd","PMi","RTLOC","SIX","TLOC","WMC");*/
+    List<String> metricsList =  Arrays.asList(
+
+            "AHF","Aa","Ad",
+            "Av","ClRCi","ClTCi","HMd","LCOM*",
+            "MHF","Ma","Md","NF","NM","NMA","NPF","NPM","NSF","NSM",
+            "PMR","PMd","RTLOC","TLOC","WMC");
 
     public String outPutFileName;
     private static final String UTF_8 = "utf-8";
@@ -99,42 +106,47 @@ public class ExtractMethodProcessor {
 
         for (RefactorInfo refInfo :refactorInfoList ) {
 
+            try {
+                for (int i = 0; i < refInfo.getRefactoring().size(); i++) {
+                    ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
+                    String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
+                    StringBuilder toWriteBefore = new StringBuilder();
+                    toWriteBefore.append(refInfo.getClassBefore().get(i));
+                    toWriteBefore.append(";");
+                    String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdBefore();
+                    toWriteBefore.append(linkTocommit);
+                    toWriteBefore.append(";");
+                    try {
+                        //gitService.checkout(repo, refInfo.getCommitIdBefore());
+                        checkout(split, refInfo.getCommitIdBefore());
 
-            for (int i = 0; i< refInfo.getRefactoring().size() ; i++){
-                ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
-                String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                    String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+                    toWriteBefore.append(executeJasome(classFileBefore));
+                    StringBuilder toWrite = new StringBuilder();
 
-                StringBuilder toWriteBefore = new StringBuilder();
+                    toWrite.append(refInfo.getClassAfter().get(i));
+                    toWrite.append(";");
+                    String linkTocommitAfter = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdAfter();
+                    toWrite.append(linkTocommitAfter);
+                    toWrite.append(";");
+                    try {
+                        //gitService.checkout(repo, refInfo.getCommitIdAfter());
+                        checkout(split, refInfo.getCommitIdAfter());
 
-                toWriteBefore.append(refInfo.getClassBefore().get(i));toWriteBefore.append(";");
-                String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdBefore();
-                toWriteBefore.append( linkTocommit);
-                toWriteBefore.append(";");
-                try {
-                    gitService.checkout(repo, refInfo.getCommitIdBefore());
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
+                    String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
+                    toWrite.append(executeJasome(classFileAfter));
+                    writeOutput(toWriteBefore, toWrite);
+                    // break;
                 }
-                catch (Exception e) {
-                    //System.out.println(e);
-                }
-                String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
-                toWriteBefore.append(executeJasome(classFileBefore));
-                StringBuilder toWrite = new StringBuilder();
-
-                toWrite.append(refInfo.getClassAfter().get(i));toWrite.append(";");
-                String linkTocommitAfter = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdAfter();
-                toWrite.append( linkTocommitAfter);
-                toWrite.append(";");
-                try {
-                    gitService.checkout(repo, refInfo.getCommitIdAfter());
-
-
-                }
-                catch (Exception e) {
-                    //System.out.println(e);
-                }
-                String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
-                toWrite.append(executeJasome(classFileAfter));
-                writeOutput(toWriteBefore, toWrite);
+                //break;
+            }catch (StackOverflowError e){
+                System.out.println(e.getStackTrace());
             }
         }
 
@@ -227,6 +239,9 @@ public class ExtractMethodProcessor {
                 e.printStackTrace();
             }
         }
+        else{
+            System.out.println("path error: " + path);
+        }
         return metrics;
     }
 
@@ -251,6 +266,40 @@ public class ExtractMethodProcessor {
             e.printStackTrace();
         }
         return null;
+    }
+    public boolean checkout(String dir, String commit){
+        Path path = Paths.get(dir);
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        processBuilder.directory(path.toFile());
+        processBuilder.command("bash", "-c", "git checkout " + commit + " -f");
+        boolean execute=false;
+        try {
+
+            Process process = processBuilder.start();
+            //Process process = Runtime.getRuntime().exec("git branch /Users/abel/Documents/ClasesU/Seminario/CohesionAfterExtractMethod/emp/WordPress-Android/");
+            StringBuilder output = new StringBuilder();
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line + "\n");
+            }
+
+            int exitVal = process.waitFor();
+            if (exitVal == 0) {
+                execute = true;
+               // System.out.println("Success!");
+                System.out.println(output);
+               // System.exit(0);
+            } else {
+                System.out.println("gg nomas bro");
+            }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        return execute;
     }
 /*
     public String hackedJasome(String dir, int starLine, String methodName) {
