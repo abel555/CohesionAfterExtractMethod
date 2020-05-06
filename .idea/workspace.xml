@@ -9,9 +9,7 @@
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/PagerBottomTabStrip" beforeDir="false" afterPath="$PROJECT_DIR$/emp/PagerBottomTabStrip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/PagerBottomTabStrip/app/src/main/java/me/majiajie/pagerbottomtabstriptest/TestControllerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/emp/PagerBottomTabStrip/app/src/main/java/me/majiajie/pagerbottomtabstriptest/TestControllerActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android/gradlew.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
@@ -157,80 +155,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="593" y="342" key="#BuildArtifactsBeforeRunChooser" timestamp="1579467882620">
+    <state width="1528" height="315" key="GridCell.Tab.0.bottom" timestamp="1588684702269">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state x="593" y="342" key="#BuildArtifactsBeforeRunChooser/0.23.1680.954@0.23.1680.954" timestamp="1579467882620" />
-    <state x="540" y="265" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1579149233199">
+    <state width="1528" height="315" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1588684702269" />
+    <state width="1528" height="315" key="GridCell.Tab.0.center" timestamp="1588684702269">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state x="540" y="265" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579149233199" />
-    <state x="270" y="192" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579467884392">
+    <state width="1528" height="315" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1588684702269" />
+    <state width="1528" height="315" key="GridCell.Tab.0.left" timestamp="1588684702268">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state x="270" y="192" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.954@0.23.1680.954" timestamp="1579467884392" />
-    <state x="615" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1580005114863">
+    <state width="1528" height="315" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1588684702268" />
+    <state width="1528" height="315" key="GridCell.Tab.0.right" timestamp="1588684702269">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state x="615" y="200" key="#com.intellij.ide.util.MemberChooser/0.23.1680.954@0.23.1680.954" timestamp="1580005114863" />
-    <state x="599" y="348" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1579467092097">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="599" y="348" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.954@0.23.1680.954" timestamp="1579467092097" />
-    <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579556025260">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="593" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.954@0.23.1680.954" timestamp="1579556025260" />
-    <state width="1504" height="317" key="GridCell.Tab.0.bottom" timestamp="1587159961178">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state width="1504" height="317" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1587159961178" />
-    <state width="1504" height="317" key="GridCell.Tab.0.center" timestamp="1587159961177">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state width="1504" height="317" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1587159961177" />
-    <state width="1504" height="317" key="GridCell.Tab.0.left" timestamp="1587159961177">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state width="1504" height="317" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1587159961177" />
-    <state width="1504" height="317" key="GridCell.Tab.0.right" timestamp="1587159961177">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state width="1504" height="317" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1587159961177" />
-    <state x="340" y="153" key="Maven.ArtifactSearchDialog" timestamp="1579474335885">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="340" y="153" key="Maven.ArtifactSearchDialog/0.23.1680.954@0.23.1680.954" timestamp="1579474335885" />
-    <state x="235" y="139" key="SettingsEditor" timestamp="1579474432757">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="235" y="139" key="SettingsEditor/0.23.1680.954@0.23.1680.954" timestamp="1579474432757" />
+    <state width="1528" height="315" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1588684702269" />
     <state x="540" y="252" key="extract.method.dialog" timestamp="1585599581337">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="540" y="252" key="extract.method.dialog/0.23.1680.954@0.23.1680.954" timestamp="1585599581337" />
-    <state x="152" y="221" key="new project wizard" timestamp="1579548323270">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="152" y="221" key="new project wizard/0.23.1680.954@0.23.1680.954" timestamp="1579548323270" />
-    <state x="509" y="114" key="refactoring.ChangeSignatureDialog" timestamp="1579367932767">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="509" y="114" key="refactoring.ChangeSignatureDialog/0.23.1680.954@0.23.1680.954" timestamp="1579367932767" />
-    <state x="467" y="230" width="670" height="676" key="search.everywhere.popup" timestamp="1579467736865">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state x="467" y="230" width="670" height="676" key="search.everywhere.popup/0.23.1680.954@0.23.1680.954" timestamp="1579467736865" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java</url>
-          <line>137</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -102,7 +102,8 @@ public class ExtractMethodProcessor {
                     StringBuilder toWriteBefore = infoSmells(rep, refInfo, i, nn);
                     StringBuilder toWrite = new StringBuilder();
                     try {
-                        gitService.checkout(repo, refInfo.getCommitIdBefore());
+                        //gitService.checkout(repo, refInfo.getCommitIdBefore());
+                        checkout(split, refInfo.getCommitIdBefore());
                         String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
 
                         toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
@@ -111,7 +112,8 @@ public class ExtractMethodProcessor {
                         System.out.println(e);
                     }
                     try {
-                        gitService.checkout(repo, refInfo.getCommitIdAfter());
+                       // gitService.checkout(repo, refInfo.getCommitIdAfter());
+                        checkout(split, refInfo.getCommitIdAfter());
                         String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
                         toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
                         toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
@@ -303,43 +305,44 @@ public class ExtractMethodProcessor {
         IOFileFilter fileFilter = FileFilterUtils.trueFileFilter();
         scanner.setFilter(fileFilter);
         Project scannerOutput = scanner.scan();
+        if (scannerOutput.getPackages().stream().findFirst().isPresent()) {
+            Set<Type> types = scannerOutput.getPackages().stream().findFirst().get().getTypes();
+            for (Type type : types) {
+                Set<Method> methods = type.getMethods();
 
-        Set<Type> types = scannerOutput.getPackages().stream().findFirst().get().getTypes();
-        for (Type type:types){
-            Set<Method> methods = type.getMethods();
 
+                for (Method method : methods) {
 
-            for (Method method:methods) {
+                    if (method.getSource().getNameAsString().equals(methodName)) {
 
-                if ( method.getSource().getNameAsString().equals(methodName)) {
-
-                    if (method.getSource().getParameters().size() == originMethodParameters.size()) {
-                        boolean isTheMethod= true;
-                        int i = 0;
-                        for (Parameter pr : method.getSource().getParameters()) {
-                            if (!pr.getType().toString().equals(originMethodParameters.get(i).toString())) {
-                                isTheMethod = false;
-                            }
-                            i++;
-                            if (!isTheMethod) {
-                                break;
-                            }
-                        }
-                        if (isTheMethod) {
-                            response.append(hackedlcom.calculate(type, method));
-                            response.append(";");
-                            String isStatic = "NO-STATIC";
-                            for (Modifier mod:method.getSource().getModifiers()){
-                                if (mod.equals(Modifier.STATIC)){
-                                    isStatic = "STATIC";
+                        if (method.getSource().getParameters().size() == originMethodParameters.size()) {
+                            boolean isTheMethod = true;
+                            int i = 0;
+                            for (Parameter pr : method.getSource().getParameters()) {
+                                if (!pr.getType().toString().equals(originMethodParameters.get(i).toString())) {
+                                    isTheMethod = false;
+                                }
+                                i++;
+                                if (!isTheMethod) {
+                                    break;
                                 }
                             }
-                            response.append(isStatic).append(";");
+                            if (isTheMethod) {
+                                response.append(hackedlcom.calculate(type, method));
+                                response.append(";");
+                                String isStatic = "NO-STATIC";
+                                for (Modifier mod : method.getSource().getModifiers()) {
+                                    if (mod.equals(Modifier.STATIC)) {
+                                        isStatic = "STATIC";
+                                    }
+                                }
+                                response.append(isStatic).append(";");
 
+                            }
                         }
+
+
                     }
-
-
                 }
             }
         }
@@ -351,6 +354,40 @@ public class ExtractMethodProcessor {
             listAsString.add(pr.getType().toString());
         }
         return listAsString;
+    }
+    public boolean checkout(String dir, String commit){
+        Path path = Paths.get(dir);
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        processBuilder.directory(path.toFile());
+        processBuilder.command("bash", "-c", "git checkout " + commit + " -f");
+        boolean execute=false;
+        try {
+
+            Process process = processBuilder.start();
+            //Process process = Runtime.getRuntime().exec("git branch /Users/abel/Documents/ClasesU/Seminario/CohesionAfterExtractMethod/emp/WordPress-Android/");
+            StringBuilder output = new StringBuilder();
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line + "\n");
+            }
+
+            int exitVal = process.waitFor();
+            if (exitVal == 0) {
+                execute = true;
+                // System.out.println("Success!");
+                System.out.println(output);
+                // System.exit(0);
+            } else {
+                System.out.println("gg nomas bro");
+            }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        return execute;
     }
 
 }
