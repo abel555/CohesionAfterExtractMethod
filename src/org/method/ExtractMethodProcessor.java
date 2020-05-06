@@ -102,7 +102,8 @@ public class ExtractMethodProcessor {
                     StringBuilder toWriteBefore = infoSmells(rep, refInfo, i, nn);
                     StringBuilder toWrite = new StringBuilder();
                     try {
-                        gitService.checkout(repo, refInfo.getCommitIdAfter());
+                        //gitService.checkout(repo, refInfo.getCommitIdAfter());
+                        checkout(split, refInfo.getCommitIdAfter());
                         String methodSignature = nn.getSourceOperationAfterExtraction().getKey().split("#")[1];
                         methodSignature = methodSignature.replaceAll("\\s+", "");
                         String extractKey = nn.getExtractedOperation().getKey().split("#")[1];
@@ -361,6 +362,40 @@ public class ExtractMethodProcessor {
             e.printStackTrace();
         }
         return metrics.toString();
+    }
+    public boolean checkout(String dir, String commit){
+        Path path = Paths.get(dir);
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        processBuilder.directory(path.toFile());
+        processBuilder.command("bash", "-c", "git checkout " + commit + " -f");
+        boolean execute=false;
+        try {
+
+            Process process = processBuilder.start();
+            //Process process = Runtime.getRuntime().exec("git branch /Users/abel/Documents/ClasesU/Seminario/CohesionAfterExtractMethod/emp/WordPress-Android/");
+            StringBuilder output = new StringBuilder();
+
+            BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(process.getInputStream()));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                output.append(line + "\n");
+            }
+
+            int exitVal = process.waitFor();
+            if (exitVal == 0) {
+                execute = true;
+                // System.out.println("Success!");
+                System.out.println(output);
+                // System.exit(0);
+            } else {
+                System.out.println("gg nomas bro");
+            }
+        } catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        return execute;
     }
 
 }
