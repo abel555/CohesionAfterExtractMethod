@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emp/WordPress-Android" beforeDir="false" afterPath="$PROJECT_DIR$/emp/WordPress-Android" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
@@ -145,6 +144,7 @@
       <workItem from="1580001441311" duration="6409000" />
       <workItem from="1580008691171" duration="1104000" />
       <workItem from="1584658430005" duration="713000" />
+      <workItem from="1588982851105" duration="1892000" />
     </task>
     <servers />
   </component>
@@ -152,26 +152,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="615" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1580005114863">
+    <state width="1528" height="315" key="GridCell.Tab.0.bottom" timestamp="1588982422196">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state x="615" y="200" key="#com.intellij.ide.util.MemberChooser/0.23.1680.954@0.23.1680.954" timestamp="1580005114863" />
-    <state width="1528" height="315" key="GridCell.Tab.0.bottom" timestamp="1588629426323">
+    <state width="1528" height="315" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1588982422196" />
+    <state width="1528" height="315" key="GridCell.Tab.0.center" timestamp="1588982422196">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1528" height="315" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1588629426323" />
-    <state width="1528" height="315" key="GridCell.Tab.0.center" timestamp="1588629426322">
+    <state width="1528" height="315" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1588982422196" />
+    <state width="1528" height="315" key="GridCell.Tab.0.left" timestamp="1588982422195">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1528" height="315" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1588629426322" />
-    <state width="1528" height="315" key="GridCell.Tab.0.left" timestamp="1588629426322">
+    <state width="1528" height="315" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1588982422195" />
+    <state width="1528" height="315" key="GridCell.Tab.0.right" timestamp="1588982422196">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1528" height="315" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1588629426322" />
-    <state width="1528" height="315" key="GridCell.Tab.0.right" timestamp="1588629426323">
-      <screen x="0" y="23" width="1680" height="954" />
-    </state>
-    <state width="1528" height="315" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1588629426323" />
+    <state width="1528" height="315" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1588982422196" />
     <state x="540" y="252" key="extract.method.dialog" timestamp="1585753327524">
       <screen x="0" y="23" width="1680" height="954" />
     </state>

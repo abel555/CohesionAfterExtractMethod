@@ -109,6 +109,8 @@ public class ExtractMethodProcessor {
                         //System.out.println(e);
                     }
                     String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+                    if(classFileBefore == null)
+                        toWriteBefore.append("nullBefore").append(";");
                     toWriteBefore.append(refInfo.getClassBefore().get(i));toWriteBefore.append(";");
                     toWriteBefore.append(refInfo.getOriginMethodName().get(i));toWriteBefore.append(";");
                     toWriteBefore.append(hackedJasomeConsole(classFileBefore, refInfo.getOriginMethodName().get(i), getParametersListAsStrings(nn.getSourceOperationBeforeExtraction().getParametersWithoutReturnType())));
@@ -129,6 +131,9 @@ public class ExtractMethodProcessor {
                         //System.out.println(e);
                     }
                     String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
+                    if(classFileAfter == null){
+                        toWrite.append("nullAfter").append(";");
+                    }
                     toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getOriginMethodNameAfter().get(i), getParametersListAsStrings(nn.getSourceOperationAfterExtraction().getParametersWithoutReturnType())));
                     toWrite.append(";;");
                     toWrite.append(hackedJasomeConsole(classFileAfter, refInfo.getExtractedMethodName().get(i), getParametersListAsStrings(nn.getExtractedOperation().getParametersWithoutReturnType())));
@@ -248,8 +253,6 @@ public class ExtractMethodProcessor {
     }
 
     public String hackedJasome(String dir, int starLine, String methodName) {
-
-
         StringBuilder response = new StringBuilder();
 
         File scanDir = new File(dir).getAbsoluteFile();
