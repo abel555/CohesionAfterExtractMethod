@@ -47,6 +47,7 @@ public class ExtractMethodProcessor {
 
     public ExtractMethodProcessor(String path) {
         this.outPutFileName = path;
+
     }
 
     public List<String> readUrlRepos(String filePath){
