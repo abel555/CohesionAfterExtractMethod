@@ -124,6 +124,11 @@ public class ExtractMethodProcessor {
                         System.out.println(e);
                     }
                     String classFileBefore = getJavaFIle(Paths.get(split), refInfo.getClassBefore().get(i));
+                    if (classFileBefore == null) {
+                        toWriteBefore.append("nullBefore");
+                        toWriteBefore.append(";;;;;;;;;;;;;;;;;;;;;;;");
+                    }
+                    toWriteBefore.append(";");
                     toWriteBefore.append(executeJasome(classFileBefore));
                     StringBuilder toWrite = new StringBuilder();
 
@@ -140,6 +145,11 @@ public class ExtractMethodProcessor {
                         System.out.println(e);
                     }
                     String classFileAfter = getJavaFIle(Paths.get(split), refInfo.getClassAfter().get(i));
+                    if (classFileAfter == null) {
+                        toWrite.append("nullAfter");
+
+                    }
+                    toWrite.append(";");
                     toWrite.append(executeJasome(classFileAfter));
                     writeOutput(toWriteBefore, toWrite);
                     // break;
