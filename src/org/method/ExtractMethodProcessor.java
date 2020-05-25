@@ -51,6 +51,7 @@ public class ExtractMethodProcessor {
             "PMR","PMd","RTLOC","TLOC","WMC");
 
     public String outPutFileName;
+    public String projectName;
     private static final String UTF_8 = "utf-8";
    /* LackOfCohesionMethodsCalculator calculator = new LackOfCohesionMethodsCalculator();
     CyclomaticComplexityCalculator cyclomaticComplexityCalculator = new CyclomaticComplexityCalculator();
@@ -90,8 +91,9 @@ public class ExtractMethodProcessor {
         GitService gitService = new GitServiceImpl();
         GitHistoryRefactoringMiner miner = new GitHistoryRefactoringMinerImpl();
         StringBuilder localFile = new StringBuilder();
-        localFile.append("/Users/abel/Documents/ClasesU/Seminario/CohesionAfterExtractMethod/emp/");localFile.append(FilenameUtils.getBaseName(rep));
+        localFile.append("emp/");localFile.append(FilenameUtils.getBaseName(rep));
         Repository repo = gitService.cloneIfNotExists(localFile.toString(), rep);
+        projectName = repo.toString().split("/")[1];
         RefactoringHandler extractHandler = new ExtractHandler();
         RefactoringHandler testHandler = new testHandler();
         try {
@@ -111,6 +113,7 @@ public class ExtractMethodProcessor {
                     ExtractOperationRefactoring nn = (ExtractOperationRefactoring) refInfo.getRefactoring().get(i);
                     String split = repo.getDirectory().getAbsolutePath().split("\\.")[0];
                     StringBuilder toWriteBefore = new StringBuilder();
+                    toWriteBefore.append(projectName).append(";");
                     toWriteBefore.append(refInfo.getClassBefore().get(i));
                     toWriteBefore.append(";");
                     String linkTocommit = rep.split("\\.git")[0] + "/commit/" + refInfo.getCommitIdBefore();
