@@ -5,8 +5,8 @@ import java.util.List;
 
 public class ExtractMethodMiner {
     public static void main(String[] args) throws Exception {
-        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("/Users/abel/Desktop/faninFINAL.txt");
-        List<String> repos = extractMethodProcessor.readUrlRepos("/Users/abel/Desktop/projects-urls.txt");
+        ExtractMethodProcessor extractMethodProcessor = new ExtractMethodProcessor("/Users/abel/Desktop/faninMuestra2.txt");
+        List<String> repos = extractMethodProcessor.readUrlRepos("/Users/abel/Downloads/projects2.txt");
 
         for(String rep: repos){
             extractMethodProcessor.analizeProjects(rep);

@@ -9,9 +9,7 @@
     <list default="true" id="2c83d12c-a7af-465b-924e-76fb80a2e3dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodMiner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodMiner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/method/ExtractMethodProcessor.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,22 +156,22 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="599" y="348" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1680.954@0.23.1680.954" timestamp="1587515786497" />
-    <state width="1528" height="315" key="GridCell.Tab.0.bottom" timestamp="1588999931110">
+    <state width="948" height="255" key="GridCell.Tab.0.bottom" timestamp="1590640638274">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1528" height="315" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1588999931110" />
-    <state width="1528" height="315" key="GridCell.Tab.0.center" timestamp="1588999931109">
+    <state width="948" height="255" key="GridCell.Tab.0.bottom/0.23.1680.954@0.23.1680.954" timestamp="1590640638274" />
+    <state width="948" height="255" key="GridCell.Tab.0.center" timestamp="1590640638274">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1528" height="315" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1588999931109" />
-    <state width="1528" height="315" key="GridCell.Tab.0.left" timestamp="1588999931108">
+    <state width="948" height="255" key="GridCell.Tab.0.center/0.23.1680.954@0.23.1680.954" timestamp="1590640638274" />
+    <state width="948" height="255" key="GridCell.Tab.0.left" timestamp="1590640638273">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1528" height="315" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1588999931108" />
-    <state width="1528" height="315" key="GridCell.Tab.0.right" timestamp="1588999931109">
+    <state width="948" height="255" key="GridCell.Tab.0.left/0.23.1680.954@0.23.1680.954" timestamp="1590640638273" />
+    <state width="948" height="255" key="GridCell.Tab.0.right" timestamp="1590640638274">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
-    <state width="1528" height="315" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1588999931109" />
+    <state width="948" height="255" key="GridCell.Tab.0.right/0.23.1680.954@0.23.1680.954" timestamp="1590640638274" />
     <state x="235" y="139" key="SettingsEditor" timestamp="1587515800967">
       <screen x="0" y="23" width="1680" height="954" />
     </state>
@@ -182,16 +180,5 @@
       <screen x="0" y="23" width="1680" height="954" />
     </state>
     <state x="540" y="252" key="extract.method.dialog/0.23.1680.954@0.23.1680.954" timestamp="1585599581337" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/org/method/ExtractMethodProcessor.java</url>
-          <line>131</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
